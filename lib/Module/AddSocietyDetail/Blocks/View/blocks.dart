@@ -114,13 +114,7 @@ class Blocks extends GetView {
                                                                 .data
                                                                 .data[index]
                                                                 .address
-                                                                .toString() +
-                                                            " " +
-                                                            snapshot
-                                                                .data
-                                                                .data[index]
-                                                                .iteration
-                                                                .toString(),
+                                                                .toString() ,
                                                         style:
                                                             GoogleFonts.ubuntu(
                                                                 fontStyle:

@@ -3,16 +3,15 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Apartment.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Building.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Floor.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/apartment.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/building.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/floor.dart';
 import 'package:http/http.dart' as Http;
 
 import '../../../Constants/api_routes.dart';
 import '../../../Routes/set_routes.dart';
 import '../../Login/Model/User.dart';
 import '../Model/phases.dart';
-import '../Model/Resident Model/ApartmentResident.dart' as ApartmentResident;
 
 
 class ApartmentResidentVerificationController extends GetxController

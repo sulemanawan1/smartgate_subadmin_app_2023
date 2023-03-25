@@ -9,7 +9,6 @@ import '../../../Constants/api_routes.dart';
 import '../../../Constants/constants.dart';
 import '../../../Widgets/My Back Button/my_back_button.dart';
 
-
 class UnVerifiedResident extends GetView {
   @override
   Widget build(BuildContext context) {

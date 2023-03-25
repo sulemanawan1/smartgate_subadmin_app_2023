@@ -79,9 +79,9 @@ HouseResident copyWith({  bool? success,
 
 class Data {
   Data({
-      num? id, 
-      num? residentid, 
-      num? subadminid, 
+      int? id,
+      int? residentid,
+      int? subadminid,
       String? country, 
       String? state, 
       String? city, 
@@ -89,23 +89,23 @@ class Data {
       String? vechileno, 
       String? residenttype, 
       String? propertytype, 
-      num? committeemember, 
-      num? status, 
+      int? committeemember,
+      int? status,
       String? createdAt, 
       String? updatedAt, 
-      num? societyid, 
-      num? pid, 
-      num? bid, 
-      num? sid, 
-      num? propertyid, 
-      num? measurementid, 
+      int? societyid,
+      int? pid,
+      int? bid,
+      int? sid,
+      int? propertyid,
+      int? measurementid,
       String? firstname, 
       String? lastname, 
       String? cnic, 
       String? address, 
       String? mobileno, 
       String? password, 
-      num? roleid, 
+      int? roleid,
       String? rolename, 
       String? image, 
       String? fcmtoken, 
@@ -229,9 +229,9 @@ class Data {
       });
     }
   }
-  num? _id;
-  num? _residentid;
-  num? _subadminid;
+  int? _id;
+  int? _residentid;
+  int? _subadminid;
   String? _country;
   String? _state;
   String? _city;
@@ -239,23 +239,23 @@ class Data {
   String? _vechileno;
   String? _residenttype;
   String? _propertytype;
-  num? _committeemember;
-  num? _status;
+  int? _committeemember;
+  int? _status;
   String? _createdAt;
   String? _updatedAt;
-  num? _societyid;
-  num? _pid;
-  num? _bid;
-  num? _sid;
-  num? _propertyid;
-  num? _measurementid;
+  int? _societyid;
+  int? _pid;
+  int? _bid;
+  int? _sid;
+  int? _propertyid;
+  int? _measurementid;
   String? _firstname;
   String? _lastname;
   String? _cnic;
   String? _address;
   String? _mobileno;
   String? _password;
-  num? _roleid;
+  int? _roleid;
   String? _rolename;
   String? _image;
   String? _fcmtoken;
@@ -266,9 +266,9 @@ class Data {
   List<Property>? _property;
   List<Measurement>? _measurement;
   List<Owner>? _owner;
-Data copyWith({  num? id,
-  num? residentid,
-  num? subadminid,
+Data copyWith({  int? id,
+  int? residentid,
+  int? subadminid,
   String? country,
   String? state,
   String? city,
@@ -276,23 +276,23 @@ Data copyWith({  num? id,
   String? vechileno,
   String? residenttype,
   String? propertytype,
-  num? committeemember,
-  num? status,
+  int? committeemember,
+  int? status,
   String? createdAt,
   String? updatedAt,
-  num? societyid,
-  num? pid,
-  num? bid,
-  num? sid,
-  num? propertyid,
-  num? measurementid,
+  int? societyid,
+  int? pid,
+  int? bid,
+  int? sid,
+  int? propertyid,
+  int? measurementid,
   String? firstname,
   String? lastname,
   String? cnic,
   String? address,
   String? mobileno,
   String? password,
-  num? roleid,
+  int? roleid,
   String? rolename,
   String? image,
   String? fcmtoken,
@@ -341,9 +341,9 @@ Data copyWith({  num? id,
   measurement: measurement ?? _measurement,
   owner: owner ?? _owner,
 );
-  num? get id => _id;
-  num? get residentid => _residentid;
-  num? get subadminid => _subadminid;
+  int? get id => _id;
+  int? get residentid => _residentid;
+  int? get subadminid => _subadminid;
   String? get country => _country;
   String? get state => _state;
   String? get city => _city;
@@ -351,23 +351,23 @@ Data copyWith({  num? id,
   String? get vechileno => _vechileno;
   String? get residenttype => _residenttype;
   String? get propertytype => _propertytype;
-  num? get committeemember => _committeemember;
-  num? get status => _status;
+  int? get committeemember => _committeemember;
+  int? get status => _status;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
-  num? get societyid => _societyid;
-  num? get pid => _pid;
-  num? get bid => _bid;
-  num? get sid => _sid;
-  num? get propertyid => _propertyid;
-  num? get measurementid => _measurementid;
+  int? get societyid => _societyid;
+  int? get pid => _pid;
+  int? get bid => _bid;
+  int? get sid => _sid;
+  int? get propertyid => _propertyid;
+  int? get measurementid => _measurementid;
   String? get firstname => _firstname;
   String? get lastname => _lastname;
   String? get cnic => _cnic;
   String? get address => _address;
   String? get mobileno => _mobileno;
   String? get password => _password;
-  num? get roleid => _roleid;
+  int? get roleid => _roleid;
   String? get rolename => _rolename;
   String? get image => _image;
   String? get fcmtoken => _fcmtoken;
@@ -447,8 +447,8 @@ Data copyWith({  num? id,
 
 class Owner {
   Owner({
-      num? id, 
-      num? residentid, 
+      int? id,
+      int? residentid,
       String? ownername, 
       String? owneraddress, 
       String? ownermobileno, 
@@ -472,15 +472,15 @@ class Owner {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
-  num? _residentid;
+  int? _id;
+  int? _residentid;
   String? _ownername;
   String? _owneraddress;
   String? _ownermobileno;
   String? _createdAt;
   String? _updatedAt;
-Owner copyWith({  num? id,
-  num? residentid,
+Owner copyWith({  int? id,
+  int? residentid,
   String? ownername,
   String? owneraddress,
   String? ownermobileno,
@@ -494,8 +494,8 @@ Owner copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
-  num? get residentid => _residentid;
+  int? get id => _id;
+  int? get residentid => _residentid;
   String? get ownername => _ownername;
   String? get owneraddress => _owneraddress;
   String? get ownermobileno => _ownermobileno;
@@ -532,17 +532,17 @@ Owner copyWith({  num? id,
 
 class Measurement {
   Measurement({
-      num? id, 
-      num? subadminid, 
+      int? id,
+      int? subadminid,
       String? type, 
       String? unit, 
-      num? charges, 
-      num? chargesafterduedate, 
-      num? appcharges, 
-      num? tax, 
-      num? area, 
-      num? bedrooms, 
-      num? status, 
+      int? charges,
+      int? chargesafterduedate,
+      int? appcharges,
+      int? tax,
+      int? area,
+      int? bedrooms,
+      int? status,
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -575,30 +575,30 @@ class Measurement {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
-  num? _subadminid;
+  int? _id;
+  int? _subadminid;
   String? _type;
   String? _unit;
-  num? _charges;
-  num? _chargesafterduedate;
-  num? _appcharges;
-  num? _tax;
-  num? _area;
-  num? _bedrooms;
-  num? _status;
+  int? _charges;
+  int? _chargesafterduedate;
+  int? _appcharges;
+  int? _tax;
+  int? _area;
+  int? _bedrooms;
+  int? _status;
   String? _createdAt;
   String? _updatedAt;
-Measurement copyWith({  num? id,
-  num? subadminid,
+Measurement copyWith({  int? id,
+  int? subadminid,
   String? type,
   String? unit,
-  num? charges,
-  num? chargesafterduedate,
-  num? appcharges,
-  num? tax,
-  num? area,
-  num? bedrooms,
-  num? status,
+  int? charges,
+  int? chargesafterduedate,
+  int? appcharges,
+  int? tax,
+  int? area,
+  int? bedrooms,
+  int? status,
   String? createdAt,
   String? updatedAt,
 }) => Measurement(  id: id ?? _id,
@@ -615,17 +615,17 @@ Measurement copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
-  num? get subadminid => _subadminid;
+  int? get id => _id;
+  int? get subadminid => _subadminid;
   String? get type => _type;
   String? get unit => _unit;
-  num? get charges => _charges;
-  num? get chargesafterduedate => _chargesafterduedate;
-  num? get appcharges => _appcharges;
-  num? get tax => _tax;
-  num? get area => _area;
-  num? get bedrooms => _bedrooms;
-  num? get status => _status;
+  int? get charges => _charges;
+  int? get chargesafterduedate => _chargesafterduedate;
+  int? get appcharges => _appcharges;
+  int? get tax => _tax;
+  int? get area => _area;
+  int? get bedrooms => _bedrooms;
+  int? get status => _status;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
 
@@ -661,13 +661,13 @@ Measurement copyWith({  num? id,
 
 class Property {
   Property({
-      num? id, 
+      int? id,
       String? address, 
       String? iteration, 
-      num? streetid, 
-      num? subadminid, 
-      num? societyid, 
-      num? superadminid, 
+      int? streetid,
+      int? subadminid,
+      int? societyid,
+      int? superadminid,
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -692,22 +692,22 @@ class Property {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
+  int? _id;
   String? _address;
   String? _iteration;
-  num? _streetid;
-  num? _subadminid;
-  num? _societyid;
-  num? _superadminid;
+  int? _streetid;
+  int? _subadminid;
+  int? _societyid;
+  int? _superadminid;
   String? _createdAt;
   String? _updatedAt;
-Property copyWith({  num? id,
+Property copyWith({  int? id,
   String? address,
   String? iteration,
-  num? streetid,
-  num? subadminid,
-  num? societyid,
-  num? superadminid,
+  int? streetid,
+  int? subadminid,
+  int? societyid,
+  int? superadminid,
   String? createdAt,
   String? updatedAt,
 }) => Property(  id: id ?? _id,
@@ -720,13 +720,13 @@ Property copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
+  int? get id => _id;
   String? get address => _address;
   String? get iteration => _iteration;
-  num? get streetid => _streetid;
-  num? get subadminid => _subadminid;
-  num? get societyid => _societyid;
-  num? get superadminid => _superadminid;
+  int? get streetid => _streetid;
+  int? get subadminid => _subadminid;
+  int? get societyid => _societyid;
+  int? get superadminid => _superadminid;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
 
@@ -759,14 +759,14 @@ Property copyWith({  num? id,
 
 class Street {
   Street({
-      num? id, 
+      int? id,
       String? address, 
       String? type, 
       String? iteration, 
-      num? dynamicid, 
-      num? subadminid, 
-      num? societyid, 
-      num? superadminid, 
+      int? dynamicid,
+      int? subadminid,
+      int? societyid,
+      int? superadminid,
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -793,24 +793,24 @@ class Street {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
+  int? _id;
   String? _address;
   String? _type;
   String? _iteration;
-  num? _dynamicid;
-  num? _subadminid;
-  num? _societyid;
-  num? _superadminid;
+  int? _dynamicid;
+  int? _subadminid;
+  int? _societyid;
+  int? _superadminid;
   String? _createdAt;
   String? _updatedAt;
-Street copyWith({  num? id,
+Street copyWith({  int? id,
   String? address,
   String? type,
   String? iteration,
-  num? dynamicid,
-  num? subadminid,
-  num? societyid,
-  num? superadminid,
+  int? dynamicid,
+  int? subadminid,
+  int? societyid,
+  int? superadminid,
   String? createdAt,
   String? updatedAt,
 }) => Street(  id: id ?? _id,
@@ -824,14 +824,14 @@ Street copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
+  int? get id => _id;
   String? get address => _address;
   String? get type => _type;
   String? get iteration => _iteration;
-  num? get dynamicid => _dynamicid;
-  num? get subadminid => _subadminid;
-  num? get societyid => _societyid;
-  num? get superadminid => _superadminid;
+  int? get dynamicid => _dynamicid;
+  int? get subadminid => _subadminid;
+  int? get societyid => _societyid;
+  int? get superadminid => _superadminid;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
 
@@ -865,14 +865,14 @@ Street copyWith({  num? id,
 
 class Block {
   Block({
-      num? id, 
+      int? id,
       String? address, 
       String? type, 
       String? iteration, 
-      num? dynamicid, 
-      num? subadminid, 
-      num? societyid, 
-      num? superadminid, 
+      int? dynamicid,
+      int? subadminid,
+      int? societyid,
+      int? superadminid,
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -899,24 +899,24 @@ class Block {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
+  int? _id;
   String? _address;
   String? _type;
   String? _iteration;
-  num? _dynamicid;
-  num? _subadminid;
-  num? _societyid;
-  num? _superadminid;
+  int? _dynamicid;
+  int? _subadminid;
+  int? _societyid;
+  int? _superadminid;
   String? _createdAt;
   String? _updatedAt;
-Block copyWith({  num? id,
+Block copyWith({  int? id,
   String? address,
   String? type,
   String? iteration,
-  num? dynamicid,
-  num? subadminid,
-  num? societyid,
-  num? superadminid,
+  int? dynamicid,
+  int? subadminid,
+  int? societyid,
+  int? superadminid,
   String? createdAt,
   String? updatedAt,
 }) => Block(  id: id ?? _id,
@@ -930,14 +930,14 @@ Block copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
+  int? get id => _id;
   String? get address => _address;
   String? get type => _type;
   String? get iteration => _iteration;
-  num? get dynamicid => _dynamicid;
-  num? get subadminid => _subadminid;
-  num? get societyid => _societyid;
-  num? get superadminid => _superadminid;
+  int? get dynamicid => _dynamicid;
+  int? get subadminid => _subadminid;
+  int? get societyid => _societyid;
+  int? get superadminid => _superadminid;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
 
@@ -970,13 +970,13 @@ Block copyWith({  num? id,
 
 class Phase {
   Phase({
-      num? id, 
+      int? id,
       String? address, 
       String? iteration, 
-      num? dynamicid, 
-      num? subadminid, 
-      num? societyid, 
-      num? superadminid, 
+      int? dynamicid,
+      int? subadminid,
+      int? societyid,
+      int? superadminid,
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -1001,22 +1001,22 @@ class Phase {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
+  int? _id;
   String? _address;
   String? _iteration;
-  num? _dynamicid;
-  num? _subadminid;
-  num? _societyid;
-  num? _superadminid;
+  int? _dynamicid;
+  int? _subadminid;
+  int? _societyid;
+  int? _superadminid;
   String? _createdAt;
   String? _updatedAt;
-Phase copyWith({  num? id,
+Phase copyWith({  int? id,
   String? address,
   String? iteration,
-  num? dynamicid,
-  num? subadminid,
-  num? societyid,
-  num? superadminid,
+  int? dynamicid,
+  int? subadminid,
+  int? societyid,
+  int? superadminid,
   String? createdAt,
   String? updatedAt,
 }) => Phase(  id: id ?? _id,
@@ -1029,13 +1029,13 @@ Phase copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
+  int? get id => _id;
   String? get address => _address;
   String? get iteration => _iteration;
-  num? get dynamicid => _dynamicid;
-  num? get subadminid => _subadminid;
-  num? get societyid => _societyid;
-  num? get superadminid => _superadminid;
+  int? get dynamicid => _dynamicid;
+  int? get subadminid => _subadminid;
+  int? get societyid => _societyid;
+  int? get superadminid => _superadminid;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
 
@@ -1070,7 +1070,7 @@ Phase copyWith({  num? id,
 
 class Society {
   Society({
-      num? id, 
+      int? id,
       String? country, 
       String? state, 
       String? city, 
@@ -1078,8 +1078,8 @@ class Society {
       String? type, 
       String? name, 
       String? address, 
-      num? superadminid, 
-      num? structuretype, 
+      int? superadminid,
+      int? structuretype,
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -1110,7 +1110,7 @@ class Society {
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }
-  num? _id;
+  int? _id;
   String? _country;
   String? _state;
   String? _city;
@@ -1118,11 +1118,11 @@ class Society {
   String? _type;
   String? _name;
   String? _address;
-  num? _superadminid;
-  num? _structuretype;
+  int? _superadminid;
+  int? _structuretype;
   String? _createdAt;
   String? _updatedAt;
-Society copyWith({  num? id,
+Society copyWith({  int? id,
   String? country,
   String? state,
   String? city,
@@ -1130,8 +1130,8 @@ Society copyWith({  num? id,
   String? type,
   String? name,
   String? address,
-  num? superadminid,
-  num? structuretype,
+  int? superadminid,
+  int? structuretype,
   String? createdAt,
   String? updatedAt,
 }) => Society(  id: id ?? _id,
@@ -1147,7 +1147,7 @@ Society copyWith({  num? id,
   createdAt: createdAt ?? _createdAt,
   updatedAt: updatedAt ?? _updatedAt,
 );
-  num? get id => _id;
+  int? get id => _id;
   String? get country => _country;
   String? get state => _state;
   String? get city => _city;
@@ -1155,8 +1155,8 @@ Society copyWith({  num? id,
   String? get type => _type;
   String? get name => _name;
   String? get address => _address;
-  num? get superadminid => _superadminid;
-  num? get structuretype => _structuretype;
+  int? get superadminid => _superadminid;
+  int? get structuretype => _structuretype;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
 

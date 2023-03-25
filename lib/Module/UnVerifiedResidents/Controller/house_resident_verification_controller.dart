@@ -2,22 +2,22 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/HousesApartmentsModel.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Society.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Street.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/measurement.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/society.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/street.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/block.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/house.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/phases.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/HouseResident.dart' as D;
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/HouseResident.dart' as HouseResident;
 import 'package:societyadminapp/Routes/set_routes.dart';
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
 import 'package:http/http.dart' as Http;
+
 class HouseResidentVerificationController extends GetxController {
   var data = Get.arguments;
   late final User userdata;
-  late D.Data resident;
-
+  late HouseResident.Data resident;
   String country = '';
   String state = '';
   String city = '';
@@ -31,19 +31,17 @@ class HouseResidentVerificationController extends GetxController {
   Block? blocks;
   Street? streets;
   House? houses;
-  HousesApartmentsModel? housesApartmentsModel;
-
-
+  Measurement? measurementModel;
 
   /*  for  houses */
-  var phaseli = <Phase>[];
-  var blockli = <Block>[];
-  var streetli = <Street>[];
-  var houseli = <House>[];
-  var housesApartments = <HousesApartmentsModel>[];
+  var phaseList = <Phase>[];
+  var blockList = <Block>[];
+  var streetList = <Street>[];
+  var houseList = <House>[];
+  var measurementList = <Measurement>[];
 
-
-  Future<List<Phase>> viewAllPhasesApi({required dynamicId,required bearerToken}) async {
+  Future<List<Phase>> viewAllPhasesApi(
+      {required dynamicId, required bearerToken}) async {
     print('phases api');
 
     print(bearerToken);
@@ -57,68 +55,73 @@ class HouseResidentVerificationController extends GetxController {
         }));
     var data = response.data['data'];
 
-    phaseli = (data as List)
+    phaseList = (data as List)
         .map((e) => Phase(
-        id: e['id'],
-        address: e['address'],
-        subadminid: e['subadminid'],
-        societyid: e['societyid'],iteration: e['iteration'],dynamiId: e['dynamicid']
-    ))
+            id: e['id'],
+            address: e['address'],
+            subadminid: e['subadminid'],
+            societyid: e['societyid'],
+            iteration: e['iteration'],
+            dynamicId: e['dynamicid']))
         .toList();
 
-    return phaseli;
+    return phaseList;
   }
 
-  Future<List<Block>> viewAllBlocksApi({required  dynamicId,required type, required bearerToken}) async {
+  Future<List<Block>> viewAllBlocksApi(
+      {required dynamicId, required type, required bearerToken}) async {
     print('Block aya');
     print(bearerToken);
     print(dynamicId);
     print(type);
 
-    var response = await Dio().get(Api.blocks + '/' +dynamicId.toString() +'/'+ type.toString(),
+    var response = await Dio().get(
+        Api.blocks + '/' + dynamicId.toString() + '/' + type.toString(),
         options: Options(headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer ${bearerToken}"
         }));
     var data = response.data['data'];
     print(data);
-    blockli = (data as List)
+    blockList = (data as List)
         .map((e) => Block(
-        id: e['id'],
-        address: e['address'],
-        dynamicId: e['dynamicid'],iteration: e['iteration']
-    ))
+            id: e['id'],
+            address: e['address'],
+            dynamicId: e['dynamicid'],
+            iteration: e['iteration']))
         .toList();
 
-    return blockli;
+    return blockList;
   }
 
-  Future<List<Street>> viewAllStreetsApi({required  dynamicId ,required type,required bearerToken}) async {
+  Future<List<Street>> viewAllStreetsApi(
+      {required dynamicId, required type, required bearerToken}) async {
     print('Street aya');
     print(bearerToken);
     print(dynamicId);
     print(type);
     var response = await Dio().get(
-        Api.streets + '/' + dynamicId.toString()+ '/' + type.toString(),
+        Api.streets + '/' + dynamicId.toString() + '/' + type.toString(),
         options: Options(headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer ${bearerToken}"
         }));
     var data = response.data['data'];
 
-
-    streetli = (data as List)
+    streetList = (data as List)
         .map((e) => Street(
-        id: e['id'],
-        address: e['address'],
-        dynamicId: e['dynamicid'],iteration: e['iteration'],
-        subadminid: e['subadminid']
-    ))
+            id: e['id'],
+            address: e['address'],
+            dynamicId: e['dynamicid'],
+            iteration: e['iteration'],
+            subadminid: e['subadminid']))
         .toList();
 
-    return streetli;
+    return streetList;
   }
-  Future<List<House>> viewAllHousesApi({required streetid,required bearerToken}) async {
+
+  Future<List<House>> viewAllHousesApi(
+      {required streetid, required bearerToken}) async {
     print('House aya');
     print(bearerToken);
     print(streetid);
@@ -131,53 +134,50 @@ class HouseResidentVerificationController extends GetxController {
         }));
     var data = response.data['data'];
 
-    houseli = (data as List)
+    houseList = (data as List)
         .map((e) => House(
-        id: e['id'],
-        address: e['address'],
-        sid: e['sid'],
-        type: e['type'],iteration: e['iteration'],
-        typeid: e['typeid']))
+              id: e['id'],
+              address: e['address'],
+              sid: e['sid'],
+              iteration: e['iteration'],
+            ))
         .toList();
 
-    return houseli;
+    return houseList;
   }
 
   SelectedProperty(val) async {
-
     blocks = null;
     streets = null;
 
-    housesApartmentsModel = null;
+    measurementModel = null;
 
-    blockli.clear();
-    streetli.clear();
-    houseli.clear();
-    housesApartments.clear();
+    blockList.clear();
+    streetList.clear();
+    houseList.clear();
+    measurementList.clear();
     houseAddressDetailController.clear();
-
 
     update();
   }
+
   SelectedHouse(val) {
     houses = val;
-    housesApartments.clear();
-    housesApartmentsModel = null;
+    measurementList.clear();
+    measurementModel = null;
     update();
   }
 
   SelectedSociety(val) async {
-
-
     phases = null;
     blocks = null;
     streets = null;
     houses = null;
 
-    phaseli.clear();
-    blockli.clear();
-    streetli.clear();
-    houseli.clear();
+    phaseList.clear();
+    blockList.clear();
+    streetList.clear();
+    houseList.clear();
     houseAddressDetailController.clear();
     societies = val;
 
@@ -185,19 +185,17 @@ class HouseResidentVerificationController extends GetxController {
   }
 
   SelectedPhase(val) async {
-
-
     blocks = null;
     streets = null;
     houses = null;
 
-    housesApartmentsModel = null;
+    measurementModel = null;
 
-    blockli.clear();
-    streetli.clear();
-    houseli.clear();
+    blockList.clear();
+    streetList.clear();
+    houseList.clear();
 
-    housesApartments.clear();
+    measurementList.clear();
     houseAddressDetailController.clear();
 
     phases = val;
@@ -210,9 +208,8 @@ class HouseResidentVerificationController extends GetxController {
 
     houses = null;
     streets = null;
-    streetli.clear();
-    houseli.clear();
-
+    streetList.clear();
+    houseList.clear();
 
     blocks = val;
     update();
@@ -221,7 +218,7 @@ class HouseResidentVerificationController extends GetxController {
   SelectedStreet(val) async {
     print('dropdown val $val');
     houses = null;
-    houseli.clear();
+    houseList.clear();
 
     houseAddressDetailController.clear();
     streets = val;
@@ -229,10 +226,10 @@ class HouseResidentVerificationController extends GetxController {
     update();
   }
 
-  Future<List<HousesApartmentsModel>> housesApartmentsModelApi(
+  Future<List<Measurement>> housesApartmentsModelApi(
       {required int subadminid,
-        required String token,
-        required String type}) async {
+      required String token,
+      required String type}) async {
     print(subadminid);
     print(token);
     print(type);
@@ -249,23 +246,20 @@ class HouseResidentVerificationController extends GetxController {
         }));
     var data = response.data['data'];
 
-    housesApartments = (data as List)
-        .map((e) => HousesApartmentsModel(
-        id: e['id'],
-        subadminid: e['subadminid'],
-        charges: e['charges'],
-        area: e['area'],
-        bedrooms: e['bedrooms'],
-        status: e['status'],
-        type: e['type'],
-        unit: e['unit']))
+    measurementList = (data as List)
+        .map((e) => Measurement(
+            id: e['id'],
+            subadminid: e['subadminid'],
+            charges: e['charges'],
+            area: e['area'],
+            bedrooms: e['bedrooms'],
+            status: e['status'],
+            type: e['type'],
+            unit: e['unit']))
         .toList();
 
-    return housesApartments;
+    return measurementList;
   }
-
-
-
 
   @override
   void onInit() {
@@ -274,9 +268,91 @@ class HouseResidentVerificationController extends GetxController {
 
     userdata = data[0];
     resident = data[1];
-    // SelectedPhase(resident.phase![0]);
-    // SelectedBlock(resident.block![0]);
-    print(resident.society!.first.structuretype);
+
+    print(resident.street);
+
+    print(resident.society!.first.structuretype.runtimeType);
+    if (resident.society!.first.structuretype == 1) {
+      SelectedStreet(Street(
+          id: resident.street!.first.id,
+          address: resident.street!.first.address,
+          dynamicId: resident.street!.first.dynamicid,
+          iteration: resident.street!.first.iteration,
+          subadminid: resident.street!.first.subadminid));
+      SelectedHouse(House(
+          id: resident.property!.first.id,
+          address: resident.property!.first.address,
+          sid: resident.property!.first.streetid,
+          iteration: resident.property!.first.iteration));
+      SelectedMeasurement(Measurement(
+          id: resident.measurement!.first.id,
+          subadminid: resident.measurement!.first.subadminid,
+          charges: resident.measurement!.first.charges,
+          area: resident.measurement!.first.area,
+          bedrooms: resident.measurement!.first.bedrooms,
+          status: resident.measurement!.first.status,
+          type: resident.measurement!.first.type,
+          unit: resident.measurement!.first.unit));
+    } else if (resident.society!.first.structuretype == 2) {
+      SelectedBlock(Block(
+          id: resident.block!.first.id,
+          address: resident.block!.first.address,
+          iteration: resident.block!.first.iteration,
+          dynamicId: resident.block!.first.dynamicid));
+      SelectedStreet(Street(
+          id: resident.street!.first.id,
+          address: resident.street!.first.address,
+          dynamicId: resident.street!.first.dynamicid,
+          iteration: resident.street!.first.iteration,
+          subadminid: resident.street!.first.subadminid));
+      SelectedHouse(House(
+          id: resident.property!.first.id,
+          address: resident.property!.first.address,
+          sid: resident.property!.first.streetid,
+          iteration: resident.property!.first.iteration));
+      SelectedMeasurement(Measurement(
+          id: resident.measurement!.first.id,
+          subadminid: resident.measurement!.first.subadminid,
+          charges: resident.measurement!.first.charges,
+          area: resident.measurement!.first.area,
+          bedrooms: resident.measurement!.first.bedrooms,
+          status: resident.measurement!.first.status,
+          type: resident.measurement!.first.type,
+          unit: resident.measurement!.first.unit));
+    } else if (resident.society!.first.structuretype == 3) {
+      SelectedPhase(Phase(
+          id: resident.phase!.first.id,
+          address: resident.phase!.first.address,
+          subadminid: resident.phase!.first.subadminid,
+          societyid: resident.phase!.first.societyid,
+          iteration: resident.phase!.first.iteration,
+          dynamicId: resident.phase!.first.dynamicid));
+      SelectedBlock(Block(
+          id: resident.block!.first.id,
+          address: resident.block!.first.address,
+          iteration: resident.block!.first.iteration,
+          dynamicId: resident.block!.first.dynamicid));
+      SelectedStreet(Street(
+          id: resident.street!.first.id,
+          address: resident.street!.first.address,
+          dynamicId: resident.street!.first.dynamicid,
+          iteration: resident.street!.first.iteration,
+          subadminid: resident.street!.first.subadminid));
+      SelectedHouse(House(
+          id: resident.property!.first.id,
+          address: resident.property!.first.address,
+          sid: resident.property!.first.streetid,
+          iteration: resident.property!.first.iteration));
+      SelectedMeasurement(Measurement(
+          id: resident.measurement!.first.id,
+          subadminid: resident.measurement!.first.subadminid,
+          charges: resident.measurement!.first.charges,
+          area: resident.measurement!.first.area,
+          bedrooms: resident.measurement!.first.bedrooms,
+          status: resident.measurement!.first.status,
+          type: resident.measurement!.first.type,
+          unit: resident.measurement!.first.unit));
+    }
 
     state = resident.state!;
     city = resident.city!;
@@ -286,13 +362,13 @@ class HouseResidentVerificationController extends GetxController {
   }
 
   Future verifyResidentApi({
- residentid,
+    residentid,
     required int status,
     pid,
-     bid,
- sid,
-   propertyid,
-     measurementid,
+    bid,
+    sid,
+    propertyid,
+    measurementid,
     vechileno,
     required String token,
   }) async {
@@ -304,45 +380,38 @@ class HouseResidentVerificationController extends GetxController {
         body: jsonEncode(<String, dynamic>{
           "residentid": residentid,
           "status": status,
-          'pid':pid,
-          'bid':bid,
-          'sid':sid,
-          'propertyid':propertyid,
-          'measurementid':measurementid,
-          "vechileno":vechileno
+          'pid': pid,
+          'bid': bid,
+          'sid': sid,
+          'propertyid': propertyid,
+          'measurementid': measurementid,
+          "vechileno": vechileno
         }));
 
     print(response.body);
 
     if (response.statusCode == 200) {
-
-
-      Get.offNamed(unverifiedresident,arguments: userdata);
-
+      Get.offNamed(unverifiedresident, arguments: userdata);
 
       update();
     } else if (response.statusCode == 403) {
-
       var data = jsonDecode(response.body.toString());
-      var errors =data['errors'] as List;
+      var errors = data['errors'] as List;
 
-      for(int i=0; i<errors.length;i++)
-      {
+      for (int i = 0; i < errors.length; i++) {
         Get.snackbar('Error', errors[i].toString());
       }
     }
   }
-
 
   isPropertyHouseApartment() {
     isProperty = true;
     update();
   }
 
-  SelectedHousesApartments(val) {
-    housesApartmentsModel = val;
+  SelectedMeasurement(val) {
+    measurementModel = val;
 
     update();
   }
-
 }

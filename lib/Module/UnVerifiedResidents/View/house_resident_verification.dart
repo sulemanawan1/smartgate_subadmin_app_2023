@@ -6,14 +6,14 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:societyadminapp/Constants/api_routes.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/block.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/house.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Street.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/street.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/phases.dart';
 import 'package:societyadminapp/Routes/set_routes.dart';
 import 'package:societyadminapp/Widgets/My%20Button/my_button.dart';
 import 'package:societyadminapp/Widgets/My%20Text/my_text.dart';
 import '../../../Widgets/My Back Button/my_back_button.dart';
 import '../Controller/house_resident_verification_controller.dart';
-import '../Model/HousesApartmentsModel.dart';
+import '../Model/measurement.dart';
 
 class HouseResidentVerification extends GetView {
   final _formKey = GlobalKey<FormState>();
@@ -143,7 +143,7 @@ class HouseResidentVerification extends GetView {
                                         selectedItem:
                                         controller.streets,
                                         itemAsString: (Street p) {
-                                          return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                          return p.address.toString();
                                         },
                                       ),
                                     ),
@@ -184,17 +184,15 @@ class HouseResidentVerification extends GetView {
                                           controller.SelectedHouse(
                                               data);
 
-
-
                                           controller
                                               .houseAddressDetailController
-                                              .text = data!.address.toString()+' '+data!.iteration.toString();
+                                              .text = data!.address.toString();
                                           controller.isPropertyHouseApartment();
                                         },
                                         selectedItem:
                                         controller.houses,
                                         itemAsString: (House p) {
-                                          return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                          return p.address.toString();
                                         },
                                       ),
                                     ),
@@ -219,7 +217,7 @@ class HouseResidentVerification extends GetView {
                                     Padding(
                                       padding:
                                       const EdgeInsets.all(8.0),
-                                      child: DropdownSearch<HousesApartmentsModel>(
+                                      child: DropdownSearch<Measurement>(
                                         validator: (value) =>
                                         value == null
                                             ? 'field required'
@@ -229,13 +227,13 @@ class HouseResidentVerification extends GetView {
                                           print(filter);
                                           return controller.housesApartmentsModelApi(subadminid: controller.userdata!.userid!, token: controller.userdata!.bearerToken!, type: 'house');
                                         },
-                                        onChanged: (HousesApartmentsModel? data) {
+                                        onChanged: (Measurement? data) {
 
-                                          controller. SelectedHousesApartments(data);
+                                          controller. SelectedMeasurement(data);
 
                                         },
-                                        selectedItem: controller.housesApartmentsModel,
-                                        itemAsString: (HousesApartmentsModel p) {
+                                        selectedItem: controller.measurementModel,
+                                        itemAsString: (Measurement p) {
                                           return p.area.toString()+' '+p.unit.toString();
                                         },
                                       ),
@@ -286,7 +284,7 @@ class HouseResidentVerification extends GetView {
                                         selectedItem:
                                         controller.blocks,
                                         itemAsString: (Block p) {
-                                          return' ${p.address.toString()}${' '}${p.iteration.toString()}';
+                                          return p.address.toString();
                                         },
                                       ),
                                     ),
@@ -332,7 +330,7 @@ class HouseResidentVerification extends GetView {
                                         selectedItem:
                                         controller.streets,
                                         itemAsString: (Street p) {
-                                          return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                          return p.address.toString();
                                         },
                                       ),
                                     ),
@@ -379,13 +377,13 @@ class HouseResidentVerification extends GetView {
 
 
 
-                                          controller.houseAddressDetailController.text = data!.address.toString()+' '+data!.iteration.toString();
+                                          controller.houseAddressDetailController.text = data!.address.toString();
                                           controller.isPropertyHouseApartment();
                                         },
                                         selectedItem:
                                         controller.houses,
                                         itemAsString: (House p) {
-                                          return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                          return p.address.toString();
                                         },
                                       ),
                                     ),
@@ -412,7 +410,7 @@ class HouseResidentVerification extends GetView {
                                     Padding(
                                       padding:
                                       const EdgeInsets.all(8.0),
-                                      child: DropdownSearch<HousesApartmentsModel>(
+                                      child: DropdownSearch<Measurement>(
                                         validator: (value) =>
                                         value == null
                                             ? 'field required'
@@ -422,13 +420,13 @@ class HouseResidentVerification extends GetView {
                                           print(filter);
                                           return controller.housesApartmentsModelApi(subadminid: controller.userdata!.userid!, token: controller.userdata!.bearerToken!, type: 'house');
                                         },
-                                        onChanged: (HousesApartmentsModel? data) {
+                                        onChanged: (Measurement? data) {
 
-                                          controller. SelectedHousesApartments(data);
+                                          controller. SelectedMeasurement(data);
 
                                         },
-                                        selectedItem: controller.housesApartmentsModel,
-                                        itemAsString: (HousesApartmentsModel p) {
+                                        selectedItem: controller.measurementModel,
+                                        itemAsString: (Measurement p) {
                                           return p.area.toString()+' '+p.unit.toString();
                                         },
                                       ),
@@ -478,7 +476,7 @@ class HouseResidentVerification extends GetView {
                                           },
                                           selectedItem: controller.phases,
                                           itemAsString: (Phase p) {
-                                            return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                            return p.address.toString();
                                           },
                                         ),
                                       ),
@@ -526,7 +524,7 @@ class HouseResidentVerification extends GetView {
                                           selectedItem:
                                           controller.blocks,
                                           itemAsString: (Block p) {
-                                            return' ${p.address.toString()}${' '}${p.iteration.toString()}';
+                                            return p.address.toString();
                                           },
                                         ),
                                       ),
@@ -572,7 +570,7 @@ class HouseResidentVerification extends GetView {
                                           selectedItem:
                                           controller.streets,
                                           itemAsString: (Street p) {
-                                            return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                            return p.address.toString();
                                           },
                                         ),
                                       ),
@@ -621,13 +619,13 @@ class HouseResidentVerification extends GetView {
 
                                             controller
                                                 .houseAddressDetailController
-                                                .text = data!.address.toString()+' '+data!.iteration.toString();
+                                                .text = data!.address.toString();
                                             controller.isPropertyHouseApartment();
                                           },
                                           selectedItem:
                                           controller.houses,
                                           itemAsString: (House p) {
-                                            return '${p.address.toString()}${' '}${p.iteration.toString()}';
+                                            return p.address.toString();
                                           },
                                         ),
                                       ),
@@ -654,7 +652,7 @@ class HouseResidentVerification extends GetView {
                                       Padding(
                                         padding:
                                         const EdgeInsets.all(8.0),
-                                        child: DropdownSearch<HousesApartmentsModel>(
+                                        child: DropdownSearch<Measurement>(
                                           validator: (value) =>
                                           value == null
                                               ? 'field required'
@@ -664,13 +662,13 @@ class HouseResidentVerification extends GetView {
                                             print(filter);
                                             return controller.housesApartmentsModelApi(subadminid: controller.userdata!.userid!, token: controller.userdata!.bearerToken!, type: 'house');
                                           },
-                                          onChanged: (HousesApartmentsModel? data) {
+                                          onChanged: (Measurement? data) {
 
-                                            controller. SelectedHousesApartments(data);
+                                            controller. SelectedMeasurement(data);
 
                                           },
-                                          selectedItem: controller.housesApartmentsModel,
-                                          itemAsString: (HousesApartmentsModel p) {
+                                          selectedItem: controller.measurementModel,
+                                          itemAsString: (Measurement p) {
                                             return p.area.toString()+' '+p.unit.toString();
                                           },
                                         ),
@@ -722,7 +720,7 @@ class HouseResidentVerification extends GetView {
                                                   .userdata.bearerToken!,
                                               bid: controller.blocks?.id??0,
                                               measurementid:
-                                                  controller.housesApartmentsModel!.id,
+                                                  controller.measurementModel!.id,
                                               pid: controller.phases?.id??0,
                                               propertyid:
                                                   controller.houses!.id!,

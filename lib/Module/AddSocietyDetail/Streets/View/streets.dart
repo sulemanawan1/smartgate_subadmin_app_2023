@@ -131,12 +131,6 @@ class Street extends GetView {
                                                                 .data
                                                                 .data[index]
                                                                 .address
-                                                                .toString() +
-                                                            " " +
-                                                            snapshot
-                                                                .data
-                                                                .data[index]
-                                                                .iteration
                                                                 .toString(),
                                                         style:
                                                             GoogleFonts.ubuntu(

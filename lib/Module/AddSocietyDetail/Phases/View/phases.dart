@@ -138,12 +138,7 @@ class Phases extends GetView {
                                                         snapshot
                                                                 .data
                                                                 .data[index]
-                                                                .address +
-                                                            " " +
-                                                            snapshot
-                                                                .data
-                                                                .data[index]
-                                                                .iteration,
+                                                                .address .toString(),
                                                         style:
                                                             GoogleFonts.ubuntu(
                                                                 fontStyle:
