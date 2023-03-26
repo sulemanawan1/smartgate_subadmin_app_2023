@@ -67,6 +67,7 @@ import '../Module/AddSocietyDetail/SocietyBuildingApartment/View/society_buildin
 import '../Module/AddSocietyDetail/SocietyBuildingFloor/View/society_building_floor_screen.dart';
 import '../Module/AddSocietyDetail/SocietyBuildings/View/society_building_screen.dart';
 import '../Module/AddSocietyDetail/StreetOrBuilding/View/street_or_building_screen.dart';
+import '../Module/AddSocietyDetail/StructureType5HouseOrBuildingMiddleWare/View/structure_type5_house_or_building_screen.dart';
 import '../Module/HomeScreen/View/home_screen.dart';
 import '../Module/UnVerifiedResidents/View/house_resident_verification.dart';
 import '../Module/UpdateGateKeeper/View/updategatekeeper_detail_screen.dart';
@@ -420,6 +421,11 @@ class RouteManagement {
           page: () => AddLocalBuildingApartmentsScreen(),
           binding: ScreenBindings(),
           transition: Transition.leftToRight),
+      GetPage(
+          name: structureType5HouseOrBuildingMiddlewareScreen,
+          page: () => StructureType5HouseOrBuildingMiddlewareScreen(),
+          binding: ScreenBindings(),
+          transition: Transition.noTransition),
     ];
   }
 }

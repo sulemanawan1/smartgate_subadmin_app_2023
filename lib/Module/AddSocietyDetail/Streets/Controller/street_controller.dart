@@ -31,8 +31,8 @@ class StreetsController extends GetxController {
       created_at: '',
       updated_at: '');
 
-  
-  int blockid=0;
+  int blockid = 0;
+  int? phaseid;
 
   @override
   void onInit() async {
@@ -40,19 +40,19 @@ class StreetsController extends GetxController {
 
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       super.onInit();
-     
 
       user = await MySharedPreferences.getUserData();
 
       if (user.structureType == 1) {
-        
-
         user = data;
         print(user);
-      } else {
+      } else if (user.structureType == 2) {
         user = data[0];
         blockid = data[1];
-        print("blockid ${blockid}");
+      } else if (user.structureType == 3) {
+        user = data[0];
+        blockid = data[1];
+        phaseid = data[2];
       }
 
       update();

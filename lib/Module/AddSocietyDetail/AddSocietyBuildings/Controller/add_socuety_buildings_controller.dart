@@ -12,7 +12,6 @@ class AddSocietyBuildingController extends GetxController {
   var data = Get.arguments;
   late final User user;
   bool isLoading = false;
-  late String type;
 
   final societyBuildingNameController = TextEditingController();
 
@@ -22,17 +21,6 @@ class AddSocietyBuildingController extends GetxController {
 
     super.onInit();
     user = data;
-
-    print(user.structureType);
-    if (user.structureType == 1) {
-      type = 'street society building';
-    } else if (user.structureType ==
-        2) {
-      type = 'block society building';
-    } else {
-      type = 'phase society building';
-    }
-
   }
 
   addSocietyBuildingApi({
@@ -43,6 +31,7 @@ class AddSocietyBuildingController extends GetxController {
     required int dynamicid,
     required String BuildingName,
     required String type,
+    
   }) async {
     print(bearerToken);
 
@@ -50,6 +39,7 @@ class AddSocietyBuildingController extends GetxController {
 
     isLoading = true;
     update();
+    
 
     Map<String, String> headers = {"Authorization": "Bearer $bearerToken"};
     var request =
@@ -64,7 +54,7 @@ class AddSocietyBuildingController extends GetxController {
 
     var responsed = await request.send();
     var response = await Http.Response.fromStream(responsed);
-print(response.body);
+
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body.toString());
       print(data);

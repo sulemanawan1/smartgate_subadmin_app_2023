@@ -63,6 +63,7 @@ class AddPhasesController extends GetxController {
       Get.snackbar("Phases Add Successfully", "");
 
       Get.offNamed(phasess, arguments: user);
+      
     } else if (response.statusCode == 403) {
       isLoading = false;
       update();

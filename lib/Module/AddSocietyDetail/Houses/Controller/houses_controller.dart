@@ -18,10 +18,28 @@ class HouseController extends GetxController {
   // int? pid ;
   // String? bearerToken;
 
-late final   User user;
+  User user = User(
+      structureType: 0,
+      userid: 0,
+      image: '',
+      societyid: 0,
+      subadminid: 0,
+      firstName: '',
+      lastName: '',
+      cnic: '',
+      roleId: 0,
+      roleName: '',
+      bearerToken: '',
+      address: '',
+      mobileno: '',
+      fcmtoken: '',
+      superadminid: 0,
+      created_at: '',
+      updated_at: '');
 
-  int? structuretype;
-  int? streetid;
+  int streetid = 0;
+  int blockid = 0;
+  int phaseid = 0;
 
   @override
   void onInit() async {
@@ -31,26 +49,32 @@ late final   User user;
     // bid=data[1];
     // pid=data[2];
     // bearerToken=data[3];
-     user = data[0];
-     streetid = data[1];
+    //  user = data[0];
+    //  streetid = data[1];
 
-    // WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
-    //   super.onInit();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      super.onInit();
 
-    //   user = await MySharedPreferences.getUserData();
-    //   structuretype = user.structureType;
+      user = await MySharedPreferences.getUserData();
 
-    //   //if (structuretype == 1) {
+      if (user.structureType == 5) {
+        user = data;
+      } else if (user.structureType == 1) {
+        user = data[0];
+        streetid = data[1];
+      } else if (user.structureType == 2) {
+        user = data[0];
+        streetid = data[1];
+        blockid = data[2];
+      } else if (user.structureType == 3) {
+        user = data[0];
+        streetid = data[1];
+        blockid = data[2];
+        phaseid = data[3];
+      }
 
-    //     print(user);
-    //     print(data);
-    //   //}
-    //   // else {
-    //   //   user = data[0];
-    //   //   streetid = data[1];
-    //   // }
-    //   update();
-    // });
+      update();
+    });
   }
 
   Future<Houses> housesApi(
@@ -62,8 +86,16 @@ late final   User user;
     //   type = 'street';
     // }
 
+    String type;
+    if (user.structureType == 5) {
+      type = 'society';
+    } else {
+      type = 'street';
+    }
+
     final response = await Http.get(
-      Uri.parse(Api.properties + "/" + dynamicid.toString()),
+      Uri.parse(
+          Api.properties + "/" + dynamicid.toString() + "/" + type.toString()),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': "Bearer $bearerToken"
@@ -72,7 +104,6 @@ late final   User user;
     var data = jsonDecode(response.body.toString());
 
     if (response.statusCode == 200) {
-      
       return Houses.fromJson(data);
     }
 

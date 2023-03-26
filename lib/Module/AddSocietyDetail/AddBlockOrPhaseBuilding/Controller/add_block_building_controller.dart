@@ -68,6 +68,7 @@ class AddBlockBuildingController extends GetxController {
       Get.snackbar("Building Addedd Successfully", "");
 
       Get.offAndToNamed(blockbuilding, arguments: [user, bid]);
+      
     } else if (response.statusCode == 403) {
       isLoading = false;
       update();

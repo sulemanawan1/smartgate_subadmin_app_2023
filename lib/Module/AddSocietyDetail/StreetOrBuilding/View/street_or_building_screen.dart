@@ -52,7 +52,7 @@ class StreetOrBuildingScreen extends GetView {
                         children: [
                           GestureDetector(
                             onTap: () async {
-                              Get.toNamed(streets, arguments: controller.data);
+                              Get.offNamed(streets, arguments: controller.data);
                             },
                             child: Card(
                               elevation: 1.5,
@@ -98,7 +98,7 @@ class StreetOrBuildingScreen extends GetView {
                             onTap: () async {
                               User user =
                                   await MySharedPreferences.getUserData();
-                              Get.toNamed(societybuildingscreen,
+                              Get.offNamed(societybuildingscreen,
                                   arguments: controller.data);
                             },
                             child: Card(

@@ -61,6 +61,7 @@ class AddSocietyBuildingFloorsController extends GetxController {
 
       Get.offAndToNamed(societybuildingfloorsscreen,
           arguments: [user, buildingid]);
+          
     } else if (response.statusCode == 403) {
       isLoading = false;
       update();

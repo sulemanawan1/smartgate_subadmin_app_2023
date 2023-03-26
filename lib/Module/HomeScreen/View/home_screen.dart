@@ -27,66 +27,66 @@ class HomeScreen extends GetView {
               padding: EdgeInsets.zero,
               children: [
                 DrawerHeader(
-                    // decoration: BoxDecoration(
-                    //     gradient: LinearGradient(colors: [
-                    //   HexColor('#FB7712'),
-                    //   HexColor('#FF9900'),
-                    // ])),
+                  // decoration: BoxDecoration(
+                  //     gradient: LinearGradient(colors: [
+                  //   HexColor('#FB7712'),
+                  //   HexColor('#FF9900'),
+                  // ])),
                     child: Column(
-                  children: [
-                    Text(
-                      controller.user.firstName! +
-                          " " +
-                          controller.user.lastName!,
-                      style: GoogleFonts.inriaSerif(
-                          fontStyle: FontStyle.normal,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 18,
-                          color: HexColor('#FF9900')),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                      children: [
+                        Text(
+                          controller.user.firstName! +
+                              " " +
+                              controller.user.lastName!,
+                          style: GoogleFonts.inriaSerif(
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 18,
+                              color: HexColor('#FF9900')),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
 
-                    Container(
-                      child: Center(
-                          child: SvgPicture.asset('assets/splashsvg.svg')),
-                    )
-                    // Padding(
-                    //   padding: EdgeInsets.fromLTRB(
-                    //       0,
-                    //       MediaQuery.of(context).size.width * 0.06,
-                    //       0,
-                    //       0),
-                    //   child:
-                    //   // GestureDetector(
-                    //   //   onTap: (){
-                    //   //
-                    //   //
-                    //   //     Get.toNamed (viewheroimage ,arguments: [imageBaseUrl+controller.user.image!.toString(),
-                    //   //       imageBaseUrl+controller.user.image!]);
-                    //   //
-                    //   //   },
-                    //   //   child: Container(
-                    //   //
-                    //   //     width:
-                    //   //     MediaQuery.of(context).size.width * 0.1,
-                    //   //     height:
-                    //   //     MediaQuery.of(context).size.width * 0.1,
-                    //   //     decoration: BoxDecoration(
-                    //   //         image: DecorationImage(fit: BoxFit.cover,
-                    //   //
-                    //   //             image:
-                    //   //             NetworkImage(imageBaseUrl+controller.user.image!) ),
-                    //   //         borderRadius: BorderRadius.circular(4),
-                    //   //         border: Border.all(
-                    //   //             color: HexColor('#ABABAB'))),
-                    //   //
-                    //   //   ),
-                    //   // ),
-                    // ),
-                  ],
-                )),
+                        Container(
+                          child: Center(
+                              child: SvgPicture.asset('assets/splashsvg.svg')),
+                        )
+                        // Padding(
+                        //   padding: EdgeInsets.fromLTRB(
+                        //       0,
+                        //       MediaQuery.of(context).size.width * 0.06,
+                        //       0,
+                        //       0),
+                        //   child:
+                        //   // GestureDetector(
+                        //   //   onTap: (){
+                        //   //
+                        //   //
+                        //   //     Get.toNamed (viewheroimage ,arguments: [imageBaseUrl+controller.user.image!.toString(),
+                        //   //       imageBaseUrl+controller.user.image!]);
+                        //   //
+                        //   //   },
+                        //   //   child: Container(
+                        //   //
+                        //   //     width:
+                        //   //     MediaQuery.of(context).size.width * 0.1,
+                        //   //     height:
+                        //   //     MediaQuery.of(context).size.width * 0.1,
+                        //   //     decoration: BoxDecoration(
+                        //   //         image: DecorationImage(fit: BoxFit.cover,
+                        //   //
+                        //   //             image:
+                        //   //             NetworkImage(imageBaseUrl+controller.user.image!) ),
+                        //   //         borderRadius: BorderRadius.circular(4),
+                        //   //         border: Border.all(
+                        //   //             color: HexColor('#ABABAB'))),
+                        //   //
+                        //   //   ),
+                        //   // ),
+                        // ),
+                      ],
+                    )),
                 // UserAccountsDrawerHeader(
                 //   decoration:BoxDecoration(color: primaryColor),
                 //
@@ -187,7 +187,7 @@ class HomeScreen extends GetView {
           backgroundColor: HexColor('#F5F5F5'),
           body: SingleChildScrollView(
             child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Padding(
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.height * 0.038,
@@ -299,33 +299,36 @@ class HomeScreen extends GetView {
                       )),
                   (controller.user.structureType == 4)
                       ? Padding(
-                          padding: EdgeInsets.only(left: 32, top: 32),
-                          child: AdminScreenContainer(
-                            onTap: () async {
-                              Get.offAndToNamed(localbuildingscreen,
-                                  arguments: controller.user);
-                            },
-                            icon: 'assets/reports.svg',
-                            text: 'Building Detail',
-                          ))
+                      padding: EdgeInsets.only(left: 32, top: 32),
+                      child: AdminScreenContainer(
+                        onTap: () async {
+                          Get.offAndToNamed(localbuildingscreen,
+                              arguments: controller.user);
+                        },
+                        icon: 'assets/reports.svg',
+                        text: 'Building Detail',
+                      ))
                       : Padding(
-                          padding: EdgeInsets.only(left: 32, top: 32),
-                          child: AdminScreenContainer(
-                            onTap: () async {
-                              if (controller.user.structureType == 1) {
-                                Get.offAndToNamed(streetorbuildingscreen,
-                                    arguments: controller.user);
-                              } else if (controller.user.structureType == 2) {
-                                Get.offAndToNamed(blockorsocietybuilding,
-                                    arguments: controller.user);
-                              } else if (controller.user.structureType == 3) {
-                                Get.offAndToNamed(phaseorsocietybuilding,
-                                    arguments: controller.user);
-                              }
-                            },
-                            icon: 'assets/reports.svg',
-                            text: 'Society Details',
-                          )),
+                      padding: EdgeInsets.only(left: 32, top: 32),
+                      child: AdminScreenContainer(
+                        onTap: () async {
+                          if (controller.user.structureType == 1) {
+                            Get.offAndToNamed(streetorbuildingscreen,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 2) {
+                            Get.offAndToNamed(blockorsocietybuilding,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 3) {
+                            Get.offAndToNamed(phaseorsocietybuilding,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 5) {
+                            Get.offAndToNamed(structureType5HouseOrBuildingMiddlewareScreen,
+                                arguments: controller.user);
+                          }
+                        },
+                        icon: 'assets/reports.svg',
+                        text: 'Society Details',
+                      )),
                 ],
               ),
               SizedBox(

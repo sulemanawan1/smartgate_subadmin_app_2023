@@ -39,6 +39,7 @@ class AddStreetsController extends GetxController {
       updated_at: '');
 
   int? blockid;
+  int? phaseid;
 
   @override
   void onInit() {
@@ -51,9 +52,13 @@ class AddStreetsController extends GetxController {
       user = await MySharedPreferences.getUserData();
       if (user.structureType == 1) {
         user = data;
-      } else {
+      } else if (user.structureType == 2) {
         user = data[0];
         blockid = data[1];
+      } else if (user.structureType == 3) {
+        user = data[0];
+        blockid = data[1];
+        phaseid = data[2];
       }
 
       update();
@@ -115,8 +120,10 @@ class AddStreetsController extends GetxController {
       Get.snackbar("Streets Add Successfully", "");
       if (user.structureType == 1) {
         Get.offAndToNamed(streets, arguments: user);
-      } else {
+      } else if (user.structureType == 2) {
         Get.offAndToNamed(streets, arguments: [user, blockid]);
+      } else if (user.structureType == 3) {
+        Get.offAndToNamed(streets, arguments: [user, blockid, phaseid]);
       }
     } else if (response.statusCode == 403) {
       isLoading = false;

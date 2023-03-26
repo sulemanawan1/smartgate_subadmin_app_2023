@@ -121,13 +121,12 @@ class HouseResidentVerificationController extends GetxController {
   }
 
   Future<List<House>> viewAllHousesApi(
-      {required streetid, required bearerToken}) async {
-    print('House aya');
+      {required dynamicId, required bearerToken,required type}) async {
     print(bearerToken);
-    print(streetid);
+    print(dynamicId);
 
     var response = await Dio().get(
-        Api.view_properties_for_residents + '/' + streetid.toString(),
+        Api.view_properties_for_residents + '/' + dynamicId.toString()+ '/' + type.toString(),
         options: Options(headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer ${bearerToken}"
@@ -138,7 +137,8 @@ class HouseResidentVerificationController extends GetxController {
         .map((e) => House(
               id: e['id'],
               address: e['address'],
-              sid: e['sid'],
+              dynamicid: e['dynamicid'],
+              type: e['type'],
               iteration: e['iteration'],
             ))
         .toList();
@@ -280,9 +280,10 @@ class HouseResidentVerificationController extends GetxController {
           iteration: resident.street!.first.iteration,
           subadminid: resident.street!.first.subadminid));
       SelectedHouse(House(
+          type:resident.property!.first.type ,
           id: resident.property!.first.id,
           address: resident.property!.first.address,
-          sid: resident.property!.first.streetid,
+          dynamicid: resident.property!.first.dynamicid,
           iteration: resident.property!.first.iteration));
       SelectedMeasurement(Measurement(
           id: resident.measurement!.first.id,
@@ -293,7 +294,8 @@ class HouseResidentVerificationController extends GetxController {
           status: resident.measurement!.first.status,
           type: resident.measurement!.first.type,
           unit: resident.measurement!.first.unit));
-    } else if (resident.society!.first.structuretype == 2) {
+    }
+    else if (resident.society!.first.structuretype == 2) {
       SelectedBlock(Block(
           id: resident.block!.first.id,
           address: resident.block!.first.address,
@@ -306,9 +308,11 @@ class HouseResidentVerificationController extends GetxController {
           iteration: resident.street!.first.iteration,
           subadminid: resident.street!.first.subadminid));
       SelectedHouse(House(
+          type:resident.property!.first.type ,
+
           id: resident.property!.first.id,
           address: resident.property!.first.address,
-          sid: resident.property!.first.streetid,
+          dynamicid: resident.property!.first.dynamicid,
           iteration: resident.property!.first.iteration));
       SelectedMeasurement(Measurement(
           id: resident.measurement!.first.id,
@@ -319,7 +323,8 @@ class HouseResidentVerificationController extends GetxController {
           status: resident.measurement!.first.status,
           type: resident.measurement!.first.type,
           unit: resident.measurement!.first.unit));
-    } else if (resident.society!.first.structuretype == 3) {
+    }
+    else if (resident.society!.first.structuretype == 3) {
       SelectedPhase(Phase(
           id: resident.phase!.first.id,
           address: resident.phase!.first.address,
@@ -339,9 +344,29 @@ class HouseResidentVerificationController extends GetxController {
           iteration: resident.street!.first.iteration,
           subadminid: resident.street!.first.subadminid));
       SelectedHouse(House(
+          type:resident.property!.first.type ,
+
           id: resident.property!.first.id,
           address: resident.property!.first.address,
-          sid: resident.property!.first.streetid,
+          dynamicid: resident.property!.first.dynamicid,
+          iteration: resident.property!.first.iteration));
+      SelectedMeasurement(Measurement(
+          id: resident.measurement!.first.id,
+          subadminid: resident.measurement!.first.subadminid,
+          charges: resident.measurement!.first.charges,
+          area: resident.measurement!.first.area,
+          bedrooms: resident.measurement!.first.bedrooms,
+          status: resident.measurement!.first.status,
+          type: resident.measurement!.first.type,
+          unit: resident.measurement!.first.unit));
+    }
+    if (resident.society!.first.structuretype == 5) {
+
+      SelectedHouse(House(
+          type:resident.property!.first.type ,
+          id: resident.property!.first.id,
+          address: resident.property!.first.address,
+          dynamicid: resident.property!.first.dynamicid,
           iteration: resident.property!.first.iteration));
       SelectedMeasurement(Measurement(
           id: resident.measurement!.first.id,

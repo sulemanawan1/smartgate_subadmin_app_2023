@@ -58,10 +58,13 @@ class SocietyBuildingController extends GetxController {
       {required int dynamicid, required String token}) async {
     print("${dynamicid.toString()}");
     print(token);
-    print(type);
 
     final response = await Http.get(
-      Uri.parse(Api.societybuildings + "/" + dynamicid.toString() + "/" + type.toString()),
+      Uri.parse(Api.societybuildings +
+          "/" +
+          dynamicid.toString() +
+          "/" +
+          type.toString()),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': "Bearer $token"
@@ -70,9 +73,8 @@ class SocietyBuildingController extends GetxController {
 
     var data = jsonDecode(response.body.toString());
 
-    print(response.statusCode);
-
     if (response.statusCode == 200) {
+      print(response.body);
 
       return SocietyBuilding.fromJson(data);
     }

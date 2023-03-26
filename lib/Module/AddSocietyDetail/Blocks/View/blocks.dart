@@ -20,9 +20,11 @@ class Blocks extends GetView {
           return WillPopScope(
             onWillPop: () async {
               if (controller.user.structureType == 2) {
-                Get.offNamed(homescreen, arguments: controller.user);
+                Get.offNamed(blockorsocietybuilding,
+                    arguments: controller.user);
               } else {
-                Get.offNamed(phasess, arguments: controller.user);
+                Get.offNamed(phasebuildingorblock,
+                    arguments: [controller.user, controller.phaseid]);
               }
 
               return false;
@@ -45,12 +47,15 @@ class Blocks extends GetView {
                     children: [
                       MyBackButton(
                         text: 'Blocks',
-                        onTap: () async {
+                        onTap: () {
                           if (controller.user.structureType == 2) {
-                            Get.offNamed(homescreen,
+                            Get.offNamed(blockorsocietybuilding,
                                 arguments: controller.user);
                           } else {
-                            Get.offNamed(phasess, arguments: controller.user);
+                            Get.offNamed(phasebuildingorblock, arguments: [
+                              controller.user,
+                              controller.phaseid
+                            ]);
                           }
                         },
                       ),
@@ -80,7 +85,7 @@ class Blocks extends GetView {
                                           height: 80,
                                           child: GestureDetector(
                                             onTap: () {
-                                              //bid        print( snapshot.data.data[index].id);
+                                              
                                               //pid        print( snapshot.data.data[index].pid);
 
                                               if (controller
@@ -98,7 +103,8 @@ class Blocks extends GetView {
                                                     arguments: [
                                                       controller.user,
                                                       snapshot
-                                                          .data.data[index].id
+                                                          .data.data[index].id,
+                                                      controller.phaseid
                                                     ]);
                                               }
                                             },

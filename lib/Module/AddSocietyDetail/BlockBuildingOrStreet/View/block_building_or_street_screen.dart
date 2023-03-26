@@ -52,8 +52,19 @@ class BlockBuildingOrStreet extends GetView {
                         children: [
                           GestureDetector(
                             onTap: () async {
-                              Get.offAndToNamed(streets,
-                                  arguments: [controller.user, controller.bid]);
+
+                              if (controller.user.structureType == 2) {
+                                Get.offAndToNamed(streets, arguments: [
+                                  controller.user,
+                                  controller.bid
+                                ]);
+                              } else if (controller.user.structureType == 3) {
+                                Get.offAndToNamed(streets, arguments: [
+                                  controller.user,
+                                  controller.bid,
+                                  controller.phaseid
+                                ]);
+                              }
                             },
                             child: Card(
                               elevation: 1.5,

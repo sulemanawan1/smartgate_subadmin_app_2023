@@ -104,44 +104,41 @@ class HouseResidentVerification extends GetView {
                                         .toString(),
                                     color: Colors.grey,
                                   ),
-                                  if(int.tryParse(controller.resident.society![0].structuretype.toString())==1)...[
+                                  if (controller
+                                          .resident.society![0].structuretype ==
+                                      1) ...[
                                     Padding(
                                       padding:
-                                      const EdgeInsets.fromLTRB(
-                                          8, 0, 0, 0),
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
                                       child: Text(
                                         "Select Street",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<Street>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller.viewAllStreetsApi(dynamicId:
-                                          controller.resident.society!.first.id,type: 'society',bearerToken: controller.userdata.bearerToken);
+                                          return controller.viewAllStreetsApi(
+                                              dynamicId: controller
+                                                  .resident.society!.first.id,
+                                              type: 'society',
+                                              bearerToken: controller
+                                                  .userdata.bearerToken);
                                         },
                                         onChanged: (Street? data) {
-                                          controller.SelectedStreet(
-                                              data);
+                                          controller.SelectedStreet(data);
                                         },
-                                        selectedItem:
-                                        controller.streets,
+                                        selectedItem: controller.streets,
                                         itemAsString: (Street p) {
                                           return p.address.toString();
                                         },
@@ -149,140 +146,124 @@ class HouseResidentVerification extends GetView {
                                     ),
                                     Padding(
                                       padding:
-                                      const EdgeInsets.fromLTRB(
-                                          8, 0, 0, 0),
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
                                       child: Text(
                                         "Select House",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<House>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller
-                                              .viewAllHousesApi(streetid:
-                                              controller.streets?.id,bearerToken: controller.userdata.bearerToken);
+                                          return controller.viewAllHousesApi(
+                                              dynamicId: controller.streets?.id,
+                                              bearerToken: controller
+                                                  .userdata.bearerToken,
+                                              type: 'street');
                                         },
                                         onChanged: (House? data) {
-
-                                          controller.SelectedHouse(
-                                              data);
+                                          controller.SelectedHouse(data);
 
                                           controller
                                               .houseAddressDetailController
                                               .text = data!.address.toString();
                                           controller.isPropertyHouseApartment();
                                         },
-                                        selectedItem:
-                                        controller.houses,
+                                        selectedItem: controller.houses,
                                         itemAsString: (House p) {
                                           return p.address.toString();
                                         },
                                       ),
                                     ),
+
                                     /// House Measurement
                                     Padding(
                                       padding:
-                                      const EdgeInsets.fromLTRB(
-                                          8, 0, 0, 0),
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
                                       child: Text(
                                         "Select Area Type",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<Measurement>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller.housesApartmentsModelApi(subadminid: controller.userdata!.userid!, token: controller.userdata!.bearerToken!, type: 'house');
+                                          return controller
+                                              .housesApartmentsModelApi(
+                                                  subadminid: controller
+                                                      .userdata!.userid!,
+                                                  token: controller
+                                                      .userdata!.bearerToken!,
+                                                  type: 'house');
                                         },
                                         onChanged: (Measurement? data) {
-
-                                          controller. SelectedMeasurement(data);
-
+                                          controller.SelectedMeasurement(data);
                                         },
-                                        selectedItem: controller.measurementModel,
+                                        selectedItem:
+                                            controller.measurementModel,
                                         itemAsString: (Measurement p) {
-                                          return p.area.toString()+' '+p.unit.toString();
+                                          return p.area.toString() +
+                                              ' ' +
+                                              p.unit.toString();
                                         },
                                       ),
                                     )
-
-                                    ]
-
-                                else if(int.tryParse(controller.resident.society![0].structuretype.toString())==2)...[
+                                  ] else if (controller.resident.society!.first
+                                          .structuretype ==
+                                      2) ...[
                                     ///Block
 
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8),
+                                      padding: const EdgeInsets.all(8),
                                       child: Text(
                                         "Select Block",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<Block>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller
-                                              .viewAllBlocksApi(
-                                              dynamicId: controller.resident.societyid,
-                                              type:'society',
-                                              bearerToken: controller.userdata.bearerToken);
+                                          return controller.viewAllBlocksApi(
+                                              dynamicId:
+                                                  controller.resident.societyid,
+                                              type: 'society',
+                                              bearerToken: controller
+                                                  .userdata.bearerToken);
                                         },
                                         onChanged: (Block? data) {
-                                          controller.SelectedBlock(
-                                              data);
+                                          controller.SelectedBlock(data);
                                         },
-                                        selectedItem:
-                                        controller.blocks,
+                                        selectedItem: controller.blocks,
                                         itemAsString: (Block p) {
                                           return p.address.toString();
                                         },
@@ -293,401 +274,422 @@ class HouseResidentVerification extends GetView {
 
                                     Padding(
                                       padding:
-                                      const EdgeInsets.fromLTRB(
-                                          8, 0, 0, 0),
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
                                       child: Text(
                                         "Select Street",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<Street>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller
-                                              .viewAllStreetsApi(dynamicId:
-                                          controller.blocks?.id,type: 'blocks', bearerToken: controller.userdata.bearerToken);
+                                          return controller.viewAllStreetsApi(
+                                              dynamicId: controller.blocks?.id,
+                                              type: 'blocks',
+                                              bearerToken: controller
+                                                  .userdata.bearerToken);
                                         },
                                         onChanged: (Street? data) {
-                                          controller.SelectedStreet(
-                                              data);
+                                          controller.SelectedStreet(data);
                                         },
-                                        selectedItem:
-                                        controller.streets,
+                                        selectedItem: controller.streets,
                                         itemAsString: (Street p) {
                                           return p.address.toString();
                                         },
                                       ),
                                     ),
 
-
                                     ///House
 
                                     Padding(
                                       padding:
-                                      const EdgeInsets.fromLTRB(
-                                          8, 0, 0, 0),
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
                                       child: Text(
                                         "Select House",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<House>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller
-                                              .viewAllHousesApi(streetid:
-                                              controller.streets?.id,bearerToken: controller.userdata.bearerToken);
+                                          return controller.viewAllHousesApi(
+                                              dynamicId: controller.streets?.id,
+                                              bearerToken: controller
+                                                  .userdata.bearerToken,
+                                              type: 'street');
                                         },
                                         onChanged: (House? data) {
+                                          controller.SelectedHouse(data);
 
-                                          controller.SelectedHouse(
-                                              data);
-
-
-
-                                          controller.houseAddressDetailController.text = data!.address.toString();
+                                          controller
+                                              .houseAddressDetailController
+                                              .text = data!.address.toString();
                                           controller.isPropertyHouseApartment();
                                         },
-                                        selectedItem:
-                                        controller.houses,
+                                        selectedItem: controller.houses,
                                         itemAsString: (House p) {
                                           return p.address.toString();
                                         },
                                       ),
                                     ),
 
+                                    /// House Measurement
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                                      child: Text(
+                                        "Select Area Type",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<Measurement>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller
+                                              .housesApartmentsModelApi(
+                                                  subadminid: controller
+                                                      .userdata!.userid!,
+                                                  token: controller
+                                                      .userdata!.bearerToken!,
+                                                  type: 'house');
+                                        },
+                                        onChanged: (Measurement? data) {
+                                          controller.SelectedMeasurement(data);
+                                        },
+                                        selectedItem:
+                                            controller.measurementModel,
+                                        itemAsString: (Measurement p) {
+                                          return p.area.toString() +
+                                              ' ' +
+                                              p.unit.toString();
+                                        },
+                                      ),
+                                    )
+                                  ] else if (controller.resident.society!.first
+                                          .structuretype ==
+                                      3) ...[
+                                    /// Phase
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                                      child: Text(
+                                        "Select Phase",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<Phase>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller.viewAllPhasesApi(
+                                              dynamicId:
+                                                  controller.resident.societyid,
+                                              bearerToken: controller
+                                                  .userdata.bearerToken);
+                                        },
+                                        onChanged: (Phase? data) {
+                                          controller.SelectedPhase(data);
+                                        },
+                                        selectedItem: controller.phases,
+                                        itemAsString: (Phase p) {
+                                          return p.address.toString();
+                                        },
+                                      ),
+                                    ),
+
+                                    /// Block
+
+                                    Padding(
+                                      padding: const EdgeInsets.all(8),
+                                      child: Text(
+                                        "Select Block",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<Block>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller.viewAllBlocksApi(
+                                              dynamicId: controller.phases?.id,
+                                              type: 'phase',
+                                              bearerToken: controller
+                                                  .userdata.bearerToken);
+                                        },
+                                        onChanged: (Block? data) {
+                                          controller.SelectedBlock(data);
+                                        },
+                                        selectedItem: controller.blocks,
+                                        itemAsString: (Block p) {
+                                          return p.address.toString();
+                                        },
+                                      ),
+                                    ),
+
+                                    /// Street
+
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                                      child: Text(
+                                        "Select Street",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<Street>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller.viewAllStreetsApi(
+                                              dynamicId: controller.blocks?.id,
+                                              type: 'blocks',
+                                              bearerToken: controller
+                                                  .userdata.bearerToken);
+                                        },
+                                        onChanged: (Street? data) {
+                                          controller.SelectedStreet(data);
+                                        },
+                                        selectedItem: controller.streets,
+                                        itemAsString: (Street p) {
+                                          return p.address.toString();
+                                        },
+                                      ),
+                                    ),
+
+                                    ///House
+
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                                      child: Text(
+                                        "Select House",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<House>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller.viewAllHousesApi(
+                                              dynamicId: controller.streets?.id,
+                                              bearerToken: controller
+                                                  .userdata.bearerToken,
+                                              type: 'street');
+                                        },
+                                        onChanged: (House? data) {
+                                          controller.SelectedHouse(data);
+
+                                          controller
+                                              .houseAddressDetailController
+                                              .text = data!.address.toString();
+                                          controller.isPropertyHouseApartment();
+                                        },
+                                        selectedItem: controller.houses,
+                                        itemAsString: (House p) {
+                                          return p.address.toString();
+                                        },
+                                      ),
+                                    ),
 
                                     /// House Measurement
                                     Padding(
                                       padding:
-                                      const EdgeInsets.fromLTRB(
-                                          8, 0, 0, 0),
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
                                       child: Text(
                                         "Select Area Type",
                                         style: GoogleFonts.ubuntu(
-                                            fontStyle:
-                                            FontStyle.normal,
+                                            fontStyle: FontStyle.normal,
                                             // color: secondaryColor,
-                                            fontWeight:
-                                            FontWeight.w400,
+                                            fontWeight: FontWeight.w400,
                                             fontSize: 14,
-                                            color:
-                                            HexColor('#4D4D4D')),
+                                            color: HexColor('#4D4D4D')),
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: DropdownSearch<Measurement>(
-                                        validator: (value) =>
-                                        value == null
+                                        validator: (value) => value == null
                                             ? 'field required'
                                             : null,
-                                        asyncItems:
-                                            (String filter) async {
+                                        asyncItems: (String filter) async {
                                           print(filter);
-                                          return controller.housesApartmentsModelApi(subadminid: controller.userdata!.userid!, token: controller.userdata!.bearerToken!, type: 'house');
+                                          return controller
+                                              .housesApartmentsModelApi(
+                                                  subadminid: controller
+                                                      .userdata!.userid!,
+                                                  token: controller
+                                                      .userdata!.bearerToken!,
+                                                  type: 'house');
                                         },
                                         onChanged: (Measurement? data) {
-
-                                          controller. SelectedMeasurement(data);
-
+                                          controller.SelectedMeasurement(data);
                                         },
-                                        selectedItem: controller.measurementModel,
+                                        selectedItem:
+                                            controller.measurementModel,
                                         itemAsString: (Measurement p) {
-                                          return p.area.toString()+' '+p.unit.toString();
+                                          return p.area.toString() +
+                                              ' ' +
+                                              p.unit.toString();
                                         },
                                       ),
                                     )
-
-
-
-                                  ]
-                                else if(int.tryParse(controller.resident.society![0].structuretype.toString())==3)...[
-                                      /// Phase
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.fromLTRB(
-                                            8, 0, 0, 0),
-                                        child: Text(
-                                          "Select Phase",
-                                          style: GoogleFonts.ubuntu(
-                                              fontStyle:
-                                              FontStyle.normal,
-                                              // color: secondaryColor,
-                                              fontWeight:
-                                              FontWeight.w400,
-                                              fontSize: 14,
-                                              color:
-                                              HexColor('#4D4D4D')),
-                                        ),
+                                  ] else if (controller.resident.society!.first
+                                          .structuretype ==
+                                      5) ...[
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                                      child: Text(
+                                        "Select House",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
                                       ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.all(8.0),
-                                        child: DropdownSearch<Phase>(
-                                          validator: (value) =>
-                                          value == null
-                                              ? 'field required'
-                                              : null,
-                                          asyncItems:
-                                              (String filter) async {
-                                            print(filter);
-                                            return controller
-                                                .viewAllPhasesApi(dynamicId:
-                                            controller
-                                                .resident.societyid, bearerToken: controller.userdata.bearerToken);
-                                          },
-                                          onChanged: (Phase? data) {
-                                            controller.SelectedPhase(
-                                                data);
-                                          },
-                                          selectedItem: controller.phases,
-                                          itemAsString: (Phase p) {
-                                            return p.address.toString();
-                                          },
-                                        ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<House>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller.viewAllHousesApi(
+                                              dynamicId: controller
+                                                  .resident.society!.first.id,
+                                              bearerToken: controller
+                                                  .userdata.bearerToken,
+                                              type: 'society');
+                                        },
+                                        onChanged: (House? data) {
+                                          controller.SelectedHouse(data);
+
+                                          controller
+                                              .houseAddressDetailController
+                                              .text = data!.address.toString();
+                                          controller.isPropertyHouseApartment();
+                                        },
+                                        selectedItem: controller.houses,
+                                        itemAsString: (House p) {
+                                          return p.address.toString();
+                                        },
                                       ),
+                                    ),
 
-                                      /// Block
-
-
-
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.all(8),
-                                        child: Text(
-                                          "Select Block",
-                                          style: GoogleFonts.ubuntu(
-                                              fontStyle:
-                                              FontStyle.normal,
-                                              // color: secondaryColor,
-                                              fontWeight:
-                                              FontWeight.w400,
-                                              fontSize: 14,
-                                              color:
-                                              HexColor('#4D4D4D')),
-                                        ),
+                                    /// House Measurement
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                                      child: Text(
+                                        "Select Area Type",
+                                        style: GoogleFonts.ubuntu(
+                                            fontStyle: FontStyle.normal,
+                                            // color: secondaryColor,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            color: HexColor('#4D4D4D')),
                                       ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.all(8.0),
-                                        child: DropdownSearch<Block>(
-                                          validator: (value) =>
-                                          value == null
-                                              ? 'field required'
-                                              : null,
-                                          asyncItems:
-                                              (String filter) async {
-                                            print(filter);
-                                            return controller
-                                                .viewAllBlocksApi(
-                                                dynamicId: controller.phases?.id,
-                                                type:'phase',bearerToken: controller.userdata.bearerToken);
-                                          },
-                                          onChanged: (Block? data) {
-                                            controller.SelectedBlock(
-                                                data);
-                                          },
-                                          selectedItem:
-                                          controller.blocks,
-                                          itemAsString: (Block p) {
-                                            return p.address.toString();
-                                          },
-                                        ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: DropdownSearch<Measurement>(
+                                        validator: (value) => value == null
+                                            ? 'field required'
+                                            : null,
+                                        asyncItems: (String filter) async {
+                                          print(filter);
+                                          return controller
+                                              .housesApartmentsModelApi(
+                                                  subadminid: controller
+                                                      .userdata!.userid!,
+                                                  token: controller
+                                                      .userdata!.bearerToken!,
+                                                  type: 'house');
+                                        },
+                                        onChanged: (Measurement? data) {
+                                          controller.SelectedMeasurement(data);
+                                        },
+                                        selectedItem:
+                                            controller.measurementModel,
+                                        itemAsString: (Measurement p) {
+                                          return p.area.toString() +
+                                              ' ' +
+                                              p.unit.toString();
+                                        },
                                       ),
+                                    )
+                                  ],
 
-                                      /// Street
-
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.fromLTRB(
-                                            8, 0, 0, 0),
-                                        child: Text(
-                                          "Select Street",
-                                          style: GoogleFonts.ubuntu(
-                                              fontStyle:
-                                              FontStyle.normal,
-                                              // color: secondaryColor,
-                                              fontWeight:
-                                              FontWeight.w400,
-                                              fontSize: 14,
-                                              color:
-                                              HexColor('#4D4D4D')),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.all(8.0),
-                                        child: DropdownSearch<Street>(
-                                          validator: (value) =>
-                                          value == null
-                                              ? 'field required'
-                                              : null,
-                                          asyncItems:
-                                              (String filter) async {
-                                            print(filter);
-                                            return controller
-                                                .viewAllStreetsApi(dynamicId:
-                                            controller.blocks?.id,type: 'blocks',bearerToken: controller.userdata.bearerToken);
-                                          },
-                                          onChanged: (Street? data) {
-                                            controller.SelectedStreet(
-                                                data);
-                                          },
-                                          selectedItem:
-                                          controller.streets,
-                                          itemAsString: (Street p) {
-                                            return p.address.toString();
-                                          },
-                                        ),
-                                      ),
-
-
-                                      ///House
-
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.fromLTRB(
-                                            8, 0, 0, 0),
-                                        child: Text(
-                                          "Select House",
-                                          style: GoogleFonts.ubuntu(
-                                              fontStyle:
-                                              FontStyle.normal,
-                                              // color: secondaryColor,
-                                              fontWeight:
-                                              FontWeight.w400,
-                                              fontSize: 14,
-                                              color:
-                                              HexColor('#4D4D4D')),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.all(8.0),
-                                        child: DropdownSearch<House>(
-                                          validator: (value) =>
-                                          value == null
-                                              ? 'field required'
-                                              : null,
-                                          asyncItems:
-                                              (String filter) async {
-                                            print(filter);
-                                            return controller
-                                                .viewAllHousesApi(streetid:
-                                                controller.streets?.id,bearerToken: controller.userdata.bearerToken);
-                                          },
-                                          onChanged: (House? data) {
-
-                                            controller.SelectedHouse(
-                                                data);
-
-
-
-                                            controller
-                                                .houseAddressDetailController
-                                                .text = data!.address.toString();
-                                            controller.isPropertyHouseApartment();
-                                          },
-                                          selectedItem:
-                                          controller.houses,
-                                          itemAsString: (House p) {
-                                            return p.address.toString();
-                                          },
-                                        ),
-                                      ),
-
-
-                                      /// House Measurement
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.fromLTRB(
-                                            8, 0, 0, 0),
-                                        child: Text(
-                                          "Select Area Type",
-                                          style: GoogleFonts.ubuntu(
-                                              fontStyle:
-                                              FontStyle.normal,
-                                              // color: secondaryColor,
-                                              fontWeight:
-                                              FontWeight.w400,
-                                              fontSize: 14,
-                                              color:
-                                              HexColor('#4D4D4D')),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.all(8.0),
-                                        child: DropdownSearch<Measurement>(
-                                          validator: (value) =>
-                                          value == null
-                                              ? 'field required'
-                                              : null,
-                                          asyncItems:
-                                              (String filter) async {
-                                            print(filter);
-                                            return controller.housesApartmentsModelApi(subadminid: controller.userdata!.userid!, token: controller.userdata!.bearerToken!, type: 'house');
-                                          },
-                                          onChanged: (Measurement? data) {
-
-                                            controller. SelectedMeasurement(data);
-
-                                          },
-                                          selectedItem: controller.measurementModel,
-                                          itemAsString: (Measurement p) {
-                                            return p.area.toString()+' '+p.unit.toString();
-                                          },
-                                        ),
-                                      )
-
-
-                                  ]
-
-                                  ,
-
-
-
-
-
-
-
-
-
-                                  MyText(name: 'Vechile Number'),
+                                  MyText(name: 'Vehicle Number'),
                                   Padding(
                                     padding: const EdgeInsets.all(6.0),
                                     child: TextFormField(
@@ -718,17 +720,15 @@ class HouseResidentVerification extends GetView {
                                               status: 1,
                                               token: controller
                                                   .userdata.bearerToken!,
-                                              bid: controller.blocks?.id??0,
-                                              measurementid:
-                                                  controller.measurementModel!.id,
-                                              pid: controller.phases?.id??0,
+                                              bid: controller.blocks?.id ?? 0,
+                                              measurementid: controller
+                                                  .measurementModel!.id,
+                                              pid: controller.phases?.id ?? 0,
                                               propertyid:
                                                   controller.houses!.id!,
-                                              sid: controller.streets!.id!,
+                                              sid: controller.streets?.id ?? 0,
                                               vechileno: controller
                                                   .vehicleNoController.text);
-                                          // Get.offNamed(unverifiedresident,
-                                          //     arguments: controller.userdata);
                                         }
                                       },
                                       name: 'Verify',

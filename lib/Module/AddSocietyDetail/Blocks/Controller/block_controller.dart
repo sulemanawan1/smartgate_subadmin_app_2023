@@ -53,7 +53,6 @@ class BlocksController extends GetxController {
 
       update();
     });
-  
   }
 
   Future<Blocks> blocksApi(
@@ -75,8 +74,6 @@ class BlocksController extends GetxController {
       },
     );
     var data = jsonDecode(response.body.toString());
-
-    ;
 
     if (response.statusCode == 200) {
       print(response.body);

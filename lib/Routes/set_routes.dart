@@ -82,7 +82,8 @@ const String localbuildingfloorsscreen = '/LocalBuildingFloorsScreen';
 const String addlocalbuildingfloors = '/AddLocalBuildingFloors';
 const String localbuildingapartmentscreen = '/LocalBuildingApartmentScreen';
 const String addlocalbuildingapartmentsscreen = '/AddLocalBuildingApartmentsScreen';
-
+const String structureType5HouseOrBuildingMiddlewareScreen =
+    '/StructureType5HouseOrBuildingMiddlewareScreen';
 
 
 

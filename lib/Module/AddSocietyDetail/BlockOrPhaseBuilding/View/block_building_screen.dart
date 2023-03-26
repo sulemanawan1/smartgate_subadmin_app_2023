@@ -1,19 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+
 import 'package:societyadminapp/Constants/constants.dart';
 
-import 'package:societyadminapp/Module/AddSocietyDetail/Phases/Controller/phases_controller.dart';
-import 'package:societyadminapp/Services/Shared%20Preferences/MySharedPreferences.dart';
 import 'package:societyadminapp/Widgets/Loader/loader.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
 import '../../../../Routes/set_routes.dart';
-import '../../../Login/Model/User.dart';
+
 import '../Controller/block_building_controller.dart';
 
 class BlockBuilding extends GetView {
@@ -67,10 +65,10 @@ class BlockBuilding extends GetView {
                           child: FutureBuilder(
                               future: (controller.user.structureType == 2)
                                   ? controller.SocietyBuildingApi(
-                                      dynamicid: controller.bid!,
+                                      dynamicid: controller.bid,
                                       token: controller.user.bearerToken!)
                                   : controller.SocietyBuildingApi(
-                                      dynamicid: controller.pid!,
+                                      dynamicid: controller.pid,
                                       token: controller.user.bearerToken!),
                               builder: (BuildContext context,
                                   AsyncSnapshot snapshot) {

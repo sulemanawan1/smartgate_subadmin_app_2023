@@ -1,5 +1,5 @@
 /// success : true
-/// data : [{"id":4,"residentid":4,"subadminid":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","houseaddress":"house 1","vechileno":"","residenttype":"Rental","propertytype":"house","committeemember":0,"status":0,"created_at":"2023-03-14T08:17:41.000000Z","updated_at":"2023-03-14T08:18:35.000000Z","societyid":1,"pid":1,"bid":1,"sid":3,"propertyid":27,"measurementid":1,"firstname":"king","lastname":"khan","cnic":"54321","address":"---","mobileno":"999","password":"$2y$10$JKjJxeqPC7Tfg7tA9PaXsOaom101/U.UEFhSXuBHEbEL/LRifVvq.","roleid":3,"rolename":"resident","image":"1678781861.jpg","fcmtoken":"diTns3WsS9OQCB8WDfYL5P:APA91bGxUvv5BlrfJs0-Ddh6Meiv7rxhqNaBOcZhjv4AOHXdWfXum-ZtSAyH6zumL_-JSFbLOLk1-Y3ZnxdX0-YYz32JqI-62URWsKRIPlZ9NYV6PDG-USdpudxYvs9vuYg6tmfJG0EJ","society":[{"id":1,"country":"Pakistan","state":"Punjab","city":"Rawat","area":"T-Chowk","type":"society","name":"Rawat Enclave","address":"Kallar Syedian Road","superadminid":1,"structuretype":3,"created_at":"2023-03-14T06:32:40.000000Z","updated_at":"2023-03-14T06:32:40.000000Z"}],"phase":[{"id":1,"address":"phase","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:11.000000Z","updated_at":"2023-03-14T08:16:11.000000Z"}],"block":[{"id":1,"address":"block","type":"phase","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:22.000000Z","updated_at":"2023-03-14T08:16:22.000000Z"}],"street":[{"id":3,"address":"street","type":"blocks","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:35.000000Z","updated_at":"2023-03-14T08:16:35.000000Z"}],"property":[{"id":27,"address":"house","iteration":"1","streetid":3,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:47.000000Z","updated_at":"2023-03-14T08:16:47.000000Z"}],"measurement":[{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":5,"bedrooms":5,"status":0,"created_at":"2023-03-14T06:42:59.000000Z","updated_at":"2023-03-14T06:42:59.000000Z"}],"owner":[{"id":1,"residentid":4,"ownername":"kinger","owneraddress":"NA","ownermobileno":"bn","created_at":"2023-03-14T08:18:35.000000Z","updated_at":"2023-03-14T08:18:35.000000Z"}]}]
+/// data : [{"id":42,"residentid":42,"subadminid":2,"country":"","state":"","city":"","houseaddress":"house#1","vechileno":"","residenttype":"Rental","propertytype":"house","committeemember":0,"status":0,"created_at":"2023-03-25T14:07:01.000000Z","updated_at":"2023-03-25T14:07:46.000000Z","societyid":1,"pid":7,"bid":28,"sid":68,"propertyid":64,"measurementid":1,"firstname":"Farrah","lastname":"Bashir","cnic":"555555","address":"---","mobileno":"03215550979","password":"$2y$10$UpyjT8/SSiJ6E6v1OAMMuujrY.NWLxCathF1.2kCfUSz0OianCN7a","roleid":3,"rolename":"resident","image":"images/user.png","fcmtoken":"fELvJ3xeQ1mGEIk74Pzd4n:APA91bF0KszAWMp20WiPUvjbGNeQgj0T39U3IQbIrugNy_k7SKzX0ZvsV6V3_bsfvIW9k6SnuEN1DsqAnDCRIkfo5aW9p-u2n86TDRVDNF_PBHP5MEC-qvBwPKBzTkWi3FzVKQ2eQ1zC","society":[{"id":1,"country":"🇵🇰    Pakistan","state":"Punjab","city":"Rawalpindi","area":"Rawat","type":"society","name":"Rawat Enclave","address":"Kallar Syedian Road","superadminid":1,"structuretype":3,"created_at":"2023-03-19T09:20:55.000000Z","updated_at":"2023-03-19T09:20:55.000000Z"}],"phase":[{"id":7,"address":"phase#1","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:05.000000Z","updated_at":"2023-03-25T09:08:05.000000Z"}],"block":[{"id":28,"address":"block#1","type":"phase","iteration":"1","dynamicid":7,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:18.000000Z","updated_at":"2023-03-25T09:08:18.000000Z"}],"street":[{"id":68,"address":"street#1","type":"blocks","iteration":"1","dynamicid":28,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:35.000000Z","updated_at":"2023-03-25T09:08:35.000000Z"}],"property":[{"id":64,"address":"house#1","type":"street","iteration":"1","dynamicid":68,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:50.000000Z","updated_at":"2023-03-25T09:08:50.000000Z"}],"measurement":[{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":5,"bedrooms":5,"status":0,"created_at":"2023-03-19T11:53:08.000000Z","updated_at":"2023-03-19T11:53:08.000000Z"}],"owner":[{"id":2,"residentid":42,"ownername":"ali","owneraddress":"NA","ownermobileno":"03215550979","created_at":"2023-03-25T14:07:45.000000Z","updated_at":"2023-03-25T14:07:45.000000Z"}]}]
 
 class HouseResident {
   HouseResident({
@@ -39,49 +39,49 @@ HouseResident copyWith({  bool? success,
 
 }
 
-/// id : 4
-/// residentid : 4
+/// id : 42
+/// residentid : 42
 /// subadminid : 2
-/// country : "🇵🇰    Pakistan"
-/// state : "null"
-/// city : "null"
-/// houseaddress : "house 1"
+/// country : ""
+/// state : ""
+/// city : ""
+/// houseaddress : "house#1"
 /// vechileno : ""
 /// residenttype : "Rental"
 /// propertytype : "house"
 /// committeemember : 0
 /// status : 0
-/// created_at : "2023-03-14T08:17:41.000000Z"
-/// updated_at : "2023-03-14T08:18:35.000000Z"
+/// created_at : "2023-03-25T14:07:01.000000Z"
+/// updated_at : "2023-03-25T14:07:46.000000Z"
 /// societyid : 1
-/// pid : 1
-/// bid : 1
-/// sid : 3
-/// propertyid : 27
+/// pid : 7
+/// bid : 28
+/// sid : 68
+/// propertyid : 64
 /// measurementid : 1
-/// firstname : "king"
-/// lastname : "khan"
-/// cnic : "54321"
+/// firstname : "Farrah"
+/// lastname : "Bashir"
+/// cnic : "555555"
 /// address : "---"
-/// mobileno : "999"
-/// password : "$2y$10$JKjJxeqPC7Tfg7tA9PaXsOaom101/U.UEFhSXuBHEbEL/LRifVvq."
+/// mobileno : "03215550979"
+/// password : "$2y$10$UpyjT8/SSiJ6E6v1OAMMuujrY.NWLxCathF1.2kCfUSz0OianCN7a"
 /// roleid : 3
 /// rolename : "resident"
-/// image : "1678781861.jpg"
-/// fcmtoken : "diTns3WsS9OQCB8WDfYL5P:APA91bGxUvv5BlrfJs0-Ddh6Meiv7rxhqNaBOcZhjv4AOHXdWfXum-ZtSAyH6zumL_-JSFbLOLk1-Y3ZnxdX0-YYz32JqI-62URWsKRIPlZ9NYV6PDG-USdpudxYvs9vuYg6tmfJG0EJ"
-/// society : [{"id":1,"country":"Pakistan","state":"Punjab","city":"Rawat","area":"T-Chowk","type":"society","name":"Rawat Enclave","address":"Kallar Syedian Road","superadminid":1,"structuretype":3,"created_at":"2023-03-14T06:32:40.000000Z","updated_at":"2023-03-14T06:32:40.000000Z"}]
-/// phase : [{"id":1,"address":"phase","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:11.000000Z","updated_at":"2023-03-14T08:16:11.000000Z"}]
-/// block : [{"id":1,"address":"block","type":"phase","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:22.000000Z","updated_at":"2023-03-14T08:16:22.000000Z"}]
-/// street : [{"id":3,"address":"street","type":"blocks","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:35.000000Z","updated_at":"2023-03-14T08:16:35.000000Z"}]
-/// property : [{"id":27,"address":"house","iteration":"1","streetid":3,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-14T08:16:47.000000Z","updated_at":"2023-03-14T08:16:47.000000Z"}]
-/// measurement : [{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":5,"bedrooms":5,"status":0,"created_at":"2023-03-14T06:42:59.000000Z","updated_at":"2023-03-14T06:42:59.000000Z"}]
-/// owner : [{"id":1,"residentid":4,"ownername":"kinger","owneraddress":"NA","ownermobileno":"bn","created_at":"2023-03-14T08:18:35.000000Z","updated_at":"2023-03-14T08:18:35.000000Z"}]
+/// image : "images/user.png"
+/// fcmtoken : "fELvJ3xeQ1mGEIk74Pzd4n:APA91bF0KszAWMp20WiPUvjbGNeQgj0T39U3IQbIrugNy_k7SKzX0ZvsV6V3_bsfvIW9k6SnuEN1DsqAnDCRIkfo5aW9p-u2n86TDRVDNF_PBHP5MEC-qvBwPKBzTkWi3FzVKQ2eQ1zC"
+/// society : [{"id":1,"country":"🇵🇰    Pakistan","state":"Punjab","city":"Rawalpindi","area":"Rawat","type":"society","name":"Rawat Enclave","address":"Kallar Syedian Road","superadminid":1,"structuretype":3,"created_at":"2023-03-19T09:20:55.000000Z","updated_at":"2023-03-19T09:20:55.000000Z"}]
+/// phase : [{"id":7,"address":"phase#1","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:05.000000Z","updated_at":"2023-03-25T09:08:05.000000Z"}]
+/// block : [{"id":28,"address":"block#1","type":"phase","iteration":"1","dynamicid":7,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:18.000000Z","updated_at":"2023-03-25T09:08:18.000000Z"}]
+/// street : [{"id":68,"address":"street#1","type":"blocks","iteration":"1","dynamicid":28,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:35.000000Z","updated_at":"2023-03-25T09:08:35.000000Z"}]
+/// property : [{"id":64,"address":"house#1","type":"street","iteration":"1","dynamicid":68,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:50.000000Z","updated_at":"2023-03-25T09:08:50.000000Z"}]
+/// measurement : [{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":5,"bedrooms":5,"status":0,"created_at":"2023-03-19T11:53:08.000000Z","updated_at":"2023-03-19T11:53:08.000000Z"}]
+/// owner : [{"id":2,"residentid":42,"ownername":"ali","owneraddress":"NA","ownermobileno":"03215550979","created_at":"2023-03-25T14:07:45.000000Z","updated_at":"2023-03-25T14:07:45.000000Z"}]
 
 class Data {
   Data({
-      int? id,
-      int? residentid,
-      int? subadminid,
+      int? id, 
+      int? residentid, 
+      int? subadminid, 
       String? country, 
       String? state, 
       String? city, 
@@ -89,23 +89,23 @@ class Data {
       String? vechileno, 
       String? residenttype, 
       String? propertytype, 
-      int? committeemember,
-      int? status,
+      int? committeemember, 
+      int? status, 
       String? createdAt, 
       String? updatedAt, 
-      int? societyid,
-      int? pid,
-      int? bid,
-      int? sid,
-      int? propertyid,
-      int? measurementid,
+      int? societyid, 
+      int? pid, 
+      int? bid, 
+      int? sid, 
+      int? propertyid, 
+      int? measurementid, 
       String? firstname, 
       String? lastname, 
       String? cnic, 
       String? address, 
       String? mobileno, 
       String? password, 
-      int? roleid,
+      int? roleid, 
       String? rolename, 
       String? image, 
       String? fcmtoken, 
@@ -437,18 +437,18 @@ Data copyWith({  int? id,
 
 }
 
-/// id : 1
-/// residentid : 4
-/// ownername : "kinger"
+/// id : 2
+/// residentid : 42
+/// ownername : "ali"
 /// owneraddress : "NA"
-/// ownermobileno : "bn"
-/// created_at : "2023-03-14T08:18:35.000000Z"
-/// updated_at : "2023-03-14T08:18:35.000000Z"
+/// ownermobileno : "03215550979"
+/// created_at : "2023-03-25T14:07:45.000000Z"
+/// updated_at : "2023-03-25T14:07:45.000000Z"
 
 class Owner {
   Owner({
-      int? id,
-      int? residentid,
+      int? id, 
+      int? residentid, 
       String? ownername, 
       String? owneraddress, 
       String? ownermobileno, 
@@ -527,22 +527,22 @@ Owner copyWith({  int? id,
 /// area : 5
 /// bedrooms : 5
 /// status : 0
-/// created_at : "2023-03-14T06:42:59.000000Z"
-/// updated_at : "2023-03-14T06:42:59.000000Z"
+/// created_at : "2023-03-19T11:53:08.000000Z"
+/// updated_at : "2023-03-19T11:53:08.000000Z"
 
 class Measurement {
   Measurement({
-      int? id,
-      int? subadminid,
+      int? id, 
+      int? subadminid, 
       String? type, 
       String? unit, 
-      int? charges,
-      int? chargesafterduedate,
-      int? appcharges,
-      int? tax,
-      int? area,
-      int? bedrooms,
-      int? status,
+      int? charges, 
+      int? chargesafterduedate, 
+      int? appcharges, 
+      int? tax, 
+      int? area, 
+      int? bedrooms, 
+      int? status, 
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -649,31 +649,34 @@ Measurement copyWith({  int? id,
 
 }
 
-/// id : 27
-/// address : "house"
+/// id : 64
+/// address : "house#1"
+/// type : "street"
 /// iteration : "1"
-/// streetid : 3
+/// dynamicid : 68
 /// subadminid : 2
 /// societyid : 1
 /// superadminid : 1
-/// created_at : "2023-03-14T08:16:47.000000Z"
-/// updated_at : "2023-03-14T08:16:47.000000Z"
+/// created_at : "2023-03-25T09:08:50.000000Z"
+/// updated_at : "2023-03-25T09:08:50.000000Z"
 
 class Property {
   Property({
-      int? id,
+      int? id, 
       String? address, 
+      String? type, 
       String? iteration, 
-      int? streetid,
-      int? subadminid,
-      int? societyid,
-      int? superadminid,
+      int? dynamicid, 
+      int? subadminid, 
+      int? societyid, 
+      int? superadminid, 
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
     _address = address;
+    _type = type;
     _iteration = iteration;
-    _streetid = streetid;
+    _dynamicid = dynamicid;
     _subadminid = subadminid;
     _societyid = societyid;
     _superadminid = superadminid;
@@ -684,8 +687,9 @@ class Property {
   Property.fromJson(dynamic json) {
     _id = json['id'];
     _address = json['address'];
+    _type = json['type'];
     _iteration = json['iteration'];
-    _streetid = json['streetid'];
+    _dynamicid = json['dynamicid'];
     _subadminid = json['subadminid'];
     _societyid = json['societyid'];
     _superadminid = json['superadminid'];
@@ -694,8 +698,9 @@ class Property {
   }
   int? _id;
   String? _address;
+  String? _type;
   String? _iteration;
-  int? _streetid;
+  int? _dynamicid;
   int? _subadminid;
   int? _societyid;
   int? _superadminid;
@@ -703,8 +708,9 @@ class Property {
   String? _updatedAt;
 Property copyWith({  int? id,
   String? address,
+  String? type,
   String? iteration,
-  int? streetid,
+  int? dynamicid,
   int? subadminid,
   int? societyid,
   int? superadminid,
@@ -712,8 +718,9 @@ Property copyWith({  int? id,
   String? updatedAt,
 }) => Property(  id: id ?? _id,
   address: address ?? _address,
+  type: type ?? _type,
   iteration: iteration ?? _iteration,
-  streetid: streetid ?? _streetid,
+  dynamicid: dynamicid ?? _dynamicid,
   subadminid: subadminid ?? _subadminid,
   societyid: societyid ?? _societyid,
   superadminid: superadminid ?? _superadminid,
@@ -722,8 +729,9 @@ Property copyWith({  int? id,
 );
   int? get id => _id;
   String? get address => _address;
+  String? get type => _type;
   String? get iteration => _iteration;
-  int? get streetid => _streetid;
+  int? get dynamicid => _dynamicid;
   int? get subadminid => _subadminid;
   int? get societyid => _societyid;
   int? get superadminid => _superadminid;
@@ -734,8 +742,9 @@ Property copyWith({  int? id,
     final map = <String, dynamic>{};
     map['id'] = _id;
     map['address'] = _address;
+    map['type'] = _type;
     map['iteration'] = _iteration;
-    map['streetid'] = _streetid;
+    map['dynamicid'] = _dynamicid;
     map['subadminid'] = _subadminid;
     map['societyid'] = _societyid;
     map['superadminid'] = _superadminid;
@@ -746,27 +755,27 @@ Property copyWith({  int? id,
 
 }
 
-/// id : 3
-/// address : "street"
+/// id : 68
+/// address : "street#1"
 /// type : "blocks"
 /// iteration : "1"
-/// dynamicid : 1
+/// dynamicid : 28
 /// subadminid : 2
 /// societyid : 1
 /// superadminid : 1
-/// created_at : "2023-03-14T08:16:35.000000Z"
-/// updated_at : "2023-03-14T08:16:35.000000Z"
+/// created_at : "2023-03-25T09:08:35.000000Z"
+/// updated_at : "2023-03-25T09:08:35.000000Z"
 
 class Street {
   Street({
-      int? id,
+      int? id, 
       String? address, 
       String? type, 
       String? iteration, 
-      int? dynamicid,
-      int? subadminid,
-      int? societyid,
-      int? superadminid,
+      int? dynamicid, 
+      int? subadminid, 
+      int? societyid, 
+      int? superadminid, 
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -852,27 +861,27 @@ Street copyWith({  int? id,
 
 }
 
-/// id : 1
-/// address : "block"
+/// id : 28
+/// address : "block#1"
 /// type : "phase"
 /// iteration : "1"
-/// dynamicid : 1
+/// dynamicid : 7
 /// subadminid : 2
 /// societyid : 1
 /// superadminid : 1
-/// created_at : "2023-03-14T08:16:22.000000Z"
-/// updated_at : "2023-03-14T08:16:22.000000Z"
+/// created_at : "2023-03-25T09:08:18.000000Z"
+/// updated_at : "2023-03-25T09:08:18.000000Z"
 
 class Block {
   Block({
-      int? id,
+      int? id, 
       String? address, 
       String? type, 
       String? iteration, 
-      int? dynamicid,
-      int? subadminid,
-      int? societyid,
-      int? superadminid,
+      int? dynamicid, 
+      int? subadminid, 
+      int? societyid, 
+      int? superadminid, 
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -958,25 +967,25 @@ Block copyWith({  int? id,
 
 }
 
-/// id : 1
-/// address : "phase"
+/// id : 7
+/// address : "phase#1"
 /// iteration : "1"
 /// dynamicid : 1
 /// subadminid : 2
 /// societyid : 1
 /// superadminid : 1
-/// created_at : "2023-03-14T08:16:11.000000Z"
-/// updated_at : "2023-03-14T08:16:11.000000Z"
+/// created_at : "2023-03-25T09:08:05.000000Z"
+/// updated_at : "2023-03-25T09:08:05.000000Z"
 
 class Phase {
   Phase({
-      int? id,
+      int? id, 
       String? address, 
       String? iteration, 
-      int? dynamicid,
-      int? subadminid,
-      int? societyid,
-      int? superadminid,
+      int? dynamicid, 
+      int? subadminid, 
+      int? societyid, 
+      int? superadminid, 
       String? createdAt, 
       String? updatedAt,}){
     _id = id;
@@ -1056,21 +1065,21 @@ Phase copyWith({  int? id,
 }
 
 /// id : 1
-/// country : "Pakistan"
+/// country : "🇵🇰    Pakistan"
 /// state : "Punjab"
-/// city : "Rawat"
-/// area : "T-Chowk"
+/// city : "Rawalpindi"
+/// area : "Rawat"
 /// type : "society"
 /// name : "Rawat Enclave"
 /// address : "Kallar Syedian Road"
 /// superadminid : 1
 /// structuretype : 3
-/// created_at : "2023-03-14T06:32:40.000000Z"
-/// updated_at : "2023-03-14T06:32:40.000000Z"
+/// created_at : "2023-03-19T09:20:55.000000Z"
+/// updated_at : "2023-03-19T09:20:55.000000Z"
 
 class Society {
   Society({
-      int? id,
+      int? id, 
       String? country, 
       String? state, 
       String? city, 
@@ -1078,8 +1087,8 @@ class Society {
       String? type, 
       String? name, 
       String? address, 
-      int? superadminid,
-      int? structuretype,
+      int? superadminid, 
+      int? structuretype, 
       String? createdAt, 
       String? updatedAt,}){
     _id = id;

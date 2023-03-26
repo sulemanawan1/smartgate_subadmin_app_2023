@@ -18,197 +18,226 @@ class AddPhases extends GetView {
         body: GetBuilder<AddPhasesController>(
             init: AddPhasesController(),
             builder: (controller) {
-              return Padding(
-                padding: EdgeInsets.only(top: 5.0, left: 10.0, right: 10.0),
-                child: Form(
-                  key: _formKey,
-                  child: ListView(
-                    children: <Widget>[
-                      MyBackButton(
-                        text: 'Add Phases',
-                        onTap: () {
-                          Get.offAndToNamed(phasess,
-                              arguments: controller.user);
-                        },
-                      ),
-                      SizedBox(height: 20),
-                      SizedBox(
-                        height: 344,
-                        width: 299,
-                        child: Card(
-                          child: Column(
-                            children: [
-                              MyTextFormField(
-                                hintText: 'Name',
-                                labelText: 'Name',
-                                onEnabledBorderColor: primaryColor,
-                                onFocusedBorderColor: primaryColor,
-                                controller: controller.addressController,
-                                validator: emptyStringValidator,
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 28, left: 27),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 27),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        color: Color(0xFFF7F8FA),
-                                        height: 25,
-                                        width: 98,
-                                        child: Center(
-                                            child: Text(
-                                          'From Phase',
-                                          style: TextStyle(
-                                              color: HexColor('#535353')),
-                                        )),
-                                      ),
-                                      SizedBox(
-                                        width: 18,
-                                      ),
-                                      Image(
-                                          image:
-                                              AssetImage('assets/arrow1.png')),
-                                      SizedBox(
-                                        width: 18,
-                                      ),
-                                      Container(
-                                        color: Color(0xFFF7F8FA),
-                                        height: 25,
-                                        width: 98,
-                                        child: Center(
-                                            child: Text(
-                                          'To Phase',
-                                          style: TextStyle(
-                                              color: HexColor('#535353')),
-                                        )),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 38),
-                                child: Row(
+              return WillPopScope(
+                onWillPop: () async {
+                  Get.offNamed(phasess, arguments: controller.user);
+
+                  return false;
+                },
+                child: Scaffold(
+                  body: SafeArea(
+                    child: Padding(
+                      padding:
+                          EdgeInsets.only(top: 5.0, left: 10.0, right: 10.0),
+                      child: Form(
+                        key: _formKey,
+                        child: ListView(
+                          children: <Widget>[
+                            MyBackButton(
+                              text: 'Add Phases',
+                              onTap: () {
+                                Get.offNamed(phasess,
+                                    arguments: controller.user);
+                              },
+                            ),
+                            SizedBox(height: 20),
+                            SizedBox(
+                              height: 344,
+                              width: 299,
+                              child: Card(
+                                child: Column(
                                   children: [
+                                    MyTextFormField(
+                                      hintText: 'Name',
+                                      labelText: 'Name',
+                                      onEnabledBorderColor: primaryColor,
+                                      onFocusedBorderColor: primaryColor,
+                                      controller: controller.addressController,
+                                      validator: emptyStringValidator,
+                                    ),
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 38),
-                                      child: Container(
-                                        width: 75,
-                                        height: 75,
-                                        color:
-                                            Color.fromRGBO(255, 153, 0, 0.14),
-                                        child: Stack(
+                                      padding:
+                                          EdgeInsets.only(top: 28, left: 27),
+                                      child: Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 27),
+                                        child: Row(
                                           children: [
-                                            Center(
-                                              child: Image(
-                                                  image: AssetImage(
-                                                      'assets/textfieldimg.png')),
+                                            Container(
+                                              color: Color(0xFFF7F8FA),
+                                              height: 25,
+                                              width: 98,
+                                              child: Center(
+                                                  child: Text(
+                                                'From Phase',
+                                                style: TextStyle(
+                                                    color: HexColor('#535353')),
+                                              )),
                                             ),
-                                            Center(
-                                              child: TextFormField(
-                                                validator: emptyStringValidator,
-                                                controller:
-                                                    controller.fromController,
-                                                keyboardType:
-                                                    TextInputType.number,
-                                                enabled: true,
-                                                decoration: InputDecoration(
-                                                    errorBorder:
-                                                        OutlineInputBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8),
-                                                      borderSide:
-                                                          BorderSide(), //<-- SEE HERE
-                                                    ),
-                                                    border: InputBorder.none),
-                                              ),
+                                            SizedBox(
+                                              width: 18,
                                             ),
+                                            Image(
+                                                image: AssetImage(
+                                                    'assets/arrow1.png')),
+                                            SizedBox(
+                                              width: 18,
+                                            ),
+                                            Container(
+                                              color: Color(0xFFF7F8FA),
+                                              height: 25,
+                                              width: 98,
+                                              child: Center(
+                                                  child: Text(
+                                                'To Phase',
+                                                style: TextStyle(
+                                                    color: HexColor('#535353')),
+                                              )),
+                                            )
                                           ],
                                         ),
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 72,
+                                      height: 20,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        width: 75,
-                                        height: 75,
-                                        color:
-                                            Color.fromRGBO(255, 153, 0, 0.14),
-                                        // decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/textfieldimg.png'))),
-
-                                        child: Stack(
-                                          children: [
-                                            Center(
-                                              child: Image(
-                                                  image: AssetImage(
-                                                      'assets/textfieldimg.png')),
-                                            ),
-                                            Center(
-                                              child: TextFormField(
-                                                validator: emptyStringValidator,
-                                                controller:
-                                                    controller.toController,
-                                                keyboardType:
-                                                    TextInputType.number,
-                                                enabled: true,
-                                                decoration: InputDecoration(
-                                                    errorBorder:
-                                                        OutlineInputBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8),
-                                                      borderSide:
-                                                          BorderSide(), //<-- SEE HERE
+                                      padding: const EdgeInsets.only(left: 38),
+                                      child: Row(
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 38),
+                                            child: Container(
+                                              width: 75,
+                                              height: 75,
+                                              color: Color.fromRGBO(
+                                                  255, 153, 0, 0.14),
+                                              child: Stack(
+                                                children: [
+                                                  Center(
+                                                    child: Image(
+                                                        image: AssetImage(
+                                                            'assets/textfieldimg.png')),
+                                                  ),
+                                                  Center(
+                                                    child: TextFormField(
+                                                      validator:
+                                                          emptyStringValidator,
+                                                      controller: controller
+                                                          .fromController,
+                                                      keyboardType:
+                                                          TextInputType.number,
+                                                      enabled: true,
+                                                      decoration:
+                                                          InputDecoration(
+                                                              errorBorder:
+                                                                  OutlineInputBorder(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            8),
+                                                                borderSide:
+                                                                    BorderSide(), //<-- SEE HERE
+                                                              ),
+                                                              border:
+                                                                  InputBorder
+                                                                      .none),
                                                     ),
-                                                    border: InputBorder.none),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                          SizedBox(
+                                            width: 72,
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Container(
+                                              width: 75,
+                                              height: 75,
+                                              color: Color.fromRGBO(
+                                                  255, 153, 0, 0.14),
+                                              // decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/textfieldimg.png'))),
+
+                                              child: Stack(
+                                                children: [
+                                                  Center(
+                                                    child: Image(
+                                                        image: AssetImage(
+                                                            'assets/textfieldimg.png')),
+                                                  ),
+                                                  Center(
+                                                    child: TextFormField(
+                                                      validator:
+                                                          emptyStringValidator,
+                                                      controller: controller
+                                                          .toController,
+                                                      keyboardType:
+                                                          TextInputType.number,
+                                                      enabled: true,
+                                                      decoration:
+                                                          InputDecoration(
+                                                              errorBorder:
+                                                                  OutlineInputBorder(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            8),
+                                                                borderSide:
+                                                                    BorderSide(), //<-- SEE HERE
+                                                              ),
+                                                              border:
+                                                                  InputBorder
+                                                                      .none),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    MyButton(
+                                      height: 37,
+                                      width: 222,
+                                      border: 5,
+                                      onPressed: () {
+                                        // print(controller.user.userid);
+                                        // print(controller.user.bearerToken);
+                                        print(controller.user.societyid);
+
+                                        controller.addPhaseApi(
+                                          address:
+                                              controller.addressController.text,
+                                          dynamicid: controller.user.societyid!,
+                                          societyid: controller.user.societyid!,
+                                          subadminid: controller.user.userid!,
+                                          superadminid:
+                                              controller.user.superadminid!,
+                                          bearerToken:
+                                              controller.user.bearerToken!,
+                                          from: controller.fromController.text
+                                              .toString(),
+                                          to: controller.toController.text
+                                              .toString(),
+                                        );
+                                      },
+                                      name: 'Save',
+                                    )
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              MyButton(
-                                height: 37,
-                                width: 222,
-                                border: 5,
-                                onPressed: () {
-                                  // print(controller.user.userid);
-                                  // print(controller.user.bearerToken);
-                                  print(controller.user.societyid);
-
-                                  controller.addPhaseApi(
-                                    address: controller.addressController.text,
-                                    dynamicid: controller.user.societyid!,
-                                    societyid: controller.user.societyid!,
-                                    subadminid: controller.user.userid!,
-                                    superadminid: controller.user.superadminid!,
-                                    bearerToken: controller.user.bearerToken!,
-                                    from: controller.fromController.text
-                                        .toString(),
-                                    to: controller.toController.text.toString(),
-                                  );
-                                },
-                                name: 'Save',
-                              )
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
-                    ],
+                    ),
                   ),
                 ),
               );

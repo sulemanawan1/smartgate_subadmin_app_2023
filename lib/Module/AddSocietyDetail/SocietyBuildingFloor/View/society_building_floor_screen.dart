@@ -31,6 +31,9 @@ class SocietyBuildingFloorsScreen extends GetView {
               } else if (controller.user.structureType == 3) {
                 Get.offAndToNamed(societybuildingscreen,
                     arguments: controller.user);
+              } else if (controller.user.structureType == 5) {
+                Get.offAndToNamed(societybuildingscreen,
+                    arguments: controller.user);
               }
 
               return false;
@@ -59,6 +62,9 @@ class SocietyBuildingFloorsScreen extends GetView {
                             Get.offAndToNamed(societybuildingscreen,
                                 arguments: controller.user);
                           } else if (controller.user.structureType == 3) {
+                            Get.offAndToNamed(societybuildingscreen,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 5) {
                             Get.offAndToNamed(societybuildingscreen,
                                 arguments: controller.user);
                           }

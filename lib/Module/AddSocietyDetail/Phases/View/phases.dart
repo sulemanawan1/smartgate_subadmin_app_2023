@@ -24,7 +24,7 @@ class Phases extends GetView {
         builder: (controller) {
           return WillPopScope(
             onWillPop: () async {
-              Get.offNamed(homescreen, arguments: controller.user);
+              Get.offNamed(phaseorsocietybuilding, arguments: controller.user);
 
               return false;
             },
@@ -42,7 +42,8 @@ class Phases extends GetView {
                       MyBackButton(
                         text: 'Phases',
                         onTap: () {
-                          Get.offNamed(homescreen, arguments: controller.user);
+                          Get.offNamed(phaseorsocietybuilding,
+                              arguments: controller.user);
                         },
                       ),
                       SizedBox(

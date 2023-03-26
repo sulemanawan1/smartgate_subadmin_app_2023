@@ -19,9 +19,14 @@ class Street extends GetView {
           return WillPopScope(
             onWillPop: () async {
               if (controller.user.structureType == 1) {
-                await Get.offNamed(homescreen, arguments: controller.user);
-              } else {
-                await Get.offNamed(blocks, arguments: controller.user);
+                await Get.offNamed(streetorbuildingscreen,
+                    arguments: controller.user);
+              } else if (controller.user.structureType == 2) {
+                await Get.offNamed(blockbuildingorstreet,
+                    arguments: [controller.user, controller.blockid]);
+              } else if (controller.user.structureType == 3) {
+                await Get.offNamed(blocks,
+                    arguments: [controller.user, controller.phaseid]);
               }
 
               return false;
@@ -35,9 +40,17 @@ class Street extends GetView {
                       onPressed: () {
                         if (controller.user.structureType == 1) {
                           Get.offNamed(addstreets, arguments: controller.user);
-                        } else {
-                          Get.offNamed(addstreets,
-                              arguments: [controller.user, controller.blockid]);
+                        } else if (controller.user.structureType == 2) {
+                          Get.offNamed(addstreets, arguments: [
+                            controller.user,
+                            controller.blockid,
+                          ]);
+                        } else if (controller.user.structureType == 3) {
+                          Get.offNamed(addstreets, arguments: [
+                            controller.user,
+                            controller.blockid,
+                            controller.phaseid,
+                          ]);
                         }
                         // Get.offAndToNamed(addblocks,arguments: [controller.pid,controller.bearerToken]);
                       }),
@@ -47,13 +60,18 @@ class Street extends GetView {
                         text: 'Streets',
                         onTap: () {
                           if (controller.user.structureType == 1) {
-                            Get.offNamed(homescreen,
+                            Get.offNamed(streetorbuildingscreen,
                                 arguments: controller.user);
-                          } else {
-                            Get.offNamed(
-                              blocks,
-                              arguments: controller.user,
-                            );
+                          } else if (controller.user.structureType == 2) {
+                            Get.offNamed(blockbuildingorstreet, arguments: [
+                              controller.user,
+                              controller.blockid
+                            ]);
+                          } else if (controller.user.structureType == 3) {
+                            Get.offNamed(blocks, arguments: [
+                              controller.user,
+                              controller.phaseid
+                            ]);
                           }
                         },
                       ),
@@ -83,11 +101,37 @@ class Street extends GetView {
                                           height: 80,
                                           child: GestureDetector(
                                             onTap: () {
-                                              Get.offAndToNamed(houses,
-                                                  arguments: [
-                                                    controller.user,
-                                                    snapshot.data.data[index].id
-                                                  ]);
+                                              if (controller
+                                                      .user.structureType ==
+                                                  1) {
+                                                Get.offAndToNamed(houses,
+                                                    arguments: [
+                                                      controller.user,
+                                                      snapshot
+                                                          .data.data[index].id
+                                                    ]);
+                                              } else if (controller
+                                                      .user.structureType ==
+                                                  2) {
+                                                Get.offAndToNamed(houses,
+                                                    arguments: [
+                                                      controller.user,
+                                                      snapshot
+                                                          .data.data[index].id,
+                                                      controller.blockid
+                                                    ]);
+                                              } else if (controller
+                                                      .user.structureType ==
+                                                  3) {
+                                                Get.offAndToNamed(houses,
+                                                    arguments: [
+                                                      controller.user,
+                                                      snapshot
+                                                          .data.data[index].id,
+                                                      controller.blockid,
+                                                      controller.phaseid
+                                                    ]);
+                                              }
                                             },
                                             child: Column(
                                               children: [
@@ -131,7 +175,7 @@ class Street extends GetView {
                                                                 .data
                                                                 .data[index]
                                                                 .address
-                                                                .toString(),
+                                                                .toString() ,
                                                         style:
                                                             GoogleFonts.ubuntu(
                                                                 fontStyle:

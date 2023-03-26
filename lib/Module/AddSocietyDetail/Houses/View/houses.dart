@@ -19,7 +19,22 @@ class Houses extends GetView<HouseController> {
         builder: (controller) {
           return WillPopScope(
             onWillPop: () async {
-              await Get.offNamed(homescreen, arguments: controller.user);
+              if (controller.user.structureType == 5) {
+                await Get.offNamed(
+                    structureType5HouseOrBuildingMiddlewareScreen,
+                    arguments: controller.user);
+              } else if (controller.user.structureType == 1) {
+                await Get.offNamed(streets, arguments: controller.user);
+              } else if (controller.user.structureType == 2) {
+                await Get.offNamed(streets,
+                    arguments: [controller.user, controller.blockid]);
+              } else if (controller.user.structureType == 3) {
+                await Get.offNamed(streets, arguments: [
+                  controller.user,
+                  controller.blockid,
+                  controller.phaseid
+                ]);
+              }
 
               return false;
             },
@@ -30,8 +45,27 @@ class Houses extends GetView<HouseController> {
                       iconSize: MediaQuery.of(context).size.height * 0.065,
                       icon: SvgPicture.asset('assets/floatingbutton.svg'),
                       onPressed: () {
-                        Get.offNamed(addhouses,
-                            arguments: [controller.user, controller.streetid]);
+                        if (controller.user.structureType == 5) {
+                          Get.offNamed(addhouses, arguments: controller.user);
+                        } else if (controller.user.structureType == 1) {
+                          Get.offNamed(addhouses, arguments: [
+                            controller.user,
+                            controller.streetid
+                          ]);
+                        } else if (controller.user.structureType == 2) {
+                          Get.offNamed(addhouses, arguments: [
+                            controller.user,
+                            controller.streetid,
+                            controller.blockid
+                          ]);
+                        } else if (controller.user.structureType == 3) {
+                          Get.offNamed(addhouses, arguments: [
+                            controller.user,
+                            controller.streetid,
+                            controller.blockid,
+                            controller.phaseid
+                          ]);
+                        }
 
                         // Get.offAndToNamed(addblocks,arguments: [controller.pid,controller.bearerToken]);
                       }),
@@ -40,7 +74,24 @@ class Houses extends GetView<HouseController> {
                       MyBackButton(
                         text: 'Houses',
                         onTap: () {
-                          Get.offNamed(homescreen, arguments: controller.user);
+                          if (controller.user.structureType == 5) {
+                            Get.offNamed(
+                                structureType5HouseOrBuildingMiddlewareScreen,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 1) {
+                            Get.offNamed(streets, arguments: controller.user);
+                          } else if (controller.user.structureType == 2) {
+                            Get.offNamed(streets, arguments: [
+                              controller.user,
+                              controller.blockid
+                            ]);
+                          } else if (controller.user.structureType == 3) {
+                            Get.offNamed(streets, arguments: [
+                              controller.user,
+                              controller.blockid,
+                              controller.phaseid
+                            ]);
+                          }
                         },
                       ),
                       SizedBox(
@@ -53,10 +104,15 @@ class Houses extends GetView<HouseController> {
                               //         controller.structuretype == 4)
                               //     ?
                               FutureBuilder(
-                                  future: controller.housesApi(
-                                      dynamicid: controller.streetid!,
-                                      bearerToken:
-                                          controller.user.bearerToken!),
+                                  future: (controller.user.structureType == 5)
+                                      ? controller.housesApi(
+                                          dynamicid: controller.user.societyid!,
+                                          bearerToken:
+                                              controller.user.bearerToken!)
+                                      : controller.housesApi(
+                                          dynamicid: controller.streetid,
+                                          bearerToken:
+                                              controller.user.bearerToken!),
                                   builder: (BuildContext context,
                                       AsyncSnapshot snapshot) {
                                     if (snapshot.hasData) {

@@ -43,6 +43,7 @@ import '../Module/AddSocietyDetail/SocietyBuildingFloor/Controller/society_build
 import '../Module/AddSocietyDetail/SocietyBuildingFloor/View/society_building_floor_screen.dart';
 import '../Module/AddSocietyDetail/SocietyBuildings/View/society_building_screen.dart';
 import '../Module/AddSocietyDetail/StreetOrBuilding/View/street_or_building_screen.dart';
+import '../Module/AddSocietyDetail/StructureType5HouseOrBuildingMiddleWare/View/structure_type5_house_or_building_screen.dart';
 import '../Module/AdminProfile/View/admin_profile_screen.dart';
 import '../Module/Events/View/events_screen.dart';
 import '../Module/Events/View/view_event_images_screen.dart';
@@ -142,6 +143,7 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => AddLocalBuildingFloors());
     Get.lazyPut(() => LocalBuildingApartmentScreen());
     Get.lazyPut(() => AddLocalBuildingApartmentsScreen());
+    Get.lazyPut(() => StructureType5HouseOrBuildingMiddlewareScreen());
 
     
 

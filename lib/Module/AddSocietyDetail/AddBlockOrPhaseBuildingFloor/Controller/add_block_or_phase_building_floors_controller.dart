@@ -64,6 +64,7 @@ class AAddBlockOrPhaseBuildingFloorsController extends GetxController {
 
       Get.offAndToNamed(blockorphasebuildingfloorsscreen,
           arguments: [user, buildingid, dynamicid]);
+          
     } else if (response.statusCode == 403) {
       isLoading = false;
       update();

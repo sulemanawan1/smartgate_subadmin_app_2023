@@ -68,6 +68,7 @@ class AddBlockOrPhaseBuildingApartmentsController extends GetxController {
       Get.snackbar("Apartments Add Successfully", "");
       Get.offAndToNamed(blockOrphasebuildingapartmentsscreen,
           arguments: [user, fid, bid,dynamicid]);
+          
     } else if (response.statusCode == 403) {
       isLoading = false;
 

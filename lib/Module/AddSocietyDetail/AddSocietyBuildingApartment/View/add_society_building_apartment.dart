@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
 import '../../../../Constants/constants.dart';
+import '../../../../Routes/set_routes.dart';
 import '../../../../Widgets/My Button/my_button.dart';
 import '../Controller/add_society_building_controller.dart';
 
@@ -15,7 +16,8 @@ class AddSocietyBuildingApartmentsScreen extends GetView {
         builder: (controller) {
           return WillPopScope(
             onWillPop: () async {
-              
+              Get.offAndToNamed(societybuildingapartmentscreen,
+                  arguments: [controller.user, controller.fid, controller.bid]);
 
               return false;
             },
@@ -28,6 +30,14 @@ class AddSocietyBuildingApartmentsScreen extends GetView {
                     child: ListView(
                       children: <Widget>[
                         MyBackButton(
+                          onTap: () {
+                            Get.offAndToNamed(societybuildingapartmentscreen,
+                                arguments: [
+                                  controller.user,
+                                  controller.fid,
+                                  controller.bid
+                                ]);
+                          },
                           text: 'Add Apartments',
                         ),
                         SizedBox(height: 20),

@@ -6,9 +6,14 @@ import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:societyadminapp/Constants/constants.dart';
+
+import 'package:societyadminapp/Module/AddSocietyDetail/Phases/Controller/phases_controller.dart';
+import 'package:societyadminapp/Services/Shared%20Preferences/MySharedPreferences.dart';
 import 'package:societyadminapp/Widgets/Loader/loader.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
 import '../../../../Routes/set_routes.dart';
+import '../../../Login/Model/User.dart';
 import '../Controller/society_building_controller.dart';
 
 class SocietyBuildingScreen extends GetView {
@@ -28,6 +33,9 @@ class SocietyBuildingScreen extends GetView {
               } else if (controller.user.structureType == 3) {
                 Get.offAndToNamed(phaseorsocietybuilding,
                     arguments: controller.user);
+              } else if (controller.user.structureType == 5) {
+                Get.offAndToNamed(structureType5HouseOrBuildingMiddlewareScreen,
+                    arguments: controller.user);
               }
 
               return false;
@@ -45,12 +53,27 @@ class SocietyBuildingScreen extends GetView {
                   body: Column(
                     children: [
                       MyBackButton(
+                        onTap: () {
+                          if (controller.user.structureType == 1) {
+                            Get.offAndToNamed(streetorbuildingscreen,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 2) {
+                            Get.offAndToNamed(blockorsocietybuilding,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 3) {
+                            Get.offAndToNamed(phaseorsocietybuilding,
+                                arguments: controller.user);
+                          } else if (controller.user.structureType == 5) {
+                            Get.offAndToNamed(
+                                structureType5HouseOrBuildingMiddlewareScreen,
+                                arguments: controller.user);
+                          }
+                        },
                         text: 'Buildings',
                       ),
                       Expanded(
                           child: FutureBuilder(
                               future: controller.SocietyBuildingApi(
-
                                   dynamicid: controller.user.societyid!,
                                   token: controller.user.bearerToken!),
                               builder: (BuildContext context,

@@ -4,13 +4,15 @@
 class House {
   final int? id;
   String? address;
+  String? type;
   String? iteration;
-  final int? sid;
+  final int? dynamicid;
 
   House({
     required this.id,
+    required this.type,
     required this.address,
-    required this.sid,
+    required this.dynamicid,
     required this.iteration,
   });
 }
