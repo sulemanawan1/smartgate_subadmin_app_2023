@@ -64,6 +64,7 @@ const String addapartments = '/AddApartments';
 const String addmeasurements = '/AddMeasurements';
 const String measurementview = '/MeasurementView';
 const String houseresidentverification = '/HouseResidentVerification';
+const String apartmentresidentverification = '/ApartmentResidentVerification';
 const String generatebill = '/GenerateBill';
 const String generatedbill = '/GeneratedBill';
 const String streetorbuildingscreen = '/StreetOrBuildingScreen';

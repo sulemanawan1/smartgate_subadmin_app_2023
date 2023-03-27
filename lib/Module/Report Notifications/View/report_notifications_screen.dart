@@ -447,8 +447,8 @@ class ReportNotificationsScreen extends GetView {
                                                         snapshot
                                                             .data![
                                                         index]
-                                                            .date
-                                                            .toString(),
+                                                            .created_at.toString()
+                                                            .toString().split('T')[0].toString(),
                                                         style:
                                                         TextStyle(
                                                           fontStyle:
@@ -456,7 +456,7 @@ class ReportNotificationsScreen extends GetView {
                                                               .normal,
                                                           fontWeight:
                                                           FontWeight
-                                                              .w200,
+                                                              .w400,
                                                           fontSize: 16,
                                                         ),
                                                         overflow:

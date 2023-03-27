@@ -198,7 +198,7 @@ class UserReportsListScreen extends StatelessWidget {
                                                               fontWeight: FontWeight.bold),
                                                         ),
                                                         Text(
-                                                          snapshot.data![index].date!,
+                                                         '',
                                                         ),
                                                         Column(
                                                           children: [

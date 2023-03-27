@@ -58,6 +58,7 @@ import '../Module/NoticeBoard/View/notice_board_screen.dart';
 import '../Module/PanicMode/View/panic_mode_screen.dart';
 import '../Module/Report Notifications/View/report_notifications_screen.dart';
 
+import '../Module/UnVerifiedResidents/View/apartment_resident_verification.dart';
 import '../Module/UnVerifiedResidents/View/house_resident_verification.dart';
 import '../Module/UpdateGateKeeper/View/updategatekeeper_detail_screen.dart';
 import '../Module/UpdateNoticeBoard/View/update_notice_screen.dart';
@@ -125,6 +126,7 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => AddMeasurements());
     Get.lazyPut(() => MeasurementView());
     Get.lazyPut(() => HouseResidentVerification());
+    Get.lazyPut(() => ApartmentResidentVerification());
     Get.lazyPut(() => GenerateBill());
     Get.lazyPut(() => GeneratedBill());
     Get.lazyPut(() => StreetOrBuildingScreen());

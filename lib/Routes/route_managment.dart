@@ -24,6 +24,7 @@ import 'package:societyadminapp/Module/NoticeBoard/View/notice_board_screen.dart
 import 'package:societyadminapp/Module/PanicMode/View/panic_mode_screen.dart';
 import 'package:societyadminapp/Module/Report%20Notifications/View/report_notifications_screen.dart';
 import 'package:societyadminapp/Module/Splash/View/splash_screen.dart';
+import 'package:societyadminapp/Module/UnVerifiedResidents/View/apartment_resident_verification.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/View/unverified_residents.dart';
 import 'package:societyadminapp/Module/UpdateNoticeBoard/View/update_notice_screen.dart';
 import 'package:societyadminapp/Module/UserDetail/View/user_detail_screen.dart';
@@ -424,6 +425,11 @@ class RouteManagement {
       GetPage(
           name: structureType5HouseOrBuildingMiddlewareScreen,
           page: () => StructureType5HouseOrBuildingMiddlewareScreen(),
+          binding: ScreenBindings(),
+          transition: Transition.noTransition),
+      GetPage(
+          name: apartmentresidentverification,
+          page: () => ApartmentResidentVerification(),
           binding: ScreenBindings(),
           transition: Transition.noTransition),
     ];

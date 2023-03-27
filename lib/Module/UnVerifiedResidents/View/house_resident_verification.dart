@@ -11,7 +11,9 @@ import 'package:societyadminapp/Module/UnVerifiedResidents/Model/phases.dart';
 import 'package:societyadminapp/Routes/set_routes.dart';
 import 'package:societyadminapp/Widgets/My%20Button/my_button.dart';
 import 'package:societyadminapp/Widgets/My%20Text/my_text.dart';
+import '../../../Constants/constants.dart';
 import '../../../Widgets/My Back Button/my_back_button.dart';
+import '../../../Widgets/My TextForm Field/my_textform_field.dart';
 import '../Controller/house_resident_verification_controller.dart';
 import '../Model/measurement.dart';
 
@@ -171,13 +173,13 @@ class HouseResidentVerification extends GetView {
                                                   .userdata.bearerToken,
                                               type: 'street');
                                         },
-                                        onChanged: (House? data) {
-                                          controller.SelectedHouse(data);
+                                        onChanged: (House? house) {
+                                          controller.SelectedHouse(house);
 
                                           controller
-                                              .houseAddressDetailController
-                                              .text = data!.address.toString();
-                                          controller.isPropertyHouseApartment();
+                                                  .houseAddressDetailController
+                                                  .text =
+                                              "${controller.resident.society!.first.name}${','}${controller.streets!.address}${','}${controller.houses!.address.toString()}";
                                         },
                                         selectedItem: controller.houses,
                                         itemAsString: (House p) {
@@ -338,13 +340,13 @@ class HouseResidentVerification extends GetView {
                                                   .userdata.bearerToken,
                                               type: 'street');
                                         },
-                                        onChanged: (House? data) {
-                                          controller.SelectedHouse(data);
+                                        onChanged: (House? house) {
+                                          controller.SelectedHouse(house);
 
                                           controller
-                                              .houseAddressDetailController
-                                              .text = data!.address.toString();
-                                          controller.isPropertyHouseApartment();
+                                                  .houseAddressDetailController
+                                                  .text =
+                                              "${controller.resident.society!.first.name}${','}${controller.blocks!.address}${','}${controller.streets!.address.toString()}${','}${controller.houses!.address.toString()}";
                                         },
                                         selectedItem: controller.houses,
                                         itemAsString: (House p) {
@@ -542,13 +544,14 @@ class HouseResidentVerification extends GetView {
                                                   .userdata.bearerToken,
                                               type: 'street');
                                         },
-                                        onChanged: (House? data) {
-                                          controller.SelectedHouse(data);
+                                        onChanged: (House? house) {
+                                          controller.SelectedHouse(house);
 
                                           controller
-                                              .houseAddressDetailController
-                                              .text = data!.address.toString();
-                                          controller.isPropertyHouseApartment();
+                                                  .houseAddressDetailController
+                                                  .text =
+                                              "${controller.resident.society!.first.name.toString()}${','}${controller.phases!.address.toString()}${','}${controller.blocks!.address.toString()}${','}${controller.streets!.address.toString()}${','}${controller.houses!.address.toString()}";
+                                          ;
                                         },
                                         selectedItem: controller.houses,
                                         itemAsString: (House p) {
@@ -630,13 +633,13 @@ class HouseResidentVerification extends GetView {
                                                   .userdata.bearerToken,
                                               type: 'society');
                                         },
-                                        onChanged: (House? data) {
-                                          controller.SelectedHouse(data);
+                                        onChanged: (House? house) {
+                                          controller.SelectedHouse(house);
 
                                           controller
-                                              .houseAddressDetailController
-                                              .text = data!.address.toString();
-                                          controller.isPropertyHouseApartment();
+                                                  .houseAddressDetailController
+                                                  .text =
+                                              "${controller.resident.society!.first.name}${','} ${controller.houses!.address.toString()}";
                                         },
                                         selectedItem: controller.houses,
                                         itemAsString: (House p) {
@@ -688,7 +691,16 @@ class HouseResidentVerification extends GetView {
                                       ),
                                     )
                                   ],
-
+                                  MyTextFormField(
+                                    onEnabledBorderColor: primaryColor,
+                                    onFocusedBorderColor: primaryColor,
+                                    validator: emptyStringValidator,
+                                    maxLines: null,
+                                    controller:
+                                        controller.houseAddressDetailController,
+                                    hintText: 'House / Apartment Adreess ',
+                                    labelText: 'House / Apartment Adreess ',
+                                  ),
                                   MyText(name: 'Vehicle Number'),
                                   Padding(
                                     padding: const EdgeInsets.all(6.0),
@@ -715,6 +727,9 @@ class HouseResidentVerification extends GetView {
                                       onPressed: () {
                                         if (_formKey.currentState!.validate()) {
                                           controller.verifyResidentApi(
+                                              houseaddress: controller
+                                                  .houseAddressDetailController
+                                                  .text,
                                               residentid: controller
                                                   .resident.residentid,
                                               status: 1,

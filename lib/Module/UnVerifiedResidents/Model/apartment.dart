@@ -1,11 +1,17 @@
-class Apartment {
+class Apartment
+{
+
   final int? id;
   final int? societybuildingfloorid;
   final String? name;
 
-  Apartment({
-    required this.id,
+  Apartment({required this.id,
     required this.societybuildingfloorid,
-    required this.name,
-  } );
+    required this.name, });
+
+
+
+
+
+
 }

@@ -8,7 +8,8 @@ import 'package:societyadminapp/Module/UnVerifiedResidents/Model/street.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/block.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/house.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/phases.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/HouseResident.dart' as HouseResident;
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/HouseResident.dart'
+    as HouseResident;
 import 'package:societyadminapp/Routes/set_routes.dart';
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
@@ -121,12 +122,16 @@ class HouseResidentVerificationController extends GetxController {
   }
 
   Future<List<House>> viewAllHousesApi(
-      {required dynamicId, required bearerToken,required type}) async {
+      {required dynamicId, required bearerToken, required type}) async {
     print(bearerToken);
     print(dynamicId);
 
     var response = await Dio().get(
-        Api.view_properties_for_residents + '/' + dynamicId.toString()+ '/' + type.toString(),
+        Api.view_properties_for_residents +
+            '/' +
+            dynamicId.toString() +
+            '/' +
+            type.toString(),
         options: Options(headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer ${bearerToken}"
@@ -280,7 +285,7 @@ class HouseResidentVerificationController extends GetxController {
           iteration: resident.street!.first.iteration,
           subadminid: resident.street!.first.subadminid));
       SelectedHouse(House(
-          type:resident.property!.first.type ,
+          type: resident.property!.first.type,
           id: resident.property!.first.id,
           address: resident.property!.first.address,
           dynamicid: resident.property!.first.dynamicid,
@@ -294,8 +299,10 @@ class HouseResidentVerificationController extends GetxController {
           status: resident.measurement!.first.status,
           type: resident.measurement!.first.type,
           unit: resident.measurement!.first.unit));
-    }
-    else if (resident.society!.first.structuretype == 2) {
+
+      houseAddressDetailController.text =
+          "${resident.society!.first.name}${','}${resident.street!.first.address}${','}${resident.property!.first.address.toString()}";
+    } else if (resident.society!.first.structuretype == 2) {
       SelectedBlock(Block(
           id: resident.block!.first.id,
           address: resident.block!.first.address,
@@ -308,8 +315,7 @@ class HouseResidentVerificationController extends GetxController {
           iteration: resident.street!.first.iteration,
           subadminid: resident.street!.first.subadminid));
       SelectedHouse(House(
-          type:resident.property!.first.type ,
-
+          type: resident.property!.first.type,
           id: resident.property!.first.id,
           address: resident.property!.first.address,
           dynamicid: resident.property!.first.dynamicid,
@@ -323,8 +329,10 @@ class HouseResidentVerificationController extends GetxController {
           status: resident.measurement!.first.status,
           type: resident.measurement!.first.type,
           unit: resident.measurement!.first.unit));
-    }
-    else if (resident.society!.first.structuretype == 3) {
+
+      houseAddressDetailController.text =
+          "${resident.society!.first.name.toString()}${','}${resident.block!.first.address.toString()}${','}${resident.street!.first.address.toString()}${','}${resident.property!.first.address.toString()}";
+    } else if (resident.society!.first.structuretype == 3) {
       SelectedPhase(Phase(
           id: resident.phase!.first.id,
           address: resident.phase!.first.address,
@@ -344,8 +352,7 @@ class HouseResidentVerificationController extends GetxController {
           iteration: resident.street!.first.iteration,
           subadminid: resident.street!.first.subadminid));
       SelectedHouse(House(
-          type:resident.property!.first.type ,
-
+          type: resident.property!.first.type,
           id: resident.property!.first.id,
           address: resident.property!.first.address,
           dynamicid: resident.property!.first.dynamicid,
@@ -359,11 +366,13 @@ class HouseResidentVerificationController extends GetxController {
           status: resident.measurement!.first.status,
           type: resident.measurement!.first.type,
           unit: resident.measurement!.first.unit));
+
+      houseAddressDetailController.text =
+          "${resident.society!.first.name}${','}${resident.phase!.first!.address.toString()}${','}${resident.block!.first.address.toString()}${','}${resident.street!.first!.address.toString()}${','}${resident.property!.first.address.toString()}";
     }
     if (resident.society!.first.structuretype == 5) {
-
       SelectedHouse(House(
-          type:resident.property!.first.type ,
+          type: resident.property!.first.type,
           id: resident.property!.first.id,
           address: resident.property!.first.address,
           dynamicid: resident.property!.first.dynamicid,
@@ -377,6 +386,8 @@ class HouseResidentVerificationController extends GetxController {
           status: resident.measurement!.first.status,
           type: resident.measurement!.first.type,
           unit: resident.measurement!.first.unit));
+      houseAddressDetailController.text =
+          "${resident.society!.first!.name}${','} ${resident.property!.first.address.toString()}";
     }
 
     state = resident.state!;
@@ -395,6 +406,7 @@ class HouseResidentVerificationController extends GetxController {
     propertyid,
     measurementid,
     vechileno,
+    houseaddress,
     required String token,
   }) async {
     final response = await Http.post(Uri.parse(Api.verifyhouseresident),
@@ -410,7 +422,8 @@ class HouseResidentVerificationController extends GetxController {
           'sid': sid,
           'propertyid': propertyid,
           'measurementid': measurementid,
-          "vechileno": vechileno
+          "vechileno": vechileno,
+          "houseaddress": houseaddress
         }));
 
     print(response.body);
@@ -427,11 +440,6 @@ class HouseResidentVerificationController extends GetxController {
         Get.snackbar('Error', errors[i].toString());
       }
     }
-  }
-
-  isPropertyHouseApartment() {
-    isProperty = true;
-    update();
   }
 
   SelectedMeasurement(val) {

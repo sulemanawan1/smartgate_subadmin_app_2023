@@ -86,6 +86,7 @@ class Api {
   static const String generatebill = baseUrl + "generatebill";
   static const String generatedbill = baseUrl + "generatedbill";
   static const String verifyhouseresident = baseUrl + "verifyhouseresident";
+  static const String verifyapartmentresident = baseUrl + "verifyapartmentresident";
   static const String unverifiedapartmentresident = baseUrl + "unverifiedapartmentresident";
   static const String unverifiedhouseresident = baseUrl + "unverifiedhouseresident";
   static const String resetpassword = baseUrl + "resetpassword";
@@ -99,6 +100,7 @@ class Api {
  static const String add_local_building_apartments =
       baseUrl + "addlocalbuildingapartments";
 
-      
-      
+  static const String allsocietybuildings = baseUrl + "allsocietybuildings";
+
+
 }
