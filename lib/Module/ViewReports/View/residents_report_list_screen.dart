@@ -21,293 +21,264 @@ class UserReportsListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<ResidentReportsController>(
       init: ResidentReportsController(),
-      builder: (controller) => Scaffold(backgroundColor: Colors.white,
+      builder: (controller) => SafeArea(
+        child: Scaffold(backgroundColor: Colors.white,
 
-        body: Column(children: [
-          MyBackButton(text: 'Reports',),
-          Expanded(
-            child: FutureBuilder<List<ResidentReports>>(
-                future: controller.viewResidentsReportsApi(
-                    controller.userdata.userid!,
-                    controller.residentId,
-                    controller.userdata.bearerToken!),
-                builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    if (snapshot.data != null && snapshot.data!.length != 0) {
-                      return    ListView.builder(
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: SizedBox(width: 400,
-                              child: Card(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                  ),
-                                  child: Container(width: 400,
-                                    // color: Colors.red,
-                                    child: Stack(children: [
-                                      // Padding(
-                                      //   padding: const EdgeInsets.all(12.0),
-                                      //   child: Container(width: MediaQuery.of(context).size.width*0.2,height:MediaQuery.of(context).size.height*0.1,
-                                      //     decoration: BoxDecoration(
-                                      //         color: Colors.red,
-                                      //         borderRadius: BorderRadius.circular(8),
-                                      //         image: DecorationImage(
-                                      //             fit: BoxFit.cover,
-                                      //
-                                      //             image: NetworkImage(imageBaseUrl+snapshot.data![index].image.toString())
-                                      //         )),),
-                                      // ),
-                                      Padding(
-                                        padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.08, MediaQuery.of(context).size.width*0.03, MediaQuery.of(context).size.width*0.03, 0),
-                                        child: Column(
-                                          children: [
-                                            Text(snapshot.data ![index].title.toString(),
-                                              maxLines: 1,
+          body: Column(children: [
+            MyBackButton(text: 'Reports',),
+            Expanded(
+              child: FutureBuilder<List<ResidentReports>>(
+                  future: controller.viewResidentsReportsApi(
+                      controller.userdata.userid!,
+                      controller.residentId,
+                      controller.userdata.bearerToken!),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      if (snapshot.data != null && snapshot.data!.length != 0) {
+                        return    ListView.builder(
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(width: 400,
+                                child: Card(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(18.0),
+                                    ),
+                                    child: Container(width: 400,
+                                      // color: Colors.red,
+                                      child: Stack(children: [
+                                        // Padding(
+                                        //   padding: const EdgeInsets.all(12.0),
+                                        //   child: Container(width: MediaQuery.of(context).size.width*0.2,height:MediaQuery.of(context).size.height*0.1,
+                                        //     decoration: BoxDecoration(
+                                        //         color: Colors.red,
+                                        //         borderRadius: BorderRadius.circular(8),
+                                        //         image: DecorationImage(
+                                        //             fit: BoxFit.cover,
+                                        //
+                                        //             image: NetworkImage(imageBaseUrl+snapshot.data![index].image.toString())
+                                        //         )),),
+                                        // ),
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.08, MediaQuery.of(context).size.width*0.03, MediaQuery.of(context).size.width*0.03, 0),
+                                          child: Column(
+                                            children: [
+                                              Text(snapshot.data ![index].title.toString(),
+                                                maxLines: 1,
 
-                                              style: GoogleFonts.ubuntu(
+                                                style: GoogleFonts.ubuntu(
+                                                    color:
+                                                    HexColor('#404345'),
+                                                    fontStyle:
+                                                    FontStyle.normal,
+                                                    letterSpacing: 0.0015,
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                    FontWeight.w500),),
+                                            ],
+                                          ),
+                                        ),
+                                        Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.08,
+                                            MediaQuery.of(context).size.width*0.09, MediaQuery.of(context).size.width*0.42, 0),
+                                          child: Column(
+                                            children: [
+                                              Text(snapshot.data![index].description.toString(),maxLines: 2,overflow: TextOverflow.ellipsis,style:
+                                              GoogleFonts.ubuntu(
                                                   color:
-                                                  HexColor('#404345'),
+                                                  HexColor('#AAAAAA'),
                                                   fontStyle:
                                                   FontStyle.normal,
                                                   letterSpacing: 0.0015,
-                                                  fontSize: 16,
+                                                  fontSize: 12,
                                                   fontWeight:
-                                                  FontWeight.w500),),
-                                          ],
+                                                  FontWeight.w500) ,),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.08,
-                                          MediaQuery.of(context).size.width*0.09, MediaQuery.of(context).size.width*0.42, 0),
-                                        child: Column(
+                                        Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.08, MediaQuery.of(context).size.width*0.18
+                                            , MediaQuery.of(context).size.width*0.10, 0), child: Column(
                                           children: [
-                                            Text(snapshot.data![index].description.toString(),maxLines: 2,overflow: TextOverflow.ellipsis,style:
-                                            GoogleFonts.ubuntu(
+                                            SvgPicture.asset(
+                                              "assets/event_icon.svg",
+                                              color: primaryColor,
+
+                                            )],
+                                        ),),
+                                        Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.14,
+                                            MediaQuery.of(context).size.width*0.18
+                                            , MediaQuery.of(context).size.width*0.10, MediaQuery.of(context).size.width*0.03), child: Column(
+                                          children: [
+
+
+                                            Text(snapshot.data![index].updatedAt.toString().split('T')[0].toString(),style:     GoogleFonts.ubuntu(
                                                 color:
-                                                HexColor('#AAAAAA'),
+                                                HexColor('#4D4D4D'),
                                                 fontStyle:
                                                 FontStyle.normal,
                                                 letterSpacing: 0.0015,
                                                 fontSize: 12,
                                                 fontWeight:
-                                                FontWeight.w500) ,),
+                                                FontWeight.w400) ,),
                                           ],
-                                        ),
-                                      ),
-                                      Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.08, MediaQuery.of(context).size.width*0.18
-                                          , MediaQuery.of(context).size.width*0.10, 0), child: Column(
-                                        children: [
-                                          SvgPicture.asset(
-                                            "assets/event_icon.svg",
-                                            color: primaryColor,
+                                        ),),
+                                        Padding(padding: EdgeInsets.fromLTRB(
+                                            MediaQuery.of(context).size.width*0.6,
+                                            MediaQuery.of(context).size.width*0.10,
+                                            MediaQuery.of(context).size.width*0.03,
+                                            0), child:
 
-                                          )],
-                                      ),),
-                                      Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.14,
-                                          MediaQuery.of(context).size.width*0.18
-                                          , MediaQuery.of(context).size.width*0.10, MediaQuery.of(context).size.width*0.03), child: Column(
-                                        children: [
-                                          Text(snapshot.data![index].date.toString(),style:     GoogleFonts.ubuntu(
-                                              color:
-                                              HexColor('#4D4D4D'),
-                                              fontStyle:
-                                              FontStyle.normal,
-                                              letterSpacing: 0.0015,
-                                              fontSize: 12,
-                                              fontWeight:
-                                              FontWeight.w400) ,),
-                                        ],
-                                      ),),
-                                      Padding(padding: EdgeInsets.fromLTRB(
-                                          MediaQuery.of(context).size.width*0.6,
-                                          MediaQuery.of(context).size.width*0.10,
-                                          MediaQuery.of(context).size.width*0.03,
-                                          0), child:
+                                        MyButton(name: snapshot.data![index].statusdescription.toString(),color: Colors.red,width: MediaQuery.of(context).size.width*0.3,fontWeight: FontWeight.w400,letterSpacing: 1.2,
 
-                                      MyButton(name: snapshot.data![index].statusdescription.toString(),color: Colors.red,width: MediaQuery.of(context).size.width*0.3,fontWeight: FontWeight.w400,letterSpacing: 1.2,
+                                          onPressed: (){
 
-                                        onPressed: (){
+                                            showDialog(
+                                              context: context,
+                                              builder: (ctx) => AlertDialog(
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.all(
+                                                        Radius.circular(32.0))),
+                                                contentPadding: EdgeInsets.only(top: 10.0),
+                                                title: Text("Report Detail"),
+                                                content: Container(
+                                                    height:
+                                                    MediaQuery.of(context).size.height *
+                                                        0.8,
+                                                    width: MediaQuery.of(context).size.width,
+                                                    child: Padding(
+                                                      padding: EdgeInsets.all(8.0),
+                                                      child: Column(
+                                                        crossAxisAlignment:
+                                                        CrossAxisAlignment.start,
+                                                        mainAxisAlignment:
+                                                        MainAxisAlignment.spaceEvenly,
+                                                        children: [
+                                                          Text(
+                                                            'Title:',
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.bold),
+                                                          ),
+                                                          Text(
+                                                            snapshot.data![index].title!,
+                                                            style: TextStyle(),
+                                                          ),
+                                                          Text(
+                                                            'Description',
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.bold),
+                                                          ),
+                                                          Text(
+                                                            snapshot
+                                                                .data![index].description!,
+                                                            textAlign: TextAlign.start,
+                                                          ),
+                                                          Text(
+                                                            'Name:',
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.bold),
+                                                          ),
+                                                          Text(
+                                                            controller.residentName,
+                                                          ),
+                                                          Text(
+                                                            'Address:',
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.bold),
+                                                          ),
+                                                          Text(
+                                                            controller.residentAddress,
+                                                          ),
+                                                          Text(
+                                                            'Mobile No',
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.bold),
+                                                          ),
+                                                          Text(
+                                                            controller.residentMobileno,
+                                                          ),
 
-                                          showDialog(
-                                            context: context,
-                                            builder: (ctx) => AlertDialog(
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.all(
-                                                      Radius.circular(32.0))),
-                                              contentPadding: EdgeInsets.only(top: 10.0),
-                                              title: Text("Report Full Detail"),
-                                              content: Container(
-                                                  height:
-                                                  MediaQuery.of(context).size.height *
-                                                      0.8,
-                                                  width: MediaQuery.of(context).size.width,
-                                                  child: Padding(
-                                                    padding: EdgeInsets.all(8.0),
-                                                    child: Column(
-                                                      crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                      mainAxisAlignment:
-                                                      MainAxisAlignment.spaceEvenly,
-                                                      children: [
-                                                        Text(
-                                                          'Report Title:',
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold),
-                                                        ),
-                                                        Text(
-                                                          snapshot.data![index].title!,
-                                                          style: TextStyle(),
-                                                        ),
-                                                        Text(
-                                                          'Report Description: ',
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold),
-                                                        ),
-                                                        Text(
-                                                          snapshot
-                                                              .data![index].description!,
-                                                          textAlign: TextAlign.start,
-                                                        ),
-                                                        Text(
-                                                          'UserName:',
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold),
-                                                        ),
-                                                        Text(
-                                                          controller.residentName,
-                                                        ),
-                                                        Text(
-                                                          'View Users Address:',
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold),
-                                                        ),
-                                                        Text(
-                                                          controller.residentAddress,
-                                                        ),
-                                                        Text(
-                                                          'Phone No:',
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold),
-                                                        ),
-                                                        Text(
-                                                          controller.residentMobileno,
-                                                        ),
-                                                        Text(
-                                                          'Date:',
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold),
-                                                        ),
-                                                        Text(
-                                                         '',
-                                                        ),
-                                                        Column(
-                                                          children: [
-                                                            Text(
-                                                              'Status',
-                                                              style: TextStyle(
-                                                                  fontWeight:
-                                                                  FontWeight.bold),
-                                                            ),
-                                                            Container(
-                                                              width: 400,
-                                                              decoration: BoxDecoration(
-                                                                border: Border.all(
-                                                                    color: primaryColor),
-                                                                borderRadius:
-                                                                BorderRadius.circular(
-                                                                    20),
-                                                              ),
-                                                              child: Padding(
-                                                                padding:
-                                                                const EdgeInsets.all(
-                                                                    12.0),
-                                                                child: Column(
-                                                                  children: [
-                                                                    Row(children: [
-                                                                      Text(
-                                                                        'Progress: ',
-                                                                        style: TextStyle(
-                                                                            fontWeight:
-                                                                            FontWeight
-                                                                                .bold),
-                                                                      ),
-                                                                      Text(
-                                                                        snapshot
-                                                                            .data![index]
-                                                                            .statusdescription!,
-                                                                      ),
-                                                                    ]),
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        SizedBox(
-                                                          height: 20,
-                                                        ),
-                                                        Center(
-                                                          child: GestureDetector(
-                                                            onTap: () {
-                                                              Get.back();
-                                                            },
-                                                            child: new Container(
-                                                              padding:
-                                                              new EdgeInsets.all(16.0),
-                                                              decoration: new BoxDecoration(
-                                                                  color: const Color(
-                                                                      0xFF33b17c),
+                                                          Column(
+                                                            children: [
+
+                                                              Container(
+                                                                width: 400,
+                                                                decoration: BoxDecoration(
+                                                                  border: Border.all(
+                                                                      color: primaryColor),
                                                                   borderRadius:
                                                                   BorderRadius.circular(
-                                                                      20)),
-                                                              child: new Text(
-                                                                'Report Okay',
-                                                                style: TextStyle(
-                                                                  color: Colors.white,
-                                                                  fontSize: 18.0,
-                                                                  fontFamily:
-                                                                  'helvetica_neue_light',
+                                                                      20),
                                                                 ),
-                                                                textAlign: TextAlign.center,
+                                                                child: Padding(
+                                                                  padding:
+                                                                  const EdgeInsets.all(
+                                                                      12.0),
+                                                                  child: Column(
+                                                                    children: [
+                                                                      Row(children: [
+                                                                        Text(
+                                                                          'Status',
+                                                                          style: TextStyle(
+                                                                              fontWeight:
+                                                                              FontWeight
+                                                                                  .bold),
+                                                                        ),
+                                                                       SizedBox(width: 12,) ,Text(
+                                                                          snapshot
+                                                                              .data![index]
+                                                                              .statusdescription!,
+                                                                        ),
+                                                                      ]),
+                                                                    ],
+                                                                  ),
+                                                                ),
                                                               ),
-                                                            ),
+                                                            ],
                                                           ),
-                                                        ),
-                                                        SizedBox(
-                                                          height: 20,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  )),
-                                            ),
-                                          );
-                                        },
+                                                          SizedBox(
+                                                            height: 20,
+                                                          ),
+                                                          Center(
+                                                            child: MyButton(name: 'Ok',onPressed: (){
 
-                                      ),),
+                                                              Get.back();
+                                                            },),
+                                                          ),
+                                                          SizedBox(
+                                                            height: 20,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    )),
+                                              ),
+                                            );
+                                          },
+
+                                        ),),
 
 
-                                    ],),)
+                                      ],),)
 
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                        itemCount: snapshot.data!.length,
-                      );
+                            );
+                          },
+                          itemCount: snapshot.data!.length,
+                        );
+                      } else {
+                        return Text('no resident');
+                      }
+                    } else if (snapshot.hasError) {
+                      return Icon(Icons.error_outline);
                     } else {
-                      return Text('no resident');
+                      return Center(child: CircularProgressIndicator(color: primaryColor,));
                     }
-                  } else if (snapshot.hasError) {
-                    return Icon(Icons.error_outline);
-                  } else {
-                    return Center(child: CircularProgressIndicator(color: primaryColor,));
-                  }
-                }),
-          ),
-          
-          
-        ],)
-       
+                  }),
+            ),
+
+
+          ],)
+
+        ),
       ),
     );
   }

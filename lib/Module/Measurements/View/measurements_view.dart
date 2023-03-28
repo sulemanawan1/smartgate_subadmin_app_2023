@@ -16,9 +16,12 @@ class MeasurementView extends StatelessWidget {
         init: MeasurementViewController(),
         builder: (controller) {
           return DefaultTabController(
+
             length: 2,
             child: SafeArea(
+
               child: Scaffold(
+
                 floatingActionButton: IconButton(
                     padding: EdgeInsets.only(top: 85),
                     iconSize: MediaQuery.of(context).size.height * 0.065,
@@ -30,6 +33,7 @@ class MeasurementView extends StatelessWidget {
                   children: [
                     MyBackButton(text: 'Measurement View'),
                     TabBar(
+
                       indicatorSize: TabBarIndicatorSize.tab,
                       indicatorColor: primaryColor,
                       tabs: [
@@ -42,7 +46,9 @@ class MeasurementView extends StatelessWidget {
                               style: TextStyle(color: primaryColor)),
                         ),
                       ],
-                      labelColor: Colors.white,
+                      labelColor: primaryColor,
+
+                      unselectedLabelColor:Colors. grey,
                     ),
                     Expanded(
                       child: TabBarView(

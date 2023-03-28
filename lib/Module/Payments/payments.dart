@@ -97,12 +97,9 @@ class Payments extends GetView {
 
             // MyTextFormField(hintText: 'Enter Service Type', labelText: 'Service Type', onFocusedBorderColor: primaryColor, onEnabledBorderColor: primaryColor),
             MyTextFormField(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
               hintText: 'Enter Charges',
               labelText: 'Charges',
-              onFocusedBorderColor: primaryColor,
-              onEnabledBorderColor: primaryColor,
-              keyboardType: TextInputType.number,
+              textInputType: TextInputType.number,
             ),
             SizedBox(
               height: 20,
@@ -119,12 +116,9 @@ class Payments extends GetView {
                   content: Column(children: [
                     SizedBox(height: 20), MyTextFormField(
                       controller: paymentcontroller.label,
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       hintText: 'Enter Label',
                       labelText: 'Label',
-                      onFocusedBorderColor: primaryColor,
-                      onEnabledBorderColor: primaryColor,
-                      keyboardType: TextInputType.number,
+                      textInputType: TextInputType.number,
                     ),
                     SizedBox(height: 20,),
                     Center(

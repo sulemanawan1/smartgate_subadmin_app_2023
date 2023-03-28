@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:societyadminapp/Module/Generate%20Bill/Controller/generate_bill_controller.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
 
@@ -59,8 +57,7 @@ class GenerateBill extends GetView {
                 validator: emptyStringValidator,
                 hintText: 'Choose Bill Start Date',
                 labelText: 'Choose Bill Start Date',
-                onFocusedBorderColor: primaryColor,
-                onEnabledBorderColor: primaryColor
+
 
             ),
 
@@ -79,8 +76,7 @@ class GenerateBill extends GetView {
                 validator: emptyStringValidator,
                 hintText: 'Choose Bill END Date',
                 labelText: 'Choose Bill END Date',
-                onFocusedBorderColor: primaryColor,
-                onEnabledBorderColor: primaryColor),
+              ),
             MyTextFormField(
 
                 onTap: () {
@@ -96,8 +92,7 @@ class GenerateBill extends GetView {
                 validator: emptyStringValidator,
                 hintText: 'Choose Bill Due Date',
                 labelText: 'Choose Bill Due Date',
-                onFocusedBorderColor: primaryColor,
-                onEnabledBorderColor: primaryColor),
+              ),
 
 MyButton(name: 'Generate', onPressed:controller.isLoading?null: () async{
 

@@ -71,8 +71,7 @@ class AddStreets extends GetView {
                                 MyTextFormField(
                                   hintText: 'Address',
                                   labelText: 'Address',
-                                  onFocusedBorderColor: primaryColor,
-                                  onEnabledBorderColor: primaryColor,
+
                                   validator: emptyStringValidator,
                                   controller: controller.addressController,
                                 ),

@@ -692,8 +692,7 @@ class HouseResidentVerification extends GetView {
                                     )
                                   ],
                                   MyTextFormField(
-                                    onEnabledBorderColor: primaryColor,
-                                    onFocusedBorderColor: primaryColor,
+
                                     validator: emptyStringValidator,
                                     maxLines: null,
                                     controller:

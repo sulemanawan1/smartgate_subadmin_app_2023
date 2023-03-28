@@ -271,7 +271,7 @@ class ApartmentResidentVerification extends GetView {
                                   ),
                                 ),
 
-                                MyTextFormField(onEnabledBorderColor: primaryColor,onFocusedBorderColor: primaryColor,
+                                MyTextFormField(
                                   validator: emptyStringValidator,
                                   maxLines: null,
                                   controller: controller.houseaddressdetailController,
@@ -281,7 +281,7 @@ class ApartmentResidentVerification extends GetView {
                                 MyTextFormField(
                                   controller: controller.vehiclenoController,
                                   hintText: 'Vehicle No',
-                                  labelText: 'Vehicle No (optional)', onFocusedBorderColor: primaryColor, onEnabledBorderColor: primaryColor,
+                                  labelText: 'Vehicle No (optional)',
                                 ),
 
 

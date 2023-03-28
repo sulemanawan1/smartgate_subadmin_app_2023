@@ -50,8 +50,7 @@ class AddPhases extends GetView {
                                     MyTextFormField(
                                       hintText: 'Name',
                                       labelText: 'Name',
-                                      onEnabledBorderColor: primaryColor,
-                                      onFocusedBorderColor: primaryColor,
+
                                       controller: controller.addressController,
                                       validator: emptyStringValidator,
                                     ),

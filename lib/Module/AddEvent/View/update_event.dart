@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:societyadminapp/Constants/constants.dart';
 import 'package:societyadminapp/Module/AddEvent/Controller/update_event_controller.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
@@ -13,41 +10,39 @@ import 'package:societyadminapp/Widgets/My%20TextForm%20Field/my_textform_field.
 class UpdateEvent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+      child: Scaffold(
 
-      body: GetBuilder<UpdateEventScreenController>(
-          init: UpdateEventScreenController(),
-          builder: (controller) {
-            return Form(
-              key: controller.formKey,
-              child: Padding(
-                padding: EdgeInsets.only(left: 10, top: 30),
+        body: GetBuilder<UpdateEventScreenController>(
+            init: UpdateEventScreenController(),
+            builder: (controller) {
+              return Form(
+                key: controller.formKey,
                 child: SingleChildScrollView(
                   child: Column(
                     children: <Widget>[
                       MyBackButton(text:'Update Event' ,),
-                      SizedBox(height: 20,),
+                      SizedBox(height:MediaQuery.of(context).size.height*0.05,),
+
                       SvgPicture.asset(
                         "assets/event_vector.svg",
                       ),
                       SizedBox(height:MediaQuery.of(context).size.height*0.05,),
 
                       MyTextFormField(
-                          fillColor: Colors.white,
                           controller: controller.eventTitleController,
                           validator: emptyStringValidator,
                           hintText: 'Enter Event Title',
                           labelText: 'Event Title',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+
+                      ),
                       MyTextFormField(
-                          fillColor: Colors.white,
                           controller: controller.eventDescriptionController,
                           validator: emptyStringValidator,
                           hintText: 'Enter Event Description',
                           labelText: 'Event Description',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+
+                      ),
                       MyTextFormField(
                           onTap: () {
                             controller.StartDate(context);
@@ -57,13 +52,13 @@ class UpdateEvent extends StatelessWidget {
                               fit: BoxFit.scaleDown
 
                           ),
-                          fillColor: Colors.white,
                           controller: controller.eventStartDateController,
                           validator: emptyStringValidator,
                           hintText: 'Enter Event Start Date',
                           labelText: 'Start Date',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+
+
+                      ),
                       MyTextFormField(
                           onTap: () {
                             controller.EndDate(context);
@@ -73,13 +68,13 @@ class UpdateEvent extends StatelessWidget {
                               fit: BoxFit.scaleDown
 
                           ),
-                          fillColor: Colors.white,
                           controller: controller.eventEndDateController,
                           validator: emptyStringValidator,
                           hintText: 'Enter Event End Date',
                           labelText: 'End Date',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+
+                      )
+                      ,
                       // CheckboxListTile(
                       //   title:controller.isCheckBox?  Text("Event Active",style:
                       //   TextStyle(color: Colors.green),):Text('Event InActive',style: TextStyle(color:Colors.red ),),
@@ -126,12 +121,14 @@ class UpdateEvent extends StatelessWidget {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                       ),
+                      SizedBox(height:MediaQuery.of(context).size.height*0.05,),
+
                     ],
                   ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+      ),
     );
   }
 }

@@ -8,8 +8,10 @@ class ResidentReports {
   String? date;
   int? status;
   String? statusdescription;
+  String? updatedAt;
   ResidentReports(
-      {required this.id,
+      {
+        required this.id,
       
       required this.userid,
       required this.subadminid,
@@ -17,5 +19,6 @@ class ResidentReports {
       required this.description,
       required this.date,
       required this.status,
+        required this.updatedAt,
       required this.statusdescription});
 }

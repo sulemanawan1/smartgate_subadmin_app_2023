@@ -57,8 +57,7 @@ backgroundColor: HexColor('#FFFFFF'),
                                 validator: emptyStringValidator,
                                 hintText: 'Enter Cnic',
                                 labelText: 'Cnic',
-                                onFocusedBorderColor: primaryColor,
-                                onEnabledBorderColor: primaryColor),
+                                ),
 
 
                            MyPasswordTextFormField(
@@ -69,8 +68,7 @@ backgroundColor: HexColor('#FFFFFF'),
                              hintText: 'Enter Password',
 
                              togglePasswordView: controller.togglePasswordView,
-                               onFocusedBorderColor: primaryColor,
-                               onEnabledBorderColor: primaryColor,
+
                                obscureText: controller.isHidden),
                             SizedBox(height:MediaQuery.of(context).size.height*0.06,),
                        MyButton(

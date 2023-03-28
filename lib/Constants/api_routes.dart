@@ -1,4 +1,4 @@
-const String imageBaseUrl = 'http://192.168.100.7:80/smartgate/public/storage/';
+const String imageBaseUrl = 'http://192.168.100.7:80/smartgate2023/public/storage/';
 
 // const String imageBaseUrl='https://www.smartgate.pk/storage/';
 class Api {

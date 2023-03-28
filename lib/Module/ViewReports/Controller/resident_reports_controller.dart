@@ -54,7 +54,7 @@ class ResidentReportsController extends GetxController {
       li = (data['data'] as List)
           .map((e) => ResidentReports(
                 
-                id: e['id'],
+                id: e['id'],updatedAt: e['updated_at'],
                 
                 subadminid: e['subadminid'],
                 userid: e['userid'],

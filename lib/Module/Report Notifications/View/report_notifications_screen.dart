@@ -80,11 +80,14 @@ class ReportNotificationsScreen extends GetView {
                                                           left:
                                                           99),
                                                       child: Text(
+                                                        overflow: TextOverflow.ellipsis,
+
                                                         snapshot
                                                             .data![
                                                         index]
                                                             .title!.toString(),
                                                         style: GoogleFonts.montserrat(
+
                                                             color: HexColor(
                                                                 '#262626'),
                                                             fontWeight:
@@ -363,8 +366,7 @@ class ReportNotificationsScreen extends GetView {
                                       });
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(
-                                    24,16,24,0),
+                                  padding:  EdgeInsets.all(18),
                                   child: Container(
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
@@ -387,86 +389,56 @@ class ReportNotificationsScreen extends GetView {
                                       ],
                                       color: HexColor('#FFFFFF'),
                                     ),
-                                    height: MediaQuery.of(context)
-                                        .size
-                                        .height *
-                                        0.150,
+
                                     child: Column(
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
+
+                                          Text(
+                                            overflow: TextOverflow.ellipsis,
+                                            snapshot
+                                                .data![index]
+                                                .title!.toString(),
+                                            style: TextStyle(
+                                                fontStyle:
+                                                FontStyle
+                                                    .normal,
+                                                fontWeight:
+                                                FontWeight
+                                                    .w500,
+                                                fontSize: 16,
+                                                color: HexColor(
+                                                    '#404345')),
+                                          ),
+                                          SizedBox(
+                                            height: 8,
+                                          ),
                                           Row(
                                             children: [
-                                              Padding(
-                                                padding:
-                                                const EdgeInsets
-                                                    .only(
-                                                    top: 14,
-                                                    left: 0),
-                                                child: Container(
-                                                  width: 70.4,
-                                                  height: 64,
-                                                  decoration: BoxDecoration(
-                                                      borderRadius:
-                                                      BorderRadius
-                                                          .circular(
-                                                          7)),
-                                                ),
+                                              Icon(Icons
+                                                  .calendar_month_outlined),
+                                              SizedBox(
+                                                width: 15,
                                               ),
-                                              Column(
-                                                crossAxisAlignment:
-                                                CrossAxisAlignment
-                                                    .start,
-                                                children: [
-                                                  Text(
-                                                    snapshot
-                                                        .data![index]
-                                                        .title!.toString(),
-                                                    style: TextStyle(
-                                                        fontStyle:
-                                                        FontStyle
-                                                            .normal,
-                                                        fontWeight:
-                                                        FontWeight
-                                                            .w500,
-                                                        fontSize: 16,
-                                                        color: HexColor(
-                                                            '#404345')),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 6,
-                                                  ),
-                                                  Row(
-                                                    children: [
-                                                      Icon(Icons
-                                                          .calendar_month_outlined),
-                                                      SizedBox(
-                                                        width: 15,
-                                                      ),
-                                                      Text(
-                                                        snapshot
-                                                            .data![
-                                                        index]
-                                                            .created_at.toString()
-                                                            .toString().split('T')[0].toString(),
-                                                        style:
-                                                        TextStyle(
-                                                          fontStyle:
-                                                          FontStyle
-                                                              .normal,
-                                                          fontWeight:
-                                                          FontWeight
-                                                              .w400,
-                                                          fontSize: 16,
-                                                        ),
-                                                        overflow:
-                                                        TextOverflow
-                                                            .ellipsis,
-                                                        maxLines: 1,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
+                                              Text(overflow: TextOverflow.ellipsis,
+                                                snapshot
+                                                    .data![
+                                                index]
+                                                    .created_at.toString()
+                                                    .toString().split('T')[0].toString(),
+                                                style:
+                                                TextStyle(
+                                                  fontStyle:
+                                                  FontStyle
+                                                      .normal,
+                                                  fontWeight:
+                                                  FontWeight
+                                                      .w400,
+                                                  fontSize: 16,
+                                                ),
+                                               
+                                                maxLines: 1,
                                               ),
                                             ],
                                           ),

@@ -38,8 +38,7 @@ class UpdateNoticeBoardScreen extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'NOTICE TITLE',
                           labelText: 'NOTICE TITLE',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+                         ),
                       MyTextFormField(
                           maxLines: 1,
                           // contentPadding: EdgeInsets.symmetric(
@@ -49,8 +48,7 @@ class UpdateNoticeBoardScreen extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'ENTER DESCRIPTION',
                           labelText: 'ENTER DESCRIPTION',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+                         ),
                       MyTextFormField(
                           onTap: () {
                             controller.NoticeStartDate(context);
@@ -65,8 +63,7 @@ class UpdateNoticeBoardScreen extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'Choose START Date',
                           labelText: 'Choose START Date',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+                         ),
                       MyTextFormField(
                           onTap: () {
                             controller.NoticeEndDate(context);
@@ -81,8 +78,7 @@ class UpdateNoticeBoardScreen extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'Choose END Date',
                           labelText: 'Choose END Date',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+                         ),
                       MyTextFormField(
                           onTap: () {
                             controller.NoticeStartTime(context);
@@ -98,8 +94,7 @@ class UpdateNoticeBoardScreen extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'Choose START TIME',
                           labelText: 'Choose START TIME',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+                         ),
                       MyTextFormField(
                           onTap: () {
                             controller.NoticeEndTime(context);
@@ -115,8 +110,7 @@ class UpdateNoticeBoardScreen extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'Choose END TIME',
                           labelText: 'Choose END TIME',
-                          onFocusedBorderColor: primaryColor,
-                          onEnabledBorderColor: primaryColor),
+                         ),
                       MyButton(
                         width: MediaQuery.of(context).size.width * 0.4,
                         elevation: 5,

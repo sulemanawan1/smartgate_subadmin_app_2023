@@ -212,43 +212,38 @@ class _AddResidentState extends State<AddResident> {
                         validator: emptyStringValidator,
                         hintText: 'First Name',
                         labelText: 'Enter First Name',
-                        onFocusedBorderColor: primaryColor,
-                        onEnabledBorderColor: primaryColor),
+                        ),
                     MyTextFormField(
                         controller: controller.lastnameController,
                         validator: emptyStringValidator,
                         hintText: 'Last Name',
                         labelText: 'Enter Last Name',
-                        onFocusedBorderColor: primaryColor,
-                        onEnabledBorderColor: primaryColor),
+                        ),
                     MyTextFormField(
                         controller: controller.cnicController,
                         validator: emptyStringValidator,
                         hintText: 'Cnic',
                         labelText: 'Enter Cnic',
-                        onFocusedBorderColor: primaryColor,
-                        onEnabledBorderColor: primaryColor),
+                        ),
                     MyTextFormField(
                         controller: controller.vehiclenoController,
                         validator: emptyStringValidator,
                         hintText: 'Vechile No',
                         labelText: 'Enter Vechile No',
-                        onFocusedBorderColor: primaryColor,
-                        onEnabledBorderColor: primaryColor),
+
+                    ),
                     MyTextFormField(
                         controller: controller.addressController,
                         validator: emptyStringValidator,
                         hintText: 'Address',
                         labelText: 'Enter Address',
-                        onFocusedBorderColor: primaryColor,
-                        onEnabledBorderColor: primaryColor),
+                        ),
                     MyTextFormField(
                         controller: controller.mobileNoController,
                         validator: emptyStringValidator,
                         hintText: 'Mobile No',
                         labelText: 'Enter Mobile No',
-                        onFocusedBorderColor: primaryColor,
-                        onEnabledBorderColor: primaryColor),
+                        ),
                     MyPasswordTextFormField(
                       maxLines: 1,
                       controller: controller.passwordController,
@@ -257,8 +252,7 @@ class _AddResidentState extends State<AddResident> {
                       validator: emptyStringValidator,
                       hintText: 'Enter Password',
                       labelText: 'Password',
-                      onFocusedBorderColor: primaryColor,
-                      onEnabledBorderColor: primaryColor,
+
                     ),
                     controller.rentalorownerval == 'Rental'
                         ? Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -279,23 +273,21 @@ class _AddResidentState extends State<AddResident> {
                                   validator: emptyStringValidator,
                                   hintText: 'Owner Name',
                                   labelText: 'Enter Owner Name',
-                                  onFocusedBorderColor: primaryColor,
-                                  onEnabledBorderColor: primaryColor),
+
+                              ),
                               MyTextFormField(
                                   controller:
                                       controller.owneraddressController,
                                             validator: emptyStringValidator,
                                   hintText: ' Owner Address',
                                   labelText: 'Enter Owner Address',
-                                  onFocusedBorderColor: primaryColor,
-                                  onEnabledBorderColor: primaryColor),
+                                  ),
                               MyTextFormField(
                                   controller: controller.ownerphonenumController,
                                   validator: emptyStringValidator,
                                   hintText: 'Owner Phone No',
                                   labelText: 'Enter Phone No',
-                                  onFocusedBorderColor: primaryColor,
-                                  onEnabledBorderColor: primaryColor),
+                                  ),
                             ],
                           )
                         : Container(),
