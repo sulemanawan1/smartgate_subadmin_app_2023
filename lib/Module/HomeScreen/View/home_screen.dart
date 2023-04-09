@@ -349,26 +349,7 @@ class HomeScreen extends GetView {
                             icon: 'assets/reports.svg',
                             text: 'Resident\nVerification',
                           ),
-                          // StreamBuilder(
-                          //   stream: _homeScreenController.countStream.stream,
-                          //   builder: (context, snapshot) {
-                          //     // print(snapshot.data);
-                          //     print("dnnnnnnnn");
-                          //     return Positioned(
-                          //
-                          //       left: 120,
-                          //       child: Badge(elevation: 0,
-                          //         badgeColor: HexColor('#141a45'),
-                          //         badgeContent: Text(snapshot.data.toString(),style: GoogleFonts.ubuntu(
-                          //             fontStyle: FontStyle.normal,
-                          //             fontWeight: FontWeight.w500,
-                          //             fontSize: 10,
-                          //             color:primaryColor)),
-                          //
-                          //       ),
-                          //     );
-                          //   }
-                          // ),
+
                         ],
                       )),
                   Padding(
@@ -384,28 +365,46 @@ class HomeScreen extends GetView {
                             icon: 'assets/property_measurements.svg',
                             text: 'Measurements',
                           ),
-                          // StreamBuilder(
-                          //   stream: _homeScreenController.countStream.stream,
-                          //   builder: (context, snapshot) {
-                          //     // print(snapshot.data);
-                          //     print("dnnnnnnnn");
-                          //     return Positioned(
-                          //
-                          //       left: 120,
-                          //       child: Badge(elevation: 0,
-                          //         badgeColor: HexColor('#141a45'),
-                          //         badgeContent: Text(snapshot.data.toString(),style: GoogleFonts.ubuntu(
-                          //             fontStyle: FontStyle.normal,
-                          //             fontWeight: FontWeight.w500,
-                          //             fontSize: 10,
-                          //             color:primaryColor)),
-                          //
-                          //       ),
-                          //     );
-                          //   }
-                          // ),
+
                         ],
                       )),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                      padding: EdgeInsets.only(left: 32, top: 32),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          AdminScreenContainer(
+                            onTap: () async {
+                              Get.toNamed(generatedbill,
+                                  arguments: controller.user);
+                            },
+                            icon: 'assets/reports.svg',
+                            text: 'Bills',
+                          ),
+
+                        ],
+                      )),
+                  // Padding(
+                  //     padding: EdgeInsets.only(left: 32, top: 32),
+                  //     child: Stack(
+                  //       clipBehavior: Clip.none,
+                  //       children: [
+                  //         AdminScreenContainer(
+                  //           onTap: () async {
+                  //             Get.toNamed(generatedbill,
+                  //                 arguments: controller.user);
+                  //           },
+                  //           icon: 'assets/reports.svg',
+                  //           text: 'Bills',
+                  //         ),
+                  //
+                  //       ],
+                  //     )),
+
                 ],
               ),
 

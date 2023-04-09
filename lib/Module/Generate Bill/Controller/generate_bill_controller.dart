@@ -17,7 +17,6 @@ late final User user;
   int status=0;
   bool isLoading=false;
 var   residentList=[];
-List<int> li=[];
 
 
 @override
@@ -67,45 +66,6 @@ void onInit() {
     update();
   }
 
-viewResidentsApi(int subadminiid, String token) async {
-  print(subadminiid.toString());
-  print(token);
-
-  final response = await Http.get(
-    Uri.parse(Api.view_residents + "/" +subadminiid.toString()),
-    headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-      'Authorization': "Bearer $token"
-    },
-  );
-  var data = jsonDecode(response.body.toString());
-
-
-  if (response.statusCode == 200) {
-    print(data);
-// Residents.fromJson(data);
-    final List<Resident>   li= await (data['residentslist'] as List).map((e) =>
-        Resident(
-
-            firstname: e['firstname'],image: e['image'],password: e['password'],id: e['id'],
-            address: e['address'],committeemember: e["committeemember"],cnic: e['cnic'],
-            lastname: e['lastname'],mobileno: e['mobileno'],
-
-            propertytype: e['propertytype'],
-            residentid:e['residentid'] ,residenttype:e ['residenttype'],roleid: e['roleid'],
-            rolename: e['rolename'],subadminid: e['subadminid'],
-            vechileno: e['vechileno'], created_at: e['created_at'], updated_at: e['updated_at']
-
-
-        ),
-
-
-    ).toList();
-
-
-    return li;
-  }
-}
 
 generateBillApi({
 
@@ -113,7 +73,6 @@ generateBillApi({
   required String billenddate,
   required String duedate,
   required int status,
-  required var residentlists,
   required String bearerToken,
   required int subadminid,
 }) async {
@@ -124,12 +83,12 @@ generateBillApi({
 
    
 
-  Map<String, List<int>> results = {
-    "residentlist": residentlists
-  };
+  // Map<String, List<int>> results = {
+  //   "residentlist": residentlists
+  // };
   print("----");
-
-  print(jsonEncode(results));
+  //
+  // print(jsonEncode(results));
   final response = await Http.post(
     Uri.parse(Api.generatebill),
     headers: <String, String>{
@@ -138,7 +97,7 @@ generateBillApi({
     },
     body: jsonEncode(<String, dynamic>{
       "subadminid": subadminid,
-      "residentlist":jsonEncode(results),
+      // "residentlist":jsonEncode(results),
       "duedate": duedate,
       "billstartdate": billstartdate,
       "billenddate": billenddate,

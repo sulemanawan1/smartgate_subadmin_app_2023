@@ -102,18 +102,14 @@ MyButton(name: 'Generate', onPressed:controller.isLoading?null: () async{
   print(controller.bill_end_date.text);
   print(controller.bill_due_date.text);
   print(controller.status);
-controller.residentList=await  controller.viewResidentsApi(controller.user.userid!, controller.user.bearerToken!);
-  controller.li.clear();
-
-for(int i=0 ;i <controller.residentList.length;i++)
-  {
-
-  controller.li.add(controller.residentList[i].residentid);
-
-  }
 
 
-  await  controller.generateBillApi(billstartdate: controller.bill_start_date.text, billenddate: controller.bill_end_date.text, duedate: controller.bill_due_date.text, status: controller.status, residentlists: controller.li, bearerToken: controller.user.bearerToken!, subadminid: controller.user.userid!);
+  await  controller.generateBillApi(billstartdate: controller.bill_start_date.text,
+      billenddate: controller.bill_end_date.text,
+      duedate: controller.bill_due_date.text,
+      status: controller.status,
+      bearerToken: controller.user.bearerToken!,
+      subadminid: controller.user.userid!);
 
 
 },)

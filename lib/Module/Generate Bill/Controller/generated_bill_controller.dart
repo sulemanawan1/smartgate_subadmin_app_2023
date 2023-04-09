@@ -4,9 +4,6 @@ import 'package:get/get.dart';
 import 'package:societyadminapp/Module/Generate%20Bill/Model/BillModel.dart';
 
 import '../../../Constants/api_routes.dart';
-import '../../../Routes/set_routes.dart';
-import '../../../Routes/set_routes.dart';
-import '../../../Routes/set_routes.dart';
 import '../../Login/Model/User.dart' as U;
 
 
