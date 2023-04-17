@@ -421,7 +421,7 @@ class GateKeeperScreen extends GetView {
                                                       decoration: BoxDecoration(
                                                           image: DecorationImage(
                                                               image: NetworkImage(
-                                                                  imageBaseUrl+   snapshot
+                                                                  Api.imageBaseUrl+   snapshot
                                                                       .data![
                                                                   index]
                                                                       .image

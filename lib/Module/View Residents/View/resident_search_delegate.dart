@@ -68,7 +68,8 @@ class ResidentSearchDelegate extends SearchDelegate {
                     return         ListTile(
                       leading: GestureDetector(
                         onTap: (){
-                          Get.toNamed (viewheroimage ,arguments: [imageBaseUrl  +snapshot.data![index].image.toString(),imageBaseUrl  +snapshot.data![index].image.toString()]);
+                          Get.toNamed (viewheroimage ,arguments: [
+                           Api. imageBaseUrl  +snapshot.data![index].image.toString(),Api.imageBaseUrl  +snapshot.data![index].image.toString()]);
 
 
                         },
@@ -76,7 +77,7 @@ class ResidentSearchDelegate extends SearchDelegate {
                         child: CircleAvatar(
                           radius: 30,
                           backgroundImage:
-                          NetworkImage(imageBaseUrl  +snapshot.data![index].image.toString()),
+                          NetworkImage(Api.imageBaseUrl  +snapshot.data![index].image.toString()),
                         ),
                       ),
                       title: Text(snapshot.data![index].firstname

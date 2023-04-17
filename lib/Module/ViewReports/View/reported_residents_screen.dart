@@ -56,7 +56,7 @@ class ReportedResidentListScreen extends StatelessWidget {
                                                 image: DecorationImage(
                                               fit: BoxFit.contain,
 
-                                            image: NetworkImage(imageBaseUrl+snapshot.data![index].image.toString())
+                                            image: NetworkImage(Api.imageBaseUrl+snapshot.data![index].image.toString())
                                           )),),
                                         ),
                                         Padding(

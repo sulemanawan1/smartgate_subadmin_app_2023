@@ -61,7 +61,7 @@ class HouseResidentVerification extends GetView {
                                               BorderRadius.circular(8),
                                           image: DecorationImage(
                                               fit: BoxFit.contain,
-                                              image: NetworkImage(imageBaseUrl +
+                                              image: NetworkImage(Api.imageBaseUrl +
                                                   controller.resident.image
                                                       .toString()))),
                                     ),

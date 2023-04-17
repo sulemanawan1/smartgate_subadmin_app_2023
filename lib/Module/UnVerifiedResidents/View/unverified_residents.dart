@@ -73,7 +73,7 @@ class UnVerifiedResident extends GetView {
                                                       decoration: BoxDecoration(
                                                           image: DecorationImage(
                                                               image: NetworkImage(
-                                                                  imageBaseUrl +
+                                                               Api.   imageBaseUrl +
                                                                       snapshot
                                                                           .data
                                                                           .data[
@@ -227,7 +227,7 @@ SizedBox(height: 20,),
                                                       decoration: BoxDecoration(
                                                           image: DecorationImage(
                                                               image: NetworkImage(
-                                                                  imageBaseUrl +
+                                                                  Api.imageBaseUrl +
                                                                       snapshot
                                                                           .data
                                                                           .data[

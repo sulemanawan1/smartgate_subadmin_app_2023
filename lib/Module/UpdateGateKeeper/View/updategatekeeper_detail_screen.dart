@@ -47,7 +47,7 @@ class _UpdateGateKepeerScreenState extends State<UpdateGateKepeerScreen> {
                                 radius: 50.0,
                                 backgroundColor: Colors.white,
                                 backgroundImage: controller.imageFile == null
-                                    ? NetworkImage(imageBaseUrl +
+                                    ? NetworkImage(Api.imageBaseUrl +
                                         controller.gatekeeper.image
                                             .toString()) as ImageProvider
                                     : FileImage(

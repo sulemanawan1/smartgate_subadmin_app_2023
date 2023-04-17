@@ -27,7 +27,7 @@ class AdminProfileScreen extends GetView {
                         child: Container(
                           child: Image(
                             image: NetworkImage(
-                              imageBaseUrl+controller.user.image!,
+                             Api. imageBaseUrl+controller.user.image!,
                             ),
                           ),
                         ),
