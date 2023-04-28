@@ -21,13 +21,11 @@ import 'package:societyadminapp/Module/Login/View/login.dart';
 import 'package:societyadminapp/Module/Measurements/View/add_measurements.dart';
 import 'package:societyadminapp/Module/Measurements/View/measurements_view.dart';
 import 'package:societyadminapp/Module/NoticeBoard/View/notice_board_screen.dart';
-import 'package:societyadminapp/Module/PanicMode/View/panic_mode_screen.dart';
 import 'package:societyadminapp/Module/Report%20Notifications/View/report_notifications_screen.dart';
 import 'package:societyadminapp/Module/Splash/View/splash_screen.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/View/apartment_resident_verification.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/View/unverified_residents.dart';
 import 'package:societyadminapp/Module/UpdateNoticeBoard/View/update_notice_screen.dart';
-import 'package:societyadminapp/Module/UserDetail/View/user_detail_screen.dart';
 import 'package:societyadminapp/Module/UsersGuestHistory/View/particular_guest_arrival_screen.dart';
 import 'package:societyadminapp/Module/UsersGuestHistory/View/users_guest_detail_screen.dart';
 import 'package:societyadminapp/Module/UsersGuestHistory/View/users_guest_history_screen.dart';
@@ -71,6 +69,7 @@ import '../Module/AddSocietyDetail/StreetOrBuilding/View/street_or_building_scre
 import '../Module/AddSocietyDetail/StructureType5HouseOrBuildingMiddleWare/View/structure_type5_house_or_building_screen.dart';
 import '../Module/HomeScreen/View/home_screen.dart';
 import '../Module/UnVerifiedResidents/View/house_resident_verification.dart';
+import '../Module/UnVerifiedResidents/View/local_building_apartment_resident_verification.dart';
 import '../Module/UpdateGateKeeper/View/updategatekeeper_detail_screen.dart';
 
 class RouteManagement {
@@ -106,11 +105,6 @@ class RouteManagement {
       //     page: () => UpdateResidentDetails(),
       //     binding: ScreenBindings(),
       //     ),
-      GetPage(
-        name: userdetailscreen,
-        page: () => UserDetailScreen(),
-        binding: ScreenBindings(),
-      ),
       // GetPage(
       //     name: chatscreen,
       //     page: () => ChatScreen(),
@@ -217,11 +211,7 @@ class RouteManagement {
         page: () => ViewEventImages(),
         binding: ScreenBindings(),
       ),
-      GetPage(
-        name: panicmodescreen,
-        page: () => PanicModeScreen(),
-        binding: ScreenBindings(),
-      ),
+
       GetPage(
         name: viewheroimage,
         page: () => ViewImage(),
@@ -430,6 +420,11 @@ class RouteManagement {
       GetPage(
           name: apartmentresidentverification,
           page: () => ApartmentResidentVerification(),
+          binding: ScreenBindings(),
+          transition: Transition.noTransition),
+      GetPage(
+          name: localBuildingApartmentResidentVerification,
+          page: () => LocalBuildingApartmentResidentVerification(),
           binding: ScreenBindings(),
           transition: Transition.noTransition),
     ];

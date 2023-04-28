@@ -3,6 +3,7 @@ class Api {
 
   static const String imageBaseUrl='http://192.168.100.7:8000/storage/';
   static const String baseUrl = 'http://192.168.100.7:8000/api/';
+
   static const String login = baseUrl + "login";
   static const String fcmtokenrefresh = baseUrl + "fcmtokenrefresh";
   static const String register_resident = baseUrl + "registerresident";
@@ -100,6 +101,9 @@ class Api {
       baseUrl + "addlocalbuildingapartments";
 
   static const String allsocietybuildings = baseUrl + "allsocietybuildings";
+  static const String verifylocalbuildingapartmentresident = baseUrl + "verifylocalbuildingapartmentresident";
+  static const String unverifiedlocalbuildingapartmentresident = baseUrl + "unverifiedlocalbuildingapartmentresident";
+
 
 
 }

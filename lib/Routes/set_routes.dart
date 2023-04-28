@@ -86,7 +86,8 @@ const String addlocalbuildingapartmentsscreen = '/AddLocalBuildingApartmentsScre
 const String structureType5HouseOrBuildingMiddlewareScreen =
     '/StructureType5HouseOrBuildingMiddlewareScreen';
 
-
+const String localBuildingApartmentResidentVerification =
+    '/LocalBuildingApartmentResidentVerification';
 
 
 

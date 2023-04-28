@@ -5,6 +5,7 @@ import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident%20Mode
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident%20Model/HouseResident.dart';
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
+import '../Model/Resident Model/LocalBuildingApartmentResidentModel.dart';
 
 class UnVerifiedResidentController extends GetxController {
   var user = Get.arguments;
@@ -74,4 +75,33 @@ class UnVerifiedResidentController extends GetxController {
 
     return ApartmentResidentModel.fromJson(data);
   }
+
+
+  Future<LocalBuildingApartmentResidentModel> viewUnVerifiedLocalBuildingApartmentResidentApi(
+      {required int subadminid,
+        required String token,
+        required int status}) async {
+    print(token);
+
+    final response = await Http.get(
+      Uri.parse(Api.unverifiedlocalbuildingapartmentresident.toString() +
+          '/' +
+          subadminid.toString() +
+          '/' +
+          status.toString()),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        'Authorization': "Bearer $token"
+      },
+    );
+    print(response.body);
+    var data = jsonDecode(response.body.toString());
+
+    if (response.statusCode == 200) {
+      return LocalBuildingApartmentResidentModel.fromJson(data);
+    }
+
+    return LocalBuildingApartmentResidentModel.fromJson(data);
+  }
+
 }

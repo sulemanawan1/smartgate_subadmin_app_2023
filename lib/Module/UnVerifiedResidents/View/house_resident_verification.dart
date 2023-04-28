@@ -213,9 +213,9 @@ class HouseResidentVerification extends GetView {
                                           return controller
                                               .housesApartmentsModelApi(
                                                   subadminid: controller
-                                                      .userdata!.userid!,
+                                                      .userdata.userid!,
                                                   token: controller
-                                                      .userdata!.bearerToken!,
+                                                      .userdata.bearerToken!,
                                                   type: 'house');
                                         },
                                         onChanged: (Measurement? data) {
@@ -380,9 +380,9 @@ class HouseResidentVerification extends GetView {
                                           return controller
                                               .housesApartmentsModelApi(
                                                   subadminid: controller
-                                                      .userdata!.userid!,
+                                                      .userdata.userid!,
                                                   token: controller
-                                                      .userdata!.bearerToken!,
+                                                      .userdata.bearerToken!,
                                                   type: 'house');
                                         },
                                         onChanged: (Measurement? data) {
@@ -585,9 +585,9 @@ class HouseResidentVerification extends GetView {
                                           return controller
                                               .housesApartmentsModelApi(
                                                   subadminid: controller
-                                                      .userdata!.userid!,
+                                                      .userdata.userid!,
                                                   token: controller
-                                                      .userdata!.bearerToken!,
+                                                      .userdata.bearerToken!,
                                                   type: 'house');
                                         },
                                         onChanged: (Measurement? data) {
@@ -673,9 +673,9 @@ class HouseResidentVerification extends GetView {
                                           return controller
                                               .housesApartmentsModelApi(
                                                   subadminid: controller
-                                                      .userdata!.userid!,
+                                                      .userdata.userid!,
                                                   token: controller
-                                                      .userdata!.bearerToken!,
+                                                      .userdata.bearerToken!,
                                                   type: 'house');
                                         },
                                         onChanged: (Measurement? data) {

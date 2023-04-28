@@ -255,7 +255,8 @@ class ApartmentResidentVerificationController extends GetxController
 
 
       update();
-    } else if (response.statusCode == 403) {
+    }
+    else if (response.statusCode == 403) {
 
       var data = jsonDecode(response.body.toString());
       var errors =data['errors'] as List;
@@ -264,6 +265,12 @@ class ApartmentResidentVerificationController extends GetxController
       {
         Get.snackbar('Error', errors[i].toString());
       }
+    }
+    else if (response.statusCode ==  409) {
+      var data = jsonDecode(response.body.toString());
+
+      Get.snackbar(data['message'], "");
+
     }
   }
 

@@ -8,8 +8,7 @@ import 'package:societyadminapp/Module/UnVerifiedResidents/Model/street.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/block.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/house.dart';
 import 'package:societyadminapp/Module/UnVerifiedResidents/Model/phases.dart';
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/HouseResident.dart'
-    as HouseResident;
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/HouseResident.dart' as HouseResident;
 import 'package:societyadminapp/Routes/set_routes.dart';
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
@@ -432,7 +431,8 @@ class HouseResidentVerificationController extends GetxController {
       Get.offNamed(unverifiedresident, arguments: userdata);
 
       update();
-    } else if (response.statusCode == 403) {
+    }
+    else if (response.statusCode == 403) {
       var data = jsonDecode(response.body.toString());
       var errors = data['errors'] as List;
 
@@ -440,6 +440,14 @@ class HouseResidentVerificationController extends GetxController {
         Get.snackbar('Error', errors[i].toString());
       }
     }
+    else if (response.statusCode ==  409) {
+      var data = jsonDecode(response.body.toString());
+
+      Get.snackbar(data['message'], "");
+
+    }
+
+
   }
 
   SelectedMeasurement(val) {

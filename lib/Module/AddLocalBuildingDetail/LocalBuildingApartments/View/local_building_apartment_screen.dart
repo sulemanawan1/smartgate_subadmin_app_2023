@@ -40,8 +40,10 @@ class LocalBuildingApartmentScreen extends GetView {
                       MyBackButton(
                         text: 'Apartments',
                         onTap: () {
-                          Get.offAndToNamed(societybuildingfloorsscreen,
+
+                          Get.offAndToNamed(localbuildingfloorsscreen,
                               arguments: controller.user);
+
                         },
                       ),
                       Expanded(

@@ -55,14 +55,13 @@ import '../Module/ImageHeroView/viewimage.dart';
 import '../Module/Login/View/login.dart';
 import '../Module/Measurements/View/measurements_view.dart';
 import '../Module/NoticeBoard/View/notice_board_screen.dart';
-import '../Module/PanicMode/View/panic_mode_screen.dart';
 import '../Module/Report Notifications/View/report_notifications_screen.dart';
 
 import '../Module/UnVerifiedResidents/View/apartment_resident_verification.dart';
 import '../Module/UnVerifiedResidents/View/house_resident_verification.dart';
+import '../Module/UnVerifiedResidents/View/local_building_apartment_resident_verification.dart';
 import '../Module/UpdateGateKeeper/View/updategatekeeper_detail_screen.dart';
 import '../Module/UpdateNoticeBoard/View/update_notice_screen.dart';
-import '../Module/UserDetail/View/user_detail_screen.dart';
 import '../Module/UsersGuestHistory/View/particular_guest_arrival_screen.dart';
 import '../Module/UsersGuestHistory/View/users_guest_detail_screen.dart';
 import '../Module/UsersGuestHistory/View/users_guest_history_screen.dart';
@@ -81,7 +80,6 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => ViewResidents());
     Get.lazyPut(() => AddResident());
     // Get.lazyPut(() => UpdateResidentDetails());
-    Get.lazyPut(() => UserDetailScreen());
     // Get.lazyPut(() => ChatScreen());
     Get.lazyPut(() => GateKeeperScreen());
     Get.lazyPut(() => AddGateKeeper());
@@ -102,7 +100,6 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => NoticeBoardScreen());
     Get.lazyPut(() => AddNoticeBoardScreen());
     Get.lazyPut(() => ViewEventImages());
-    Get.lazyPut(() => PanicModeScreen());
     Get.lazyPut(() => UpdateNoticeBoardScreen());
     Get.lazyPut(() => ViewImage());
     Get.lazyPut(() => AddPhases());
@@ -146,7 +143,7 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => LocalBuildingApartmentScreen());
     Get.lazyPut(() => AddLocalBuildingApartmentsScreen());
     Get.lazyPut(() => StructureType5HouseOrBuildingMiddlewareScreen());
-
+    Get.lazyPut(() => LocalBuildingApartmentResidentVerification());
     
 
     
