@@ -1,38 +1,235 @@
 /// success : true
-/// data : [{"id":1,"charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"balance":5000,"subadminid":2,"residentid":4,"propertyid":2,"measurementid":1,"duedate":"2023-03-20","billstartdate":"2023-02-01","billenddate":"2023-02-28","month":"February 2023","status":0,"created_at":"2023-03-13T10:44:00.000000Z","updated_at":"2023-03-13T10:44:00.000000Z","user":[{"id":4,"firstname":"rimsha","lastname":"sohai","cnic":"37905","address":"House no 2","mobileno":"0321","password":"$2y$10$FhqO1ATAYKwIryTewivtpeGdrs.em0yc3HRO1iEdwb4Jh/ojgsay2","roleid":3,"isverfied":1,"rolename":"resident","image":"1678703649.jpg","fcmtoken":"fd2X6CQ1RnOjnbeKXQo0Wj:APA91bGYJSdZXRh97FsDA09S8e13yF_l7ozJbc52l0_5zUPs6cNbTjWtNz0rQsSMvbRUNDxfsNOo54ff0VrEnzZp6e-gGqBcbFku6TF66qZ3wk-tEngArM9vCq6TZxC5WTf-pLJbZrJd","created_at":"2023-03-13T10:34:09.000000Z","updated_at":"2023-03-13T10:35:08.000000Z"}],"resident":[{"id":2,"residentid":4,"subadminid":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","houseaddress":"House no 2","vechileno":"","residenttype":"Owner","propertytype":"house","committeemember":0,"status":1,"created_at":"2023-03-13T10:34:52.000000Z","updated_at":"2023-03-13T10:35:08.000000Z"}],"measurement":[{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":2,"bedrooms":2,"status":0,"created_at":"2023-03-13T10:27:15.000000Z","updated_at":"2023-03-13T10:27:15.000000Z"}],"property":[{"id":2,"sid":1,"address":"House no 2","typeid":0,"type":"house","created_at":"2023-03-13T10:25:49.000000Z","updated_at":"2023-03-13T10:25:49.000000Z"}]}]
+/// data : [{"id":3,"charges":"5000.00","chargesafterduedate":"6100.00","appcharges":"100.00","tax":"750.00","balance":"5850.00","payableamount":"5850.00","subadminid":2,"residentid":4,"propertyid":1,"measurementid":1,"duedate":"2023-04-29","billstartdate":"2023-04-28","billenddate":"2023-04-29","month":"April 2023","status":0,"noofappusers":1,"created_at":"2023-04-28T14:51:35.000000Z","updated_at":"2023-04-28T14:51:35.000000Z","user":[{"id":4,"firstname":"Umer","lastname":"Bashir","cnic":"1","address":"Rawat Enclave,Block#1,Street#1,House#1","mobileno":"0300","password":"$2y$10$Y672rdtIgtV2..GAlFheb.yqFv4FcdlCGAvdz2lvSD0vTnkfMjZxi","roleid":3,"rolename":"resident","image":"images/user.png","fcmtoken":"d2sFJLkXSeiS0jdh2nzlAD:APA91bHVNWN4Do2KozEFBt-g-9MTC1EJEBeFKxGx_xbhCj6ds25G6Z2EczQLRuHDX08uJFkf_A4hzrqEYKjIXaBM2slYoLkf4Pep-6f04VXDye9DUbfj5xV-SIJ1Nxw_e2AW7AOXPLSx","created_at":"2023-04-28T12:42:54.000000Z","updated_at":"2023-04-28T14:46:02.000000Z"}],"resident":[{"id":1,"residentid":4,"subadminid":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","houseaddress":"Rawat Enclave,Block#1,Street#1,House#1","vechileno":"","residenttype":"Owner","propertytype":"house","committeemember":0,"status":1,"created_at":"2023-04-28T12:43:42.000000Z","updated_at":"2023-04-28T14:44:23.000000Z"}],"measurement":[{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":"5000.00","chargesafterduedate":"5250.00","appcharges":"100.00","tax":"750.00","area":"5.00","bedrooms":5,"status":0,"created_at":"2023-04-28T12:38:11.000000Z","updated_at":"2023-04-28T12:38:11.000000Z"}],"property":[{"id":1,"address":"House#1","type":"street","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"occupied":1,"created_at":"2023-04-28T12:37:18.000000Z","updated_at":"2023-04-28T14:44:23.000000Z"}]},{"id":4,"charges":"7000.00","chargesafterduedate":"8540.00","appcharges":"140.00","tax":"1050.00","balance":"8190.00","payableamount":"8190.00","subadminid":2,"residentid":5,"propertyid":2,"measurementid":2,"duedate":"2023-04-29","billstartdate":"2023-04-28","billenddate":"2023-04-29","month":"April 2023","status":0,"noofappusers":1,"created_at":"2023-04-28T14:51:35.000000Z","updated_at":"2023-04-28T14:51:35.000000Z","user":[{"id":5,"firstname":"Farrah","lastname":"Bashir","cnic":"111","address":"Rawat Enclave,Block#1,Street#1,House#2","mobileno":"0321555079","password":"$2y$10$EkwjSnFweqBp5ZR5oisY3.tsWn9RHeWAuhDI.inX4dHvyZrOIs43K","roleid":3,"rolename":"resident","image":"images/user.png","fcmtoken":"doicq4q0TNyYXYxTFmd9y1:APA91bG-j6VAHLt8zKZLyrhvW_tmMpSNf5qmFdGPCyz_kqQJRmHfMxv17CZ-DRUTi6oj-DgjicRvq9Hfkp-DkZ6JMXMySE9ZmcUWqL9vK_juzk75QXLO_JpEJpnGbxOxg0G3rTNAL6IH","created_at":"2023-04-28T12:47:00.000000Z","updated_at":"2023-04-28T14:44:19.000000Z"}],"resident":[{"id":2,"residentid":5,"subadminid":2,"country":"🇵🇰    Pakistan","state":"Punjab","city":"Rawalpindi","houseaddress":"Rawat Enclave,Block#1,Street#1,House#2","vechileno":"rwp66","residenttype":"Rental","propertytype":"house","committeemember":0,"status":1,"created_at":"2023-04-28T12:47:52.000000Z","updated_at":"2023-04-28T14:44:19.000000Z"}],"measurement":[{"id":2,"subadminid":2,"type":"house","unit":"marla","charges":"7000.00","chargesafterduedate":"7350.00","appcharges":"140.00","tax":"1050.00","area":"7.00","bedrooms":7,"status":0,"created_at":"2023-04-28T12:38:45.000000Z","updated_at":"2023-04-28T12:38:45.000000Z"}],"property":[{"id":2,"address":"House#2","type":"street","iteration":"2","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"occupied":1,"created_at":"2023-04-28T12:37:18.000000Z","updated_at":"2023-04-28T14:44:19.000000Z"}]}]
 
 class BillModel {
   BillModel({
-      bool? success, 
-      List<Data>? data,}){
-    _success = success;
-    _data = data;
-}
+      this.success, 
+      this.data,});
 
   BillModel.fromJson(dynamic json) {
-    _success = json['success'];
+    success = json['success'];
     if (json['data'] != null) {
-      _data = [];
+      data = [];
       json['data'].forEach((v) {
-        _data?.add(Data.fromJson(v));
+        data?.add(Data.fromJson(v));
       });
     }
   }
-  bool? _success;
-  List<Data>? _data;
+  bool? success;
+  List<Data>? data;
 BillModel copyWith({  bool? success,
   List<Data>? data,
-}) => BillModel(  success: success ?? _success,
-  data: data ?? _data,
+}) => BillModel(  success: success ?? this.success,
+  data: data ?? this.data,
 );
-  bool? get success => _success;
-  List<Data>? get data => _data;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['success'] = _success;
-    if (_data != null) {
-      map['data'] = _data?.map((v) => v.toJson()).toList();
+    map['success'] = success;
+    if (data != null) {
+      map['data'] = data?.map((v) => v.toJson()).toList();
+    }
+    return map;
+  }
+
+}
+
+/// id : 3
+/// charges : "5000.00"
+/// chargesafterduedate : "6100.00"
+/// appcharges : "100.00"
+/// tax : "750.00"
+/// balance : "5850.00"
+/// payableamount : "5850.00"
+/// subadminid : 2
+/// residentid : 4
+/// propertyid : 1
+/// measurementid : 1
+/// duedate : "2023-04-29"
+/// billstartdate : "2023-04-28"
+/// billenddate : "2023-04-29"
+/// month : "April 2023"
+/// status : 0
+/// noofappusers : 1
+/// created_at : "2023-04-28T14:51:35.000000Z"
+/// updated_at : "2023-04-28T14:51:35.000000Z"
+/// user : [{"id":4,"firstname":"Umer","lastname":"Bashir","cnic":"1","address":"Rawat Enclave,Block#1,Street#1,House#1","mobileno":"0300","password":"$2y$10$Y672rdtIgtV2..GAlFheb.yqFv4FcdlCGAvdz2lvSD0vTnkfMjZxi","roleid":3,"rolename":"resident","image":"images/user.png","fcmtoken":"d2sFJLkXSeiS0jdh2nzlAD:APA91bHVNWN4Do2KozEFBt-g-9MTC1EJEBeFKxGx_xbhCj6ds25G6Z2EczQLRuHDX08uJFkf_A4hzrqEYKjIXaBM2slYoLkf4Pep-6f04VXDye9DUbfj5xV-SIJ1Nxw_e2AW7AOXPLSx","created_at":"2023-04-28T12:42:54.000000Z","updated_at":"2023-04-28T14:46:02.000000Z"}]
+/// resident : [{"id":1,"residentid":4,"subadminid":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","houseaddress":"Rawat Enclave,Block#1,Street#1,House#1","vechileno":"","residenttype":"Owner","propertytype":"house","committeemember":0,"status":1,"created_at":"2023-04-28T12:43:42.000000Z","updated_at":"2023-04-28T14:44:23.000000Z"}]
+/// measurement : [{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":"5000.00","chargesafterduedate":"5250.00","appcharges":"100.00","tax":"750.00","area":"5.00","bedrooms":5,"status":0,"created_at":"2023-04-28T12:38:11.000000Z","updated_at":"2023-04-28T12:38:11.000000Z"}]
+/// property : [{"id":1,"address":"House#1","type":"street","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"occupied":1,"created_at":"2023-04-28T12:37:18.000000Z","updated_at":"2023-04-28T14:44:23.000000Z"}]
+
+class Data {
+  Data({
+      this.id, 
+      this.charges, 
+      this.chargesafterduedate, 
+      this.appcharges, 
+      this.tax, 
+      this.balance, 
+      this.payableamount, 
+      this.subadminid, 
+      this.residentid, 
+      this.propertyid, 
+      this.measurementid, 
+      this.duedate, 
+      this.billstartdate, 
+      this.billenddate, 
+      this.month, 
+      this.status, 
+      this.noofappusers, 
+      this.createdAt, 
+      this.updatedAt, 
+      this.user, 
+      this.resident, 
+      this.measurement, 
+      this.property,});
+
+  Data.fromJson(dynamic json) {
+    id = json['id'];
+    charges = json['charges'];
+    chargesafterduedate = json['chargesafterduedate'];
+    appcharges = json['appcharges'];
+    tax = json['tax'];
+    balance = json['balance'];
+    payableamount = json['payableamount'];
+    subadminid = json['subadminid'];
+    residentid = json['residentid'];
+    propertyid = json['propertyid'];
+    measurementid = json['measurementid'];
+    duedate = json['duedate'];
+    billstartdate = json['billstartdate'];
+    billenddate = json['billenddate'];
+    month = json['month'];
+    status = json['status'];
+    noofappusers = json['noofappusers'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
+    if (json['user'] != null) {
+      user = [];
+      json['user'].forEach((v) {
+        user?.add(User.fromJson(v));
+      });
+    }
+    if (json['resident'] != null) {
+      resident = [];
+      json['resident'].forEach((v) {
+        resident?.add(Resident.fromJson(v));
+      });
+    }
+    if (json['measurement'] != null) {
+      measurement = [];
+      json['measurement'].forEach((v) {
+        measurement?.add(Measurement.fromJson(v));
+      });
+    }
+    if (json['property'] != null) {
+      property = [];
+      json['property'].forEach((v) {
+        property?.add(Property.fromJson(v));
+      });
+    }
+  }
+  int? id;
+  String? charges;
+  String? chargesafterduedate;
+  String? appcharges;
+  String? tax;
+  String? balance;
+  String? payableamount;
+  int? subadminid;
+  int? residentid;
+  int? propertyid;
+  int? measurementid;
+  String? duedate;
+  String? billstartdate;
+  String? billenddate;
+  String? month;
+  int? status;
+  int? noofappusers;
+  String? createdAt;
+  String? updatedAt;
+  List<User>? user;
+  List<Resident>? resident;
+  List<Measurement>? measurement;
+  List<Property>? property;
+Data copyWith({  int? id,
+  String? charges,
+  String? chargesafterduedate,
+  String? appcharges,
+  String? tax,
+  String? balance,
+  String? payableamount,
+  int? subadminid,
+  int? residentid,
+  int? propertyid,
+  int? measurementid,
+  String? duedate,
+  String? billstartdate,
+  String? billenddate,
+  String? month,
+  int? status,
+  int? noofappusers,
+  String? createdAt,
+  String? updatedAt,
+  List<User>? user,
+  List<Resident>? resident,
+  List<Measurement>? measurement,
+  List<Property>? property,
+}) => Data(  id: id ?? this.id,
+  charges: charges ?? this.charges,
+  chargesafterduedate: chargesafterduedate ?? this.chargesafterduedate,
+  appcharges: appcharges ?? this.appcharges,
+  tax: tax ?? this.tax,
+  balance: balance ?? this.balance,
+  payableamount: payableamount ?? this.payableamount,
+  subadminid: subadminid ?? this.subadminid,
+  residentid: residentid ?? this.residentid,
+  propertyid: propertyid ?? this.propertyid,
+  measurementid: measurementid ?? this.measurementid,
+  duedate: duedate ?? this.duedate,
+  billstartdate: billstartdate ?? this.billstartdate,
+  billenddate: billenddate ?? this.billenddate,
+  month: month ?? this.month,
+  status: status ?? this.status,
+  noofappusers: noofappusers ?? this.noofappusers,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
+  user: user ?? this.user,
+  resident: resident ?? this.resident,
+  measurement: measurement ?? this.measurement,
+  property: property ?? this.property,
+);
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = id;
+    map['charges'] = charges;
+    map['chargesafterduedate'] = chargesafterduedate;
+    map['appcharges'] = appcharges;
+    map['tax'] = tax;
+    map['balance'] = balance;
+    map['payableamount'] = payableamount;
+    map['subadminid'] = subadminid;
+    map['residentid'] = residentid;
+    map['propertyid'] = propertyid;
+    map['measurementid'] = measurementid;
+    map['duedate'] = duedate;
+    map['billstartdate'] = billstartdate;
+    map['billenddate'] = billenddate;
+    map['month'] = month;
+    map['status'] = status;
+    map['noofappusers'] = noofappusers;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
+    if (user != null) {
+      map['user'] = user?.map((v) => v.toJson()).toList();
+    }
+    if (resident != null) {
+      map['resident'] = resident?.map((v) => v.toJson()).toList();
+    }
+    if (measurement != null) {
+      map['measurement'] = measurement?.map((v) => v.toJson()).toList();
+    }
+    if (property != null) {
+      map['property'] = property?.map((v) => v.toJson()).toList();
     }
     return map;
   }
@@ -40,312 +237,91 @@ BillModel copyWith({  bool? success,
 }
 
 /// id : 1
-/// charges : 5000
-/// chargesafterduedate : 5250
-/// appcharges : 100
-/// tax : 750
-/// balance : 5000
+/// address : "House#1"
+/// type : "street"
+/// iteration : "1"
+/// dynamicid : 1
 /// subadminid : 2
-/// residentid : 4
-/// propertyid : 2
-/// measurementid : 1
-/// duedate : "2023-03-20"
-/// billstartdate : "2023-02-01"
-/// billenddate : "2023-02-28"
-/// month : "February 2023"
-/// status : 0
-/// created_at : "2023-03-13T10:44:00.000000Z"
-/// updated_at : "2023-03-13T10:44:00.000000Z"
-/// user : [{"id":4,"firstname":"rimsha","lastname":"sohai","cnic":"37905","address":"House no 2","mobileno":"0321","password":"$2y$10$FhqO1ATAYKwIryTewivtpeGdrs.em0yc3HRO1iEdwb4Jh/ojgsay2","roleid":3,"isverfied":1,"rolename":"resident","image":"1678703649.jpg","fcmtoken":"fd2X6CQ1RnOjnbeKXQo0Wj:APA91bGYJSdZXRh97FsDA09S8e13yF_l7ozJbc52l0_5zUPs6cNbTjWtNz0rQsSMvbRUNDxfsNOo54ff0VrEnzZp6e-gGqBcbFku6TF66qZ3wk-tEngArM9vCq6TZxC5WTf-pLJbZrJd","created_at":"2023-03-13T10:34:09.000000Z","updated_at":"2023-03-13T10:35:08.000000Z"}]
-/// resident : [{"id":2,"residentid":4,"subadminid":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","houseaddress":"House no 2","vechileno":"","residenttype":"Owner","propertytype":"house","committeemember":0,"status":1,"created_at":"2023-03-13T10:34:52.000000Z","updated_at":"2023-03-13T10:35:08.000000Z"}]
-/// measurement : [{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":2,"bedrooms":2,"status":0,"created_at":"2023-03-13T10:27:15.000000Z","updated_at":"2023-03-13T10:27:15.000000Z"}]
-/// property : [{"id":2,"sid":1,"address":"House no 2","typeid":0,"type":"house","created_at":"2023-03-13T10:25:49.000000Z","updated_at":"2023-03-13T10:25:49.000000Z"}]
-
-class Data {
-  Data({
-      num? id, 
-      num? charges, 
-      num? chargesafterduedate, 
-      num? appcharges, 
-      num? tax, 
-      num? balance, 
-      num? subadminid, 
-      num? residentid, 
-      num? propertyid, 
-      num? measurementid, 
-      String? duedate, 
-      String? billstartdate, 
-      String? billenddate, 
-      String? month, 
-      num? status, 
-      String? createdAt, 
-      String? updatedAt, 
-      List<User>? user, 
-      List<Resident>? resident, 
-      List<Measurement>? measurement, 
-      List<Property>? property,}){
-    _id = id;
-    _charges = charges;
-    _chargesafterduedate = chargesafterduedate;
-    _appcharges = appcharges;
-    _tax = tax;
-    _balance = balance;
-    _subadminid = subadminid;
-    _residentid = residentid;
-    _propertyid = propertyid;
-    _measurementid = measurementid;
-    _duedate = duedate;
-    _billstartdate = billstartdate;
-    _billenddate = billenddate;
-    _month = month;
-    _status = status;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-    _user = user;
-    _resident = resident;
-    _measurement = measurement;
-    _property = property;
-}
-
-  Data.fromJson(dynamic json) {
-    _id = json['id'];
-    _charges = json['charges'];
-    _chargesafterduedate = json['chargesafterduedate'];
-    _appcharges = json['appcharges'];
-    _tax = json['tax'];
-    _balance = json['balance'];
-    _subadminid = json['subadminid'];
-    _residentid = json['residentid'];
-    _propertyid = json['propertyid'];
-    _measurementid = json['measurementid'];
-    _duedate = json['duedate'];
-    _billstartdate = json['billstartdate'];
-    _billenddate = json['billenddate'];
-    _month = json['month'];
-    _status = json['status'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
-    if (json['user'] != null) {
-      _user = [];
-      json['user'].forEach((v) {
-        _user?.add(User.fromJson(v));
-      });
-    }
-    if (json['resident'] != null) {
-      _resident = [];
-      json['resident'].forEach((v) {
-        _resident?.add(Resident.fromJson(v));
-      });
-    }
-    if (json['measurement'] != null) {
-      _measurement = [];
-      json['measurement'].forEach((v) {
-        _measurement?.add(Measurement.fromJson(v));
-      });
-    }
-    if (json['property'] != null) {
-      _property = [];
-      json['property'].forEach((v) {
-        _property?.add(Property.fromJson(v));
-      });
-    }
-  }
-  num? _id;
-  num? _charges;
-  num? _chargesafterduedate;
-  num? _appcharges;
-  num? _tax;
-  num? _balance;
-  num? _subadminid;
-  num? _residentid;
-  num? _propertyid;
-  num? _measurementid;
-  String? _duedate;
-  String? _billstartdate;
-  String? _billenddate;
-  String? _month;
-  num? _status;
-  String? _createdAt;
-  String? _updatedAt;
-  List<User>? _user;
-  List<Resident>? _resident;
-  List<Measurement>? _measurement;
-  List<Property>? _property;
-Data copyWith({  num? id,
-  num? charges,
-  num? chargesafterduedate,
-  num? appcharges,
-  num? tax,
-  num? balance,
-  num? subadminid,
-  num? residentid,
-  num? propertyid,
-  num? measurementid,
-  String? duedate,
-  String? billstartdate,
-  String? billenddate,
-  String? month,
-  num? status,
-  String? createdAt,
-  String? updatedAt,
-  List<User>? user,
-  List<Resident>? resident,
-  List<Measurement>? measurement,
-  List<Property>? property,
-}) => Data(  id: id ?? _id,
-  charges: charges ?? _charges,
-  chargesafterduedate: chargesafterduedate ?? _chargesafterduedate,
-  appcharges: appcharges ?? _appcharges,
-  tax: tax ?? _tax,
-  balance: balance ?? _balance,
-  subadminid: subadminid ?? _subadminid,
-  residentid: residentid ?? _residentid,
-  propertyid: propertyid ?? _propertyid,
-  measurementid: measurementid ?? _measurementid,
-  duedate: duedate ?? _duedate,
-  billstartdate: billstartdate ?? _billstartdate,
-  billenddate: billenddate ?? _billenddate,
-  month: month ?? _month,
-  status: status ?? _status,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
-  user: user ?? _user,
-  resident: resident ?? _resident,
-  measurement: measurement ?? _measurement,
-  property: property ?? _property,
-);
-  num? get id => _id;
-  num? get charges => _charges;
-  num? get chargesafterduedate => _chargesafterduedate;
-  num? get appcharges => _appcharges;
-  num? get tax => _tax;
-  num? get balance => _balance;
-  num? get subadminid => _subadminid;
-  num? get residentid => _residentid;
-  num? get propertyid => _propertyid;
-  num? get measurementid => _measurementid;
-  String? get duedate => _duedate;
-  String? get billstartdate => _billstartdate;
-  String? get billenddate => _billenddate;
-  String? get month => _month;
-  num? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  List<User>? get user => _user;
-  List<Resident>? get resident => _resident;
-  List<Measurement>? get measurement => _measurement;
-  List<Property>? get property => _property;
-
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['charges'] = _charges;
-    map['chargesafterduedate'] = _chargesafterduedate;
-    map['appcharges'] = _appcharges;
-    map['tax'] = _tax;
-    map['balance'] = _balance;
-    map['subadminid'] = _subadminid;
-    map['residentid'] = _residentid;
-    map['propertyid'] = _propertyid;
-    map['measurementid'] = _measurementid;
-    map['duedate'] = _duedate;
-    map['billstartdate'] = _billstartdate;
-    map['billenddate'] = _billenddate;
-    map['month'] = _month;
-    map['status'] = _status;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
-    if (_user != null) {
-      map['user'] = _user?.map((v) => v.toJson()).toList();
-    }
-    if (_resident != null) {
-      map['resident'] = _resident?.map((v) => v.toJson()).toList();
-    }
-    if (_measurement != null) {
-      map['measurement'] = _measurement?.map((v) => v.toJson()).toList();
-    }
-    if (_property != null) {
-      map['property'] = _property?.map((v) => v.toJson()).toList();
-    }
-    return map;
-  }
-
-}
-
-/// id : 2
-/// sid : 1
-/// address : "House no 2"
-/// typeid : 0
-/// type : "house"
-/// created_at : "2023-03-13T10:25:49.000000Z"
-/// updated_at : "2023-03-13T10:25:49.000000Z"
+/// societyid : 1
+/// superadminid : 1
+/// occupied : 1
+/// created_at : "2023-04-28T12:37:18.000000Z"
+/// updated_at : "2023-04-28T14:44:23.000000Z"
 
 class Property {
   Property({
-      num? id, 
-      num? sid, 
-      String? address, 
-      num? typeid, 
-      String? type, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _sid = sid;
-    _address = address;
-    _typeid = typeid;
-    _type = type;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.address, 
+      this.type, 
+      this.iteration, 
+      this.dynamicid, 
+      this.subadminid, 
+      this.societyid, 
+      this.superadminid, 
+      this.occupied, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Property.fromJson(dynamic json) {
-    _id = json['id'];
-    _sid = json['sid'];
-    _address = json['address'];
-    _typeid = json['typeid'];
-    _type = json['type'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    address = json['address'];
+    type = json['type'];
+    iteration = json['iteration'];
+    dynamicid = json['dynamicid'];
+    subadminid = json['subadminid'];
+    societyid = json['societyid'];
+    superadminid = json['superadminid'];
+    occupied = json['occupied'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  num? _id;
-  num? _sid;
-  String? _address;
-  num? _typeid;
-  String? _type;
-  String? _createdAt;
-  String? _updatedAt;
-Property copyWith({  num? id,
-  num? sid,
+  int? id;
+  String? address;
+  String? type;
+  String? iteration;
+  int? dynamicid;
+  int? subadminid;
+  int? societyid;
+  int? superadminid;
+  int? occupied;
+  String? createdAt;
+  String? updatedAt;
+Property copyWith({  int? id,
   String? address,
-  num? typeid,
   String? type,
+  String? iteration,
+  int? dynamicid,
+  int? subadminid,
+  int? societyid,
+  int? superadminid,
+  int? occupied,
   String? createdAt,
   String? updatedAt,
-}) => Property(  id: id ?? _id,
-  sid: sid ?? _sid,
-  address: address ?? _address,
-  typeid: typeid ?? _typeid,
-  type: type ?? _type,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Property(  id: id ?? this.id,
+  address: address ?? this.address,
+  type: type ?? this.type,
+  iteration: iteration ?? this.iteration,
+  dynamicid: dynamicid ?? this.dynamicid,
+  subadminid: subadminid ?? this.subadminid,
+  societyid: societyid ?? this.societyid,
+  superadminid: superadminid ?? this.superadminid,
+  occupied: occupied ?? this.occupied,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  num? get id => _id;
-  num? get sid => _sid;
-  String? get address => _address;
-  num? get typeid => _typeid;
-  String? get type => _type;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['sid'] = _sid;
-    map['address'] = _address;
-    map['typeid'] = _typeid;
-    map['type'] = _type;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['address'] = address;
+    map['type'] = type;
+    map['iteration'] = iteration;
+    map['dynamicid'] = dynamicid;
+    map['subadminid'] = subadminid;
+    map['societyid'] = societyid;
+    map['superadminid'] = superadminid;
+    map['occupied'] = occupied;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
@@ -355,215 +331,172 @@ Property copyWith({  num? id,
 /// subadminid : 2
 /// type : "house"
 /// unit : "marla"
-/// charges : 5000
-/// chargesafterduedate : 5250
-/// appcharges : 100
-/// tax : 750
-/// area : 2
-/// bedrooms : 2
+/// charges : "5000.00"
+/// chargesafterduedate : "5250.00"
+/// appcharges : "100.00"
+/// tax : "750.00"
+/// area : "5.00"
+/// bedrooms : 5
 /// status : 0
-/// created_at : "2023-03-13T10:27:15.000000Z"
-/// updated_at : "2023-03-13T10:27:15.000000Z"
+/// created_at : "2023-04-28T12:38:11.000000Z"
+/// updated_at : "2023-04-28T12:38:11.000000Z"
 
 class Measurement {
   Measurement({
-      num? id, 
-      num? subadminid, 
-      String? type, 
-      String? unit, 
-      num? charges, 
-      num? chargesafterduedate, 
-      num? appcharges, 
-      num? tax, 
-      num? area, 
-      num? bedrooms, 
-      num? status, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _subadminid = subadminid;
-    _type = type;
-    _unit = unit;
-    _charges = charges;
-    _chargesafterduedate = chargesafterduedate;
-    _appcharges = appcharges;
-    _tax = tax;
-    _area = area;
-    _bedrooms = bedrooms;
-    _status = status;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.subadminid, 
+      this.type, 
+      this.unit, 
+      this.charges, 
+      this.chargesafterduedate, 
+      this.appcharges, 
+      this.tax, 
+      this.area, 
+      this.bedrooms, 
+      this.status, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Measurement.fromJson(dynamic json) {
-    _id = json['id'];
-    _subadminid = json['subadminid'];
-    _type = json['type'];
-    _unit = json['unit'];
-    _charges = json['charges'];
-    _chargesafterduedate = json['chargesafterduedate'];
-    _appcharges = json['appcharges'];
-    _tax = json['tax'];
-    _area = json['area'];
-    _bedrooms = json['bedrooms'];
-    _status = json['status'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    subadminid = json['subadminid'];
+    type = json['type'];
+    unit = json['unit'];
+    charges = json['charges'];
+    chargesafterduedate = json['chargesafterduedate'];
+    appcharges = json['appcharges'];
+    tax = json['tax'];
+    area = json['area'];
+    bedrooms = json['bedrooms'];
+    status = json['status'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  num? _id;
-  num? _subadminid;
-  String? _type;
-  String? _unit;
-  num? _charges;
-  num? _chargesafterduedate;
-  num? _appcharges;
-  num? _tax;
-  num? _area;
-  num? _bedrooms;
-  num? _status;
-  String? _createdAt;
-  String? _updatedAt;
-Measurement copyWith({  num? id,
-  num? subadminid,
+  int? id;
+  int? subadminid;
+  String? type;
+  String? unit;
+  String? charges;
+  String? chargesafterduedate;
+  String? appcharges;
+  String? tax;
+  String? area;
+  int? bedrooms;
+  int? status;
+  String? createdAt;
+  String? updatedAt;
+Measurement copyWith({  int? id,
+  int? subadminid,
   String? type,
   String? unit,
-  num? charges,
-  num? chargesafterduedate,
-  num? appcharges,
-  num? tax,
-  num? area,
-  num? bedrooms,
-  num? status,
+  String? charges,
+  String? chargesafterduedate,
+  String? appcharges,
+  String? tax,
+  String? area,
+  int? bedrooms,
+  int? status,
   String? createdAt,
   String? updatedAt,
-}) => Measurement(  id: id ?? _id,
-  subadminid: subadminid ?? _subadminid,
-  type: type ?? _type,
-  unit: unit ?? _unit,
-  charges: charges ?? _charges,
-  chargesafterduedate: chargesafterduedate ?? _chargesafterduedate,
-  appcharges: appcharges ?? _appcharges,
-  tax: tax ?? _tax,
-  area: area ?? _area,
-  bedrooms: bedrooms ?? _bedrooms,
-  status: status ?? _status,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Measurement(  id: id ?? this.id,
+  subadminid: subadminid ?? this.subadminid,
+  type: type ?? this.type,
+  unit: unit ?? this.unit,
+  charges: charges ?? this.charges,
+  chargesafterduedate: chargesafterduedate ?? this.chargesafterduedate,
+  appcharges: appcharges ?? this.appcharges,
+  tax: tax ?? this.tax,
+  area: area ?? this.area,
+  bedrooms: bedrooms ?? this.bedrooms,
+  status: status ?? this.status,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  num? get id => _id;
-  num? get subadminid => _subadminid;
-  String? get type => _type;
-  String? get unit => _unit;
-  num? get charges => _charges;
-  num? get chargesafterduedate => _chargesafterduedate;
-  num? get appcharges => _appcharges;
-  num? get tax => _tax;
-  num? get area => _area;
-  num? get bedrooms => _bedrooms;
-  num? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['subadminid'] = _subadminid;
-    map['type'] = _type;
-    map['unit'] = _unit;
-    map['charges'] = _charges;
-    map['chargesafterduedate'] = _chargesafterduedate;
-    map['appcharges'] = _appcharges;
-    map['tax'] = _tax;
-    map['area'] = _area;
-    map['bedrooms'] = _bedrooms;
-    map['status'] = _status;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['subadminid'] = subadminid;
+    map['type'] = type;
+    map['unit'] = unit;
+    map['charges'] = charges;
+    map['chargesafterduedate'] = chargesafterduedate;
+    map['appcharges'] = appcharges;
+    map['tax'] = tax;
+    map['area'] = area;
+    map['bedrooms'] = bedrooms;
+    map['status'] = status;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 2
+/// id : 1
 /// residentid : 4
 /// subadminid : 2
 /// country : "🇵🇰    Pakistan"
 /// state : "null"
 /// city : "null"
-/// houseaddress : "House no 2"
+/// houseaddress : "Rawat Enclave,Block#1,Street#1,House#1"
 /// vechileno : ""
 /// residenttype : "Owner"
 /// propertytype : "house"
 /// committeemember : 0
 /// status : 1
-/// created_at : "2023-03-13T10:34:52.000000Z"
-/// updated_at : "2023-03-13T10:35:08.000000Z"
+/// created_at : "2023-04-28T12:43:42.000000Z"
+/// updated_at : "2023-04-28T14:44:23.000000Z"
 
 class Resident {
   Resident({
-      num? id, 
-      num? residentid, 
-      num? subadminid, 
-      String? country, 
-      String? state, 
-      String? city, 
-      String? houseaddress, 
-      String? vechileno, 
-      String? residenttype, 
-      String? propertytype, 
-      num? committeemember, 
-      num? status, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _residentid = residentid;
-    _subadminid = subadminid;
-    _country = country;
-    _state = state;
-    _city = city;
-    _houseaddress = houseaddress;
-    _vechileno = vechileno;
-    _residenttype = residenttype;
-    _propertytype = propertytype;
-    _committeemember = committeemember;
-    _status = status;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.residentid, 
+      this.subadminid, 
+      this.country, 
+      this.state, 
+      this.city, 
+      this.houseaddress, 
+      this.vechileno, 
+      this.residenttype, 
+      this.propertytype, 
+      this.committeemember, 
+      this.status, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Resident.fromJson(dynamic json) {
-    _id = json['id'];
-    _residentid = json['residentid'];
-    _subadminid = json['subadminid'];
-    _country = json['country'];
-    _state = json['state'];
-    _city = json['city'];
-    _houseaddress = json['houseaddress'];
-    _vechileno = json['vechileno'];
-    _residenttype = json['residenttype'];
-    _propertytype = json['propertytype'];
-    _committeemember = json['committeemember'];
-    _status = json['status'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    residentid = json['residentid'];
+    subadminid = json['subadminid'];
+    country = json['country'];
+    state = json['state'];
+    city = json['city'];
+    houseaddress = json['houseaddress'];
+    vechileno = json['vechileno'];
+    residenttype = json['residenttype'];
+    propertytype = json['propertytype'];
+    committeemember = json['committeemember'];
+    status = json['status'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  num? _id;
-  num? _residentid;
-  num? _subadminid;
-  String? _country;
-  String? _state;
-  String? _city;
-  String? _houseaddress;
-  String? _vechileno;
-  String? _residenttype;
-  String? _propertytype;
-  num? _committeemember;
-  num? _status;
-  String? _createdAt;
-  String? _updatedAt;
-Resident copyWith({  num? id,
-  num? residentid,
-  num? subadminid,
+  int? id;
+  int? residentid;
+  int? subadminid;
+  String? country;
+  String? state;
+  String? city;
+  String? houseaddress;
+  String? vechileno;
+  String? residenttype;
+  String? propertytype;
+  int? committeemember;
+  int? status;
+  String? createdAt;
+  String? updatedAt;
+Resident copyWith({  int? id,
+  int? residentid,
+  int? subadminid,
   String? country,
   String? state,
   String? city,
@@ -571,198 +504,146 @@ Resident copyWith({  num? id,
   String? vechileno,
   String? residenttype,
   String? propertytype,
-  num? committeemember,
-  num? status,
+  int? committeemember,
+  int? status,
   String? createdAt,
   String? updatedAt,
-}) => Resident(  id: id ?? _id,
-  residentid: residentid ?? _residentid,
-  subadminid: subadminid ?? _subadminid,
-  country: country ?? _country,
-  state: state ?? _state,
-  city: city ?? _city,
-  houseaddress: houseaddress ?? _houseaddress,
-  vechileno: vechileno ?? _vechileno,
-  residenttype: residenttype ?? _residenttype,
-  propertytype: propertytype ?? _propertytype,
-  committeemember: committeemember ?? _committeemember,
-  status: status ?? _status,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Resident(  id: id ?? this.id,
+  residentid: residentid ?? this.residentid,
+  subadminid: subadminid ?? this.subadminid,
+  country: country ?? this.country,
+  state: state ?? this.state,
+  city: city ?? this.city,
+  houseaddress: houseaddress ?? this.houseaddress,
+  vechileno: vechileno ?? this.vechileno,
+  residenttype: residenttype ?? this.residenttype,
+  propertytype: propertytype ?? this.propertytype,
+  committeemember: committeemember ?? this.committeemember,
+  status: status ?? this.status,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  num? get id => _id;
-  num? get residentid => _residentid;
-  num? get subadminid => _subadminid;
-  String? get country => _country;
-  String? get state => _state;
-  String? get city => _city;
-  String? get houseaddress => _houseaddress;
-  String? get vechileno => _vechileno;
-  String? get residenttype => _residenttype;
-  String? get propertytype => _propertytype;
-  num? get committeemember => _committeemember;
-  num? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['residentid'] = _residentid;
-    map['subadminid'] = _subadminid;
-    map['country'] = _country;
-    map['state'] = _state;
-    map['city'] = _city;
-    map['houseaddress'] = _houseaddress;
-    map['vechileno'] = _vechileno;
-    map['residenttype'] = _residenttype;
-    map['propertytype'] = _propertytype;
-    map['committeemember'] = _committeemember;
-    map['status'] = _status;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['residentid'] = residentid;
+    map['subadminid'] = subadminid;
+    map['country'] = country;
+    map['state'] = state;
+    map['city'] = city;
+    map['houseaddress'] = houseaddress;
+    map['vechileno'] = vechileno;
+    map['residenttype'] = residenttype;
+    map['propertytype'] = propertytype;
+    map['committeemember'] = committeemember;
+    map['status'] = status;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
 /// id : 4
-/// firstname : "rimsha"
-/// lastname : "sohai"
-/// cnic : "37905"
-/// address : "House no 2"
-/// mobileno : "0321"
-/// password : "$2y$10$FhqO1ATAYKwIryTewivtpeGdrs.em0yc3HRO1iEdwb4Jh/ojgsay2"
+/// firstname : "Umer"
+/// lastname : "Bashir"
+/// cnic : "1"
+/// address : "Rawat Enclave,Block#1,Street#1,House#1"
+/// mobileno : "0300"
+/// password : "$2y$10$Y672rdtIgtV2..GAlFheb.yqFv4FcdlCGAvdz2lvSD0vTnkfMjZxi"
 /// roleid : 3
-/// isverfied : 1
 /// rolename : "resident"
-/// image : "1678703649.jpg"
-/// fcmtoken : "fd2X6CQ1RnOjnbeKXQo0Wj:APA91bGYJSdZXRh97FsDA09S8e13yF_l7ozJbc52l0_5zUPs6cNbTjWtNz0rQsSMvbRUNDxfsNOo54ff0VrEnzZp6e-gGqBcbFku6TF66qZ3wk-tEngArM9vCq6TZxC5WTf-pLJbZrJd"
-/// created_at : "2023-03-13T10:34:09.000000Z"
-/// updated_at : "2023-03-13T10:35:08.000000Z"
+/// image : "images/user.png"
+/// fcmtoken : "d2sFJLkXSeiS0jdh2nzlAD:APA91bHVNWN4Do2KozEFBt-g-9MTC1EJEBeFKxGx_xbhCj6ds25G6Z2EczQLRuHDX08uJFkf_A4hzrqEYKjIXaBM2slYoLkf4Pep-6f04VXDye9DUbfj5xV-SIJ1Nxw_e2AW7AOXPLSx"
+/// created_at : "2023-04-28T12:42:54.000000Z"
+/// updated_at : "2023-04-28T14:46:02.000000Z"
 
 class User {
   User({
-      num? id, 
-      String? firstname, 
-      String? lastname, 
-      String? cnic, 
-      String? address, 
-      String? mobileno, 
-      String? password, 
-      num? roleid, 
-      num? isverfied, 
-      String? rolename, 
-      String? image, 
-      String? fcmtoken, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _firstname = firstname;
-    _lastname = lastname;
-    _cnic = cnic;
-    _address = address;
-    _mobileno = mobileno;
-    _password = password;
-    _roleid = roleid;
-    _isverfied = isverfied;
-    _rolename = rolename;
-    _image = image;
-    _fcmtoken = fcmtoken;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.firstname, 
+      this.lastname, 
+      this.cnic, 
+      this.address, 
+      this.mobileno, 
+      this.password, 
+      this.roleid, 
+      this.rolename, 
+      this.image, 
+      this.fcmtoken, 
+      this.createdAt, 
+      this.updatedAt,});
 
   User.fromJson(dynamic json) {
-    _id = json['id'];
-    _firstname = json['firstname'];
-    _lastname = json['lastname'];
-    _cnic = json['cnic'];
-    _address = json['address'];
-    _mobileno = json['mobileno'];
-    _password = json['password'];
-    _roleid = json['roleid'];
-    _isverfied = json['isverfied'];
-    _rolename = json['rolename'];
-    _image = json['image'];
-    _fcmtoken = json['fcmtoken'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    firstname = json['firstname'];
+    lastname = json['lastname'];
+    cnic = json['cnic'];
+    address = json['address'];
+    mobileno = json['mobileno'];
+    password = json['password'];
+    roleid = json['roleid'];
+    rolename = json['rolename'];
+    image = json['image'];
+    fcmtoken = json['fcmtoken'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  num? _id;
-  String? _firstname;
-  String? _lastname;
-  String? _cnic;
-  String? _address;
-  String? _mobileno;
-  String? _password;
-  num? _roleid;
-  num? _isverfied;
-  String? _rolename;
-  String? _image;
-  String? _fcmtoken;
-  String? _createdAt;
-  String? _updatedAt;
-User copyWith({  num? id,
+  int? id;
+  String? firstname;
+  String? lastname;
+  String? cnic;
+  String? address;
+  String? mobileno;
+  String? password;
+  int? roleid;
+  String? rolename;
+  String? image;
+  String? fcmtoken;
+  String? createdAt;
+  String? updatedAt;
+User copyWith({  int? id,
   String? firstname,
   String? lastname,
   String? cnic,
   String? address,
   String? mobileno,
   String? password,
-  num? roleid,
-  num? isverfied,
+  int? roleid,
   String? rolename,
   String? image,
   String? fcmtoken,
   String? createdAt,
   String? updatedAt,
-}) => User(  id: id ?? _id,
-  firstname: firstname ?? _firstname,
-  lastname: lastname ?? _lastname,
-  cnic: cnic ?? _cnic,
-  address: address ?? _address,
-  mobileno: mobileno ?? _mobileno,
-  password: password ?? _password,
-  roleid: roleid ?? _roleid,
-  isverfied: isverfied ?? _isverfied,
-  rolename: rolename ?? _rolename,
-  image: image ?? _image,
-  fcmtoken: fcmtoken ?? _fcmtoken,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => User(  id: id ?? this.id,
+  firstname: firstname ?? this.firstname,
+  lastname: lastname ?? this.lastname,
+  cnic: cnic ?? this.cnic,
+  address: address ?? this.address,
+  mobileno: mobileno ?? this.mobileno,
+  password: password ?? this.password,
+  roleid: roleid ?? this.roleid,
+  rolename: rolename ?? this.rolename,
+  image: image ?? this.image,
+  fcmtoken: fcmtoken ?? this.fcmtoken,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  num? get id => _id;
-  String? get firstname => _firstname;
-  String? get lastname => _lastname;
-  String? get cnic => _cnic;
-  String? get address => _address;
-  String? get mobileno => _mobileno;
-  String? get password => _password;
-  num? get roleid => _roleid;
-  num? get isverfied => _isverfied;
-  String? get rolename => _rolename;
-  String? get image => _image;
-  String? get fcmtoken => _fcmtoken;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['firstname'] = _firstname;
-    map['lastname'] = _lastname;
-    map['cnic'] = _cnic;
-    map['address'] = _address;
-    map['mobileno'] = _mobileno;
-    map['password'] = _password;
-    map['roleid'] = _roleid;
-    map['isverfied'] = _isverfied;
-    map['rolename'] = _rolename;
-    map['image'] = _image;
-    map['fcmtoken'] = _fcmtoken;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['firstname'] = firstname;
+    map['lastname'] = lastname;
+    map['cnic'] = cnic;
+    map['address'] = address;
+    map['mobileno'] = mobileno;
+    map['password'] = password;
+    map['roleid'] = roleid;
+    map['rolename'] = rolename;
+    map['image'] = image;
+    map['fcmtoken'] = fcmtoken;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 

@@ -13,6 +13,7 @@ import '../../../Services/Shared Preferences/MySharedPreferences.dart';
 class HomeScreen extends GetView {
   // final HomeScreenController _homeScreenController =
   //     Get.put(HomeScreenController());
+  var _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class HomeScreen extends GetView {
       init: HomeScreenController(),
       builder: (controller) => SafeArea(
         child: Scaffold(
-          key: controller.scaffoldKey,
+          key: _scaffoldKey,
           drawer: Drawer(
             child: ListView(
               // Important: Remove any padding from the ListView.
@@ -199,7 +200,7 @@ class HomeScreen extends GetView {
                           'assets/drawer.svg',
                         ),
                         onPressed: () {
-                          controller.scaffoldKey.currentState!.openDrawer();
+                         _scaffoldKey.currentState!.openDrawer();
                         }),
                     Padding(
                       padding: EdgeInsets.only(

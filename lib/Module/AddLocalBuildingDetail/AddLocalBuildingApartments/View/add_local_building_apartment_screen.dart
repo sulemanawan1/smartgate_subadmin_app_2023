@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
 import '../../../../Constants/constants.dart';
+import '../../../../Routes/set_routes.dart';
 import '../../../../Widgets/My Button/my_button.dart';
 import '../Controller/add_local_building_apartment_controller.dart';
 
@@ -15,7 +16,9 @@ class AddLocalBuildingApartmentsScreen extends GetView {
         builder: (controller) {
           return WillPopScope(
             onWillPop: () async {
-              return false;
+              Get.offAndToNamed(localbuildingapartmentscreen, arguments: [controller.user,controller. fid]);
+
+              return true;
             },
             child: SafeArea(
               child: Scaffold(
@@ -27,6 +30,10 @@ class AddLocalBuildingApartmentsScreen extends GetView {
                       children: <Widget>[
                         MyBackButton(
                           text: 'Add Apartments',
+                          onTap: (){
+                            Get.offAndToNamed(localbuildingapartmentscreen, arguments: [controller.user,controller. fid]);
+
+                          },
                         ),
                         SizedBox(height: 20),
                         Card(

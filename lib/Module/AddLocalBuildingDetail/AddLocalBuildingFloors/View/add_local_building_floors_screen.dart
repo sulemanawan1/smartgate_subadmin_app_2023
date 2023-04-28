@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:societyadminapp/Widgets/My%20Back%20Button/my_back_button.dart';
 import '../../../../Constants/constants.dart';
+import '../../../../Routes/set_routes.dart';
 import '../../../../Widgets/My Button/my_button.dart';
 import '../Controller/add_local_building_floors_controller.dart';
 
@@ -10,11 +11,19 @@ class AddLocalBuildingFloors extends GetView {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GetBuilder<AddLocalBuildingFloorsController>(
-          init: AddLocalBuildingFloorsController(),
-          builder: (controller) {
-            return Padding(
+    return GetBuilder<AddLocalBuildingFloorsController>
+
+      (init: AddLocalBuildingFloorsController(),
+        builder: (controller) {
+      return WillPopScope(
+        onWillPop: ()async{
+          Get.offAndToNamed(localbuildingfloorsscreen,
+              arguments: controller.user);
+
+          return true;
+        },
+        child: Scaffold(
+            body: Padding(
               padding: EdgeInsets.only(top: 5.0, left: 10.0, right: 10.0),
               child: Form(
                 key: _formKey,
@@ -22,6 +31,10 @@ class AddLocalBuildingFloors extends GetView {
                   children: <Widget>[
                     MyBackButton(
                       text: 'Add Floors',
+                      onTap: () {
+                        Get.offAndToNamed(localbuildingfloorsscreen,
+                            arguments: controller.user);
+                      },
                     ),
                     SizedBox(height: 20),
                     Card(
@@ -53,9 +66,9 @@ class AddLocalBuildingFloors extends GetView {
                                         filled: true,
                                         errorBorder: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(8),
+                                          BorderRadius.circular(8),
                                           borderSide:
-                                              BorderSide(), //<-- SEE HERE
+                                          BorderSide(), //<-- SEE HERE
                                         ),
                                         border: InputBorder.none),
                                   ),
@@ -74,9 +87,9 @@ class AddLocalBuildingFloors extends GetView {
                                         filled: true,
                                         errorBorder: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(8),
+                                          BorderRadius.circular(8),
                                           borderSide:
-                                              BorderSide(), //<-- SEE HERE
+                                          BorderSide(), //<-- SEE HERE
                                         ),
                                         border: InputBorder.none),
                                   ),
@@ -96,21 +109,23 @@ class AddLocalBuildingFloors extends GetView {
                         // print(controller.user.bearerToken);
 
                         controller.addLocalbuildingFloorsApi(
-                            bearerToken: controller.user.bearerToken!,
-                            from: controller.fromController.text.toString(),
-                            to: controller.toController.text.toString(),
-                            buildingid: controller.user.societyid!,
-                            subadminid: controller.user.userid!,
-                            
-                            );
+                          bearerToken: controller.user.bearerToken!,
+                          from: controller.fromController.text.toString(),
+                          to: controller.toController.text.toString(),
+                          buildingid: controller.user.societyid!,
+                          subadminid: controller.user.userid!,
+
+                        );
                       },
                       name: 'Save',
                     )
                   ],
                 ),
               ),
-            );
-          }),
-    );
+            )
+
+        ),
+      );
+    });
   }
 }

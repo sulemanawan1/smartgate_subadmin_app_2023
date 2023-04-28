@@ -7,7 +7,6 @@ import 'package:societyadminapp/Routes/set_routes.dart';
 
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
-import '../../View Residents/Model/Resident.dart';
 
 class GenerateBillController extends GetxController
 {

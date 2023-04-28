@@ -1,8 +1,6 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:hexcolor/hexcolor.dart';
 import '../../../Constants/api_routes.dart';
 import '../../../Constants/constants.dart';
 import '../../../Routes/set_routes.dart';
@@ -10,10 +8,8 @@ import '../../../Widgets/My Back Button/my_back_button.dart';
 import '../../../Widgets/My Button/my_button.dart';
 import '../../../Widgets/My Text/my_text.dart';
 import '../../../Widgets/My TextForm Field/my_textform_field.dart';
-import '../Controller/apartment_resident_verification_controller.dart';
 
 import '../Controller/local_building_apartment_resident_verification_controller.dart';
-import '../Model/Resident Model/ApartmentResidentModel.dart';
 
 import '../Model/Resident Model/LocalBuildingApartmentResidentModel.dart';
 import '../Widget/unverified_resident_custom_widget.dart';
@@ -171,8 +167,7 @@ class LocalBuildingApartmentResidentVerification extends GetView {
                                         (Localbuildingapartment? apartment) {
                                       controller.SelectedApartment(apartment);
                                       controller.houseaddressdetailController
-                                              .text =
-                                          "${controller.resident.localbuilding.first.name}${','}${controller.localbuilding!.name.toString()}${','} ${controller.floor!.name.toString()}${','}${apartment!.name.toString()}";
+                                              .text = "${controller.localbuilding!.name.toString()}${','} ${controller.floor!.name.toString()}${','}${apartment!.name.toString()}";
                                     },
                                     selectedItem: controller.apartment,
                                     itemAsString: (Localbuildingapartment p) {
@@ -210,6 +205,7 @@ class LocalBuildingApartmentResidentVerification extends GetView {
                                   ),
                                 ),
                                 MyTextFormField(
+                                  readOnly: true,
                                   validator: emptyStringValidator,
                                   maxLines: null,
                                   controller:

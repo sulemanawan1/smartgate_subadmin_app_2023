@@ -6,7 +6,6 @@ import 'package:societyadminapp/Routes/set_routes.dart';
 import 'package:societyadminapp/Widgets/Empty%20List/empty_list.dart';
 import 'package:societyadminapp/Widgets/Loader/loader.dart';
 import '../../../Constants/api_routes.dart';
-import '../../../Constants/constants.dart';
 import '../../../Widgets/My Back Button/my_back_button.dart';
 import '../Widget/unverified_resident_custom_widget.dart';
 

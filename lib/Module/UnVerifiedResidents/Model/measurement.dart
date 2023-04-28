@@ -6,8 +6,8 @@ class Measurement {
 
   final int? id;
   final int? subadminid;
-  final int? charges;
-  final int? area;
+  final String? charges;
+  final String? area;
   final int? bedrooms;
   final int? status;
   final String? type;

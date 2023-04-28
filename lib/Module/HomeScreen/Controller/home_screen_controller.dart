@@ -17,10 +17,8 @@ import '../Model/myapimodel.dart';
 class HomeScreenController extends GetxController {
   late final User user;
   var userdata = Get.arguments;
-  var scaffoldKey = GlobalKey<ScaffoldState>();
 
   PhasesList? selectedItem;
-  StreamController<int> countStream = StreamController<int>();
   SocietyModel? societyModel;
 
   //  Phases? selectedItem;

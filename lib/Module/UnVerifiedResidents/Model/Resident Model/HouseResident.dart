@@ -1,271 +1,227 @@
 /// success : true
-/// data : [{"id":42,"residentid":42,"subadminid":2,"country":"","state":"","city":"","houseaddress":"house#1","vechileno":"","residenttype":"Rental","propertytype":"house","committeemember":0,"status":0,"created_at":"2023-03-25T14:07:01.000000Z","updated_at":"2023-03-25T14:07:46.000000Z","societyid":1,"pid":7,"bid":28,"sid":68,"propertyid":64,"measurementid":1,"firstname":"Farrah","lastname":"Bashir","cnic":"555555","address":"---","mobileno":"03215550979","password":"$2y$10$UpyjT8/SSiJ6E6v1OAMMuujrY.NWLxCathF1.2kCfUSz0OianCN7a","roleid":3,"rolename":"resident","image":"images/user.png","fcmtoken":"fELvJ3xeQ1mGEIk74Pzd4n:APA91bF0KszAWMp20WiPUvjbGNeQgj0T39U3IQbIrugNy_k7SKzX0ZvsV6V3_bsfvIW9k6SnuEN1DsqAnDCRIkfo5aW9p-u2n86TDRVDNF_PBHP5MEC-qvBwPKBzTkWi3FzVKQ2eQ1zC","society":[{"id":1,"country":"🇵🇰    Pakistan","state":"Punjab","city":"Rawalpindi","area":"Rawat","type":"society","name":"Rawat Enclave","address":"Kallar Syedian Road","superadminid":1,"structuretype":3,"created_at":"2023-03-19T09:20:55.000000Z","updated_at":"2023-03-19T09:20:55.000000Z"}],"phase":[{"id":7,"address":"phase#1","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:05.000000Z","updated_at":"2023-03-25T09:08:05.000000Z"}],"block":[{"id":28,"address":"block#1","type":"phase","iteration":"1","dynamicid":7,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:18.000000Z","updated_at":"2023-03-25T09:08:18.000000Z"}],"street":[{"id":68,"address":"street#1","type":"blocks","iteration":"1","dynamicid":28,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:35.000000Z","updated_at":"2023-03-25T09:08:35.000000Z"}],"property":[{"id":64,"address":"house#1","type":"street","iteration":"1","dynamicid":68,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:50.000000Z","updated_at":"2023-03-25T09:08:50.000000Z"}],"measurement":[{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":5,"bedrooms":5,"status":0,"created_at":"2023-03-19T11:53:08.000000Z","updated_at":"2023-03-19T11:53:08.000000Z"}],"owner":[{"id":2,"residentid":42,"ownername":"ali","owneraddress":"NA","ownermobileno":"03215550979","created_at":"2023-03-25T14:07:45.000000Z","updated_at":"2023-03-25T14:07:45.000000Z"}]}]
+/// data : [{"id":7,"residentid":7,"subadminid":6,"country":"🇵🇰    Pakistan","state":"null","city":"null","houseaddress":"Bahria Town,Phase#1,Block#1,Stret#1,House#1","vechileno":"gj555","residenttype":"Rental","propertytype":"house","committeemember":0,"status":0,"created_at":"2023-04-28T12:55:34.000000Z","updated_at":"2023-04-28T12:56:35.000000Z","societyid":2,"pid":1,"bid":3,"sid":3,"propertyid":41,"measurementid":3,"firstname":"Nimra","lastname":"Naeem","cnic":"777","address":"---","mobileno":"0321","password":"$2y$10$GxKePW6nAfvxueituAo3ruvetGOOi/5kqbSoCPQbyISn5DoLogLeO","roleid":3,"rolename":"resident","image":"images/user.png","fcmtoken":"doicq4q0TNyYXYxTFmd9y1:APA91bGpfb_8EBf1egIsOY_GYLVuj9qOqP1S1MofvPSgxJbu1PWzX6WFucUu1xXoupsKnpl25gTTWSqaglNm5Kf-Hf4lJtzy53r2xSVK2Fn-4RQqKAmIwZzo8HE-JVVTW6Ria_WBgtB5","society":[{"id":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","area":"Islamabad","type":"society","name":"Bahria Town","address":"Islamabad","superadminid":1,"structuretype":3,"created_at":"2023-04-28T12:52:32.000000Z","updated_at":"2023-04-28T12:52:32.000000Z"}],"phase":[{"id":1,"address":"Phase#1","iteration":"1","dynamicid":2,"subadminid":6,"societyid":2,"superadminid":1,"created_at":"2023-04-28T12:53:57.000000Z","updated_at":"2023-04-28T12:53:57.000000Z"}],"block":[{"id":3,"address":"Block#1","type":"phase","iteration":"1","dynamicid":1,"subadminid":6,"societyid":2,"superadminid":1,"created_at":"2023-04-28T12:54:09.000000Z","updated_at":"2023-04-28T12:54:09.000000Z"}],"street":[{"id":3,"address":"Stret#1","type":"blocks","iteration":"1","dynamicid":3,"subadminid":6,"societyid":2,"superadminid":1,"created_at":"2023-04-28T12:54:22.000000Z","updated_at":"2023-04-28T12:54:22.000000Z"}],"property":[{"id":41,"address":"House#1","type":"street","iteration":"1","dynamicid":3,"subadminid":6,"societyid":2,"superadminid":1,"occupied":0,"created_at":"2023-04-28T12:54:33.000000Z","updated_at":"2023-04-28T12:54:33.000000Z"}],"measurement":[{"id":3,"subadminid":6,"type":"house","unit":"marla","charges":"5000.00","chargesafterduedate":"5250.00","appcharges":"100.00","tax":"750.00","area":"5.00","bedrooms":5,"status":0,"created_at":"2023-04-28T12:56:15.000000Z","updated_at":"2023-04-28T12:56:15.000000Z"}],"owner":[{"id":2,"residentid":7,"ownername":"noman","owneraddress":"NA","ownermobileno":"02134","created_at":"2023-04-28T12:56:34.000000Z","updated_at":"2023-04-28T12:56:34.000000Z"}]}]
 
 class HouseResident {
   HouseResident({
-      bool? success, 
-      List<Data>? data,}){
-    _success = success;
-    _data = data;
-}
+      this.success, 
+      this.data,});
 
   HouseResident.fromJson(dynamic json) {
-    _success = json['success'];
+    success = json['success'];
     if (json['data'] != null) {
-      _data = [];
+      data = [];
       json['data'].forEach((v) {
-        _data?.add(Data.fromJson(v));
+        data?.add(Data.fromJson(v));
       });
     }
   }
-  bool? _success;
-  List<Data>? _data;
+  bool? success;
+  List<Data>? data;
 HouseResident copyWith({  bool? success,
   List<Data>? data,
-}) => HouseResident(  success: success ?? _success,
-  data: data ?? _data,
+}) => HouseResident(  success: success ?? this.success,
+  data: data ?? this.data,
 );
-  bool? get success => _success;
-  List<Data>? get data => _data;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['success'] = _success;
-    if (_data != null) {
-      map['data'] = _data?.map((v) => v.toJson()).toList();
+    map['success'] = success;
+    if (data != null) {
+      map['data'] = data?.map((v) => v.toJson()).toList();
     }
     return map;
   }
 
 }
 
-/// id : 42
-/// residentid : 42
-/// subadminid : 2
-/// country : ""
-/// state : ""
-/// city : ""
-/// houseaddress : "house#1"
-/// vechileno : ""
+/// id : 7
+/// residentid : 7
+/// subadminid : 6
+/// country : "🇵🇰    Pakistan"
+/// state : "null"
+/// city : "null"
+/// houseaddress : "Bahria Town,Phase#1,Block#1,Stret#1,House#1"
+/// vechileno : "gj555"
 /// residenttype : "Rental"
 /// propertytype : "house"
 /// committeemember : 0
 /// status : 0
-/// created_at : "2023-03-25T14:07:01.000000Z"
-/// updated_at : "2023-03-25T14:07:46.000000Z"
-/// societyid : 1
-/// pid : 7
-/// bid : 28
-/// sid : 68
-/// propertyid : 64
-/// measurementid : 1
-/// firstname : "Farrah"
-/// lastname : "Bashir"
-/// cnic : "555555"
+/// created_at : "2023-04-28T12:55:34.000000Z"
+/// updated_at : "2023-04-28T12:56:35.000000Z"
+/// societyid : 2
+/// pid : 1
+/// bid : 3
+/// sid : 3
+/// propertyid : 41
+/// measurementid : 3
+/// firstname : "Nimra"
+/// lastname : "Naeem"
+/// cnic : "777"
 /// address : "---"
-/// mobileno : "03215550979"
-/// password : "$2y$10$UpyjT8/SSiJ6E6v1OAMMuujrY.NWLxCathF1.2kCfUSz0OianCN7a"
+/// mobileno : "0321"
+/// password : "$2y$10$GxKePW6nAfvxueituAo3ruvetGOOi/5kqbSoCPQbyISn5DoLogLeO"
 /// roleid : 3
 /// rolename : "resident"
 /// image : "images/user.png"
-/// fcmtoken : "fELvJ3xeQ1mGEIk74Pzd4n:APA91bF0KszAWMp20WiPUvjbGNeQgj0T39U3IQbIrugNy_k7SKzX0ZvsV6V3_bsfvIW9k6SnuEN1DsqAnDCRIkfo5aW9p-u2n86TDRVDNF_PBHP5MEC-qvBwPKBzTkWi3FzVKQ2eQ1zC"
-/// society : [{"id":1,"country":"🇵🇰    Pakistan","state":"Punjab","city":"Rawalpindi","area":"Rawat","type":"society","name":"Rawat Enclave","address":"Kallar Syedian Road","superadminid":1,"structuretype":3,"created_at":"2023-03-19T09:20:55.000000Z","updated_at":"2023-03-19T09:20:55.000000Z"}]
-/// phase : [{"id":7,"address":"phase#1","iteration":"1","dynamicid":1,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:05.000000Z","updated_at":"2023-03-25T09:08:05.000000Z"}]
-/// block : [{"id":28,"address":"block#1","type":"phase","iteration":"1","dynamicid":7,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:18.000000Z","updated_at":"2023-03-25T09:08:18.000000Z"}]
-/// street : [{"id":68,"address":"street#1","type":"blocks","iteration":"1","dynamicid":28,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:35.000000Z","updated_at":"2023-03-25T09:08:35.000000Z"}]
-/// property : [{"id":64,"address":"house#1","type":"street","iteration":"1","dynamicid":68,"subadminid":2,"societyid":1,"superadminid":1,"created_at":"2023-03-25T09:08:50.000000Z","updated_at":"2023-03-25T09:08:50.000000Z"}]
-/// measurement : [{"id":1,"subadminid":2,"type":"house","unit":"marla","charges":5000,"chargesafterduedate":5250,"appcharges":100,"tax":750,"area":5,"bedrooms":5,"status":0,"created_at":"2023-03-19T11:53:08.000000Z","updated_at":"2023-03-19T11:53:08.000000Z"}]
-/// owner : [{"id":2,"residentid":42,"ownername":"ali","owneraddress":"NA","ownermobileno":"03215550979","created_at":"2023-03-25T14:07:45.000000Z","updated_at":"2023-03-25T14:07:45.000000Z"}]
+/// fcmtoken : "doicq4q0TNyYXYxTFmd9y1:APA91bGpfb_8EBf1egIsOY_GYLVuj9qOqP1S1MofvPSgxJbu1PWzX6WFucUu1xXoupsKnpl25gTTWSqaglNm5Kf-Hf4lJtzy53r2xSVK2Fn-4RQqKAmIwZzo8HE-JVVTW6Ria_WBgtB5"
+/// society : [{"id":2,"country":"🇵🇰    Pakistan","state":"null","city":"null","area":"Islamabad","type":"society","name":"Bahria Town","address":"Islamabad","superadminid":1,"structuretype":3,"created_at":"2023-04-28T12:52:32.000000Z","updated_at":"2023-04-28T12:52:32.000000Z"}]
+/// phase : [{"id":1,"address":"Phase#1","iteration":"1","dynamicid":2,"subadminid":6,"societyid":2,"superadminid":1,"created_at":"2023-04-28T12:53:57.000000Z","updated_at":"2023-04-28T12:53:57.000000Z"}]
+/// block : [{"id":3,"address":"Block#1","type":"phase","iteration":"1","dynamicid":1,"subadminid":6,"societyid":2,"superadminid":1,"created_at":"2023-04-28T12:54:09.000000Z","updated_at":"2023-04-28T12:54:09.000000Z"}]
+/// street : [{"id":3,"address":"Stret#1","type":"blocks","iteration":"1","dynamicid":3,"subadminid":6,"societyid":2,"superadminid":1,"created_at":"2023-04-28T12:54:22.000000Z","updated_at":"2023-04-28T12:54:22.000000Z"}]
+/// property : [{"id":41,"address":"House#1","type":"street","iteration":"1","dynamicid":3,"subadminid":6,"societyid":2,"superadminid":1,"occupied":0,"created_at":"2023-04-28T12:54:33.000000Z","updated_at":"2023-04-28T12:54:33.000000Z"}]
+/// measurement : [{"id":3,"subadminid":6,"type":"house","unit":"marla","charges":"5000.00","chargesafterduedate":"5250.00","appcharges":"100.00","tax":"750.00","area":"5.00","bedrooms":5,"status":0,"created_at":"2023-04-28T12:56:15.000000Z","updated_at":"2023-04-28T12:56:15.000000Z"}]
+/// owner : [{"id":2,"residentid":7,"ownername":"noman","owneraddress":"NA","ownermobileno":"02134","created_at":"2023-04-28T12:56:34.000000Z","updated_at":"2023-04-28T12:56:34.000000Z"}]
 
 class Data {
   Data({
-      int? id, 
-      int? residentid, 
-      int? subadminid, 
-      String? country, 
-      String? state, 
-      String? city, 
-      String? houseaddress, 
-      String? vechileno, 
-      String? residenttype, 
-      String? propertytype, 
-      int? committeemember, 
-      int? status, 
-      String? createdAt, 
-      String? updatedAt, 
-      int? societyid, 
-      int? pid, 
-      int? bid, 
-      int? sid, 
-      int? propertyid, 
-      int? measurementid, 
-      String? firstname, 
-      String? lastname, 
-      String? cnic, 
-      String? address, 
-      String? mobileno, 
-      String? password, 
-      int? roleid, 
-      String? rolename, 
-      String? image, 
-      String? fcmtoken, 
-      List<Society>? society, 
-      List<Phase>? phase, 
-      List<Block>? block, 
-      List<Street>? street, 
-      List<Property>? property, 
-      List<Measurement>? measurement, 
-      List<Owner>? owner,}){
-    _id = id;
-    _residentid = residentid;
-    _subadminid = subadminid;
-    _country = country;
-    _state = state;
-    _city = city;
-    _houseaddress = houseaddress;
-    _vechileno = vechileno;
-    _residenttype = residenttype;
-    _propertytype = propertytype;
-    _committeemember = committeemember;
-    _status = status;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-    _societyid = societyid;
-    _pid = pid;
-    _bid = bid;
-    _sid = sid;
-    _propertyid = propertyid;
-    _measurementid = measurementid;
-    _firstname = firstname;
-    _lastname = lastname;
-    _cnic = cnic;
-    _address = address;
-    _mobileno = mobileno;
-    _password = password;
-    _roleid = roleid;
-    _rolename = rolename;
-    _image = image;
-    _fcmtoken = fcmtoken;
-    _society = society;
-    _phase = phase;
-    _block = block;
-    _street = street;
-    _property = property;
-    _measurement = measurement;
-    _owner = owner;
-}
+      this.id, 
+      this.residentid, 
+      this.subadminid, 
+      this.country, 
+      this.state, 
+      this.city, 
+      this.houseaddress, 
+      this.vechileno, 
+      this.residenttype, 
+      this.propertytype, 
+      this.committeemember, 
+      this.status, 
+      this.createdAt, 
+      this.updatedAt, 
+      this.societyid, 
+      this.pid, 
+      this.bid, 
+      this.sid, 
+      this.propertyid, 
+      this.measurementid, 
+      this.firstname, 
+      this.lastname, 
+      this.cnic, 
+      this.address, 
+      this.mobileno, 
+      this.password, 
+      this.roleid, 
+      this.rolename, 
+      this.image, 
+      this.fcmtoken, 
+      this.society, 
+      this.phase, 
+      this.block, 
+      this.street, 
+      this.property, 
+      this.measurement, 
+      this.owner,});
 
   Data.fromJson(dynamic json) {
-    _id = json['id'];
-    _residentid = json['residentid'];
-    _subadminid = json['subadminid'];
-    _country = json['country'];
-    _state = json['state'];
-    _city = json['city'];
-    _houseaddress = json['houseaddress'];
-    _vechileno = json['vechileno'];
-    _residenttype = json['residenttype'];
-    _propertytype = json['propertytype'];
-    _committeemember = json['committeemember'];
-    _status = json['status'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
-    _societyid = json['societyid'];
-    _pid = json['pid'];
-    _bid = json['bid'];
-    _sid = json['sid'];
-    _propertyid = json['propertyid'];
-    _measurementid = json['measurementid'];
-    _firstname = json['firstname'];
-    _lastname = json['lastname'];
-    _cnic = json['cnic'];
-    _address = json['address'];
-    _mobileno = json['mobileno'];
-    _password = json['password'];
-    _roleid = json['roleid'];
-    _rolename = json['rolename'];
-    _image = json['image'];
-    _fcmtoken = json['fcmtoken'];
+    id = json['id'];
+    residentid = json['residentid'];
+    subadminid = json['subadminid'];
+    country = json['country'];
+    state = json['state'];
+    city = json['city'];
+    houseaddress = json['houseaddress'];
+    vechileno = json['vechileno'];
+    residenttype = json['residenttype'];
+    propertytype = json['propertytype'];
+    committeemember = json['committeemember'];
+    status = json['status'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
+    societyid = json['societyid'];
+    pid = json['pid'];
+    bid = json['bid'];
+    sid = json['sid'];
+    propertyid = json['propertyid'];
+    measurementid = json['measurementid'];
+    firstname = json['firstname'];
+    lastname = json['lastname'];
+    cnic = json['cnic'];
+    address = json['address'];
+    mobileno = json['mobileno'];
+    password = json['password'];
+    roleid = json['roleid'];
+    rolename = json['rolename'];
+    image = json['image'];
+    fcmtoken = json['fcmtoken'];
     if (json['society'] != null) {
-      _society = [];
+      society = [];
       json['society'].forEach((v) {
-        _society?.add(Society.fromJson(v));
+        society?.add(Society.fromJson(v));
       });
     }
     if (json['phase'] != null) {
-      _phase = [];
+      phase = [];
       json['phase'].forEach((v) {
-        _phase?.add(Phase.fromJson(v));
+        phase?.add(Phase.fromJson(v));
       });
     }
     if (json['block'] != null) {
-      _block = [];
+      block = [];
       json['block'].forEach((v) {
-        _block?.add(Block.fromJson(v));
+        block?.add(Block.fromJson(v));
       });
     }
     if (json['street'] != null) {
-      _street = [];
+      street = [];
       json['street'].forEach((v) {
-        _street?.add(Street.fromJson(v));
+        street?.add(Street.fromJson(v));
       });
     }
     if (json['property'] != null) {
-      _property = [];
+      property = [];
       json['property'].forEach((v) {
-        _property?.add(Property.fromJson(v));
+        property?.add(Property.fromJson(v));
       });
     }
     if (json['measurement'] != null) {
-      _measurement = [];
+      measurement = [];
       json['measurement'].forEach((v) {
-        _measurement?.add(Measurement.fromJson(v));
+        measurement?.add(Measurement.fromJson(v));
       });
     }
     if (json['owner'] != null) {
-      _owner = [];
+      owner = [];
       json['owner'].forEach((v) {
-        _owner?.add(Owner.fromJson(v));
+        owner?.add(Owner.fromJson(v));
       });
     }
   }
-  int? _id;
-  int? _residentid;
-  int? _subadminid;
-  String? _country;
-  String? _state;
-  String? _city;
-  String? _houseaddress;
-  String? _vechileno;
-  String? _residenttype;
-  String? _propertytype;
-  int? _committeemember;
-  int? _status;
-  String? _createdAt;
-  String? _updatedAt;
-  int? _societyid;
-  int? _pid;
-  int? _bid;
-  int? _sid;
-  int? _propertyid;
-  int? _measurementid;
-  String? _firstname;
-  String? _lastname;
-  String? _cnic;
-  String? _address;
-  String? _mobileno;
-  String? _password;
-  int? _roleid;
-  String? _rolename;
-  String? _image;
-  String? _fcmtoken;
-  List<Society>? _society;
-  List<Phase>? _phase;
-  List<Block>? _block;
-  List<Street>? _street;
-  List<Property>? _property;
-  List<Measurement>? _measurement;
-  List<Owner>? _owner;
+  int? id;
+  int? residentid;
+  int? subadminid;
+  String? country;
+  String? state;
+  String? city;
+  String? houseaddress;
+  String? vechileno;
+  String? residenttype;
+  String? propertytype;
+  int? committeemember;
+  int? status;
+  String? createdAt;
+  String? updatedAt;
+  int? societyid;
+  int? pid;
+  int? bid;
+  int? sid;
+  int? propertyid;
+  int? measurementid;
+  String? firstname;
+  String? lastname;
+  String? cnic;
+  String? address;
+  String? mobileno;
+  String? password;
+  int? roleid;
+  String? rolename;
+  String? image;
+  String? fcmtoken;
+  List<Society>? society;
+  List<Phase>? phase;
+  List<Block>? block;
+  List<Street>? street;
+  List<Property>? property;
+  List<Measurement>? measurement;
+  List<Owner>? owner;
 Data copyWith({  int? id,
   int? residentid,
   int? subadminid,
@@ -303,134 +259,96 @@ Data copyWith({  int? id,
   List<Property>? property,
   List<Measurement>? measurement,
   List<Owner>? owner,
-}) => Data(  id: id ?? _id,
-  residentid: residentid ?? _residentid,
-  subadminid: subadminid ?? _subadminid,
-  country: country ?? _country,
-  state: state ?? _state,
-  city: city ?? _city,
-  houseaddress: houseaddress ?? _houseaddress,
-  vechileno: vechileno ?? _vechileno,
-  residenttype: residenttype ?? _residenttype,
-  propertytype: propertytype ?? _propertytype,
-  committeemember: committeemember ?? _committeemember,
-  status: status ?? _status,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
-  societyid: societyid ?? _societyid,
-  pid: pid ?? _pid,
-  bid: bid ?? _bid,
-  sid: sid ?? _sid,
-  propertyid: propertyid ?? _propertyid,
-  measurementid: measurementid ?? _measurementid,
-  firstname: firstname ?? _firstname,
-  lastname: lastname ?? _lastname,
-  cnic: cnic ?? _cnic,
-  address: address ?? _address,
-  mobileno: mobileno ?? _mobileno,
-  password: password ?? _password,
-  roleid: roleid ?? _roleid,
-  rolename: rolename ?? _rolename,
-  image: image ?? _image,
-  fcmtoken: fcmtoken ?? _fcmtoken,
-  society: society ?? _society,
-  phase: phase ?? _phase,
-  block: block ?? _block,
-  street: street ?? _street,
-  property: property ?? _property,
-  measurement: measurement ?? _measurement,
-  owner: owner ?? _owner,
+}) => Data(  id: id ?? this.id,
+  residentid: residentid ?? this.residentid,
+  subadminid: subadminid ?? this.subadminid,
+  country: country ?? this.country,
+  state: state ?? this.state,
+  city: city ?? this.city,
+  houseaddress: houseaddress ?? this.houseaddress,
+  vechileno: vechileno ?? this.vechileno,
+  residenttype: residenttype ?? this.residenttype,
+  propertytype: propertytype ?? this.propertytype,
+  committeemember: committeemember ?? this.committeemember,
+  status: status ?? this.status,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
+  societyid: societyid ?? this.societyid,
+  pid: pid ?? this.pid,
+  bid: bid ?? this.bid,
+  sid: sid ?? this.sid,
+  propertyid: propertyid ?? this.propertyid,
+  measurementid: measurementid ?? this.measurementid,
+  firstname: firstname ?? this.firstname,
+  lastname: lastname ?? this.lastname,
+  cnic: cnic ?? this.cnic,
+  address: address ?? this.address,
+  mobileno: mobileno ?? this.mobileno,
+  password: password ?? this.password,
+  roleid: roleid ?? this.roleid,
+  rolename: rolename ?? this.rolename,
+  image: image ?? this.image,
+  fcmtoken: fcmtoken ?? this.fcmtoken,
+  society: society ?? this.society,
+  phase: phase ?? this.phase,
+  block: block ?? this.block,
+  street: street ?? this.street,
+  property: property ?? this.property,
+  measurement: measurement ?? this.measurement,
+  owner: owner ?? this.owner,
 );
-  int? get id => _id;
-  int? get residentid => _residentid;
-  int? get subadminid => _subadminid;
-  String? get country => _country;
-  String? get state => _state;
-  String? get city => _city;
-  String? get houseaddress => _houseaddress;
-  String? get vechileno => _vechileno;
-  String? get residenttype => _residenttype;
-  String? get propertytype => _propertytype;
-  int? get committeemember => _committeemember;
-  int? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  int? get societyid => _societyid;
-  int? get pid => _pid;
-  int? get bid => _bid;
-  int? get sid => _sid;
-  int? get propertyid => _propertyid;
-  int? get measurementid => _measurementid;
-  String? get firstname => _firstname;
-  String? get lastname => _lastname;
-  String? get cnic => _cnic;
-  String? get address => _address;
-  String? get mobileno => _mobileno;
-  String? get password => _password;
-  int? get roleid => _roleid;
-  String? get rolename => _rolename;
-  String? get image => _image;
-  String? get fcmtoken => _fcmtoken;
-  List<Society>? get society => _society;
-  List<Phase>? get phase => _phase;
-  List<Block>? get block => _block;
-  List<Street>? get street => _street;
-  List<Property>? get property => _property;
-  List<Measurement>? get measurement => _measurement;
-  List<Owner>? get owner => _owner;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['residentid'] = _residentid;
-    map['subadminid'] = _subadminid;
-    map['country'] = _country;
-    map['state'] = _state;
-    map['city'] = _city;
-    map['houseaddress'] = _houseaddress;
-    map['vechileno'] = _vechileno;
-    map['residenttype'] = _residenttype;
-    map['propertytype'] = _propertytype;
-    map['committeemember'] = _committeemember;
-    map['status'] = _status;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
-    map['societyid'] = _societyid;
-    map['pid'] = _pid;
-    map['bid'] = _bid;
-    map['sid'] = _sid;
-    map['propertyid'] = _propertyid;
-    map['measurementid'] = _measurementid;
-    map['firstname'] = _firstname;
-    map['lastname'] = _lastname;
-    map['cnic'] = _cnic;
-    map['address'] = _address;
-    map['mobileno'] = _mobileno;
-    map['password'] = _password;
-    map['roleid'] = _roleid;
-    map['rolename'] = _rolename;
-    map['image'] = _image;
-    map['fcmtoken'] = _fcmtoken;
-    if (_society != null) {
-      map['society'] = _society?.map((v) => v.toJson()).toList();
+    map['id'] = id;
+    map['residentid'] = residentid;
+    map['subadminid'] = subadminid;
+    map['country'] = country;
+    map['state'] = state;
+    map['city'] = city;
+    map['houseaddress'] = houseaddress;
+    map['vechileno'] = vechileno;
+    map['residenttype'] = residenttype;
+    map['propertytype'] = propertytype;
+    map['committeemember'] = committeemember;
+    map['status'] = status;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
+    map['societyid'] = societyid;
+    map['pid'] = pid;
+    map['bid'] = bid;
+    map['sid'] = sid;
+    map['propertyid'] = propertyid;
+    map['measurementid'] = measurementid;
+    map['firstname'] = firstname;
+    map['lastname'] = lastname;
+    map['cnic'] = cnic;
+    map['address'] = address;
+    map['mobileno'] = mobileno;
+    map['password'] = password;
+    map['roleid'] = roleid;
+    map['rolename'] = rolename;
+    map['image'] = image;
+    map['fcmtoken'] = fcmtoken;
+    if (society != null) {
+      map['society'] = society?.map((v) => v.toJson()).toList();
     }
-    if (_phase != null) {
-      map['phase'] = _phase?.map((v) => v.toJson()).toList();
+    if (phase != null) {
+      map['phase'] = phase?.map((v) => v.toJson()).toList();
     }
-    if (_block != null) {
-      map['block'] = _block?.map((v) => v.toJson()).toList();
+    if (block != null) {
+      map['block'] = block?.map((v) => v.toJson()).toList();
     }
-    if (_street != null) {
-      map['street'] = _street?.map((v) => v.toJson()).toList();
+    if (street != null) {
+      map['street'] = street?.map((v) => v.toJson()).toList();
     }
-    if (_property != null) {
-      map['property'] = _property?.map((v) => v.toJson()).toList();
+    if (property != null) {
+      map['property'] = property?.map((v) => v.toJson()).toList();
     }
-    if (_measurement != null) {
-      map['measurement'] = _measurement?.map((v) => v.toJson()).toList();
+    if (measurement != null) {
+      map['measurement'] = measurement?.map((v) => v.toJson()).toList();
     }
-    if (_owner != null) {
-      map['owner'] = _owner?.map((v) => v.toJson()).toList();
+    if (owner != null) {
+      map['owner'] = owner?.map((v) => v.toJson()).toList();
     }
     return map;
   }
@@ -438,47 +356,39 @@ Data copyWith({  int? id,
 }
 
 /// id : 2
-/// residentid : 42
-/// ownername : "ali"
+/// residentid : 7
+/// ownername : "noman"
 /// owneraddress : "NA"
-/// ownermobileno : "03215550979"
-/// created_at : "2023-03-25T14:07:45.000000Z"
-/// updated_at : "2023-03-25T14:07:45.000000Z"
+/// ownermobileno : "02134"
+/// created_at : "2023-04-28T12:56:34.000000Z"
+/// updated_at : "2023-04-28T12:56:34.000000Z"
 
 class Owner {
   Owner({
-      int? id, 
-      int? residentid, 
-      String? ownername, 
-      String? owneraddress, 
-      String? ownermobileno, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _residentid = residentid;
-    _ownername = ownername;
-    _owneraddress = owneraddress;
-    _ownermobileno = ownermobileno;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.residentid, 
+      this.ownername, 
+      this.owneraddress, 
+      this.ownermobileno, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Owner.fromJson(dynamic json) {
-    _id = json['id'];
-    _residentid = json['residentid'];
-    _ownername = json['ownername'];
-    _owneraddress = json['owneraddress'];
-    _ownermobileno = json['ownermobileno'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    residentid = json['residentid'];
+    ownername = json['ownername'];
+    owneraddress = json['owneraddress'];
+    ownermobileno = json['ownermobileno'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  int? _residentid;
-  String? _ownername;
-  String? _owneraddress;
-  String? _ownermobileno;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  int? residentid;
+  String? ownername;
+  String? owneraddress;
+  String? ownermobileno;
+  String? createdAt;
+  String? updatedAt;
 Owner copyWith({  int? id,
   int? residentid,
   String? ownername,
@@ -486,226 +396,183 @@ Owner copyWith({  int? id,
   String? ownermobileno,
   String? createdAt,
   String? updatedAt,
-}) => Owner(  id: id ?? _id,
-  residentid: residentid ?? _residentid,
-  ownername: ownername ?? _ownername,
-  owneraddress: owneraddress ?? _owneraddress,
-  ownermobileno: ownermobileno ?? _ownermobileno,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Owner(  id: id ?? this.id,
+  residentid: residentid ?? this.residentid,
+  ownername: ownername ?? this.ownername,
+  owneraddress: owneraddress ?? this.owneraddress,
+  ownermobileno: ownermobileno ?? this.ownermobileno,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  int? get residentid => _residentid;
-  String? get ownername => _ownername;
-  String? get owneraddress => _owneraddress;
-  String? get ownermobileno => _ownermobileno;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['residentid'] = _residentid;
-    map['ownername'] = _ownername;
-    map['owneraddress'] = _owneraddress;
-    map['ownermobileno'] = _ownermobileno;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['residentid'] = residentid;
+    map['ownername'] = ownername;
+    map['owneraddress'] = owneraddress;
+    map['ownermobileno'] = ownermobileno;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 1
-/// subadminid : 2
+/// id : 3
+/// subadminid : 6
 /// type : "house"
 /// unit : "marla"
-/// charges : 5000
-/// chargesafterduedate : 5250
-/// appcharges : 100
-/// tax : 750
-/// area : 5
+/// charges : "5000.00"
+/// chargesafterduedate : "5250.00"
+/// appcharges : "100.00"
+/// tax : "750.00"
+/// area : "5.00"
 /// bedrooms : 5
 /// status : 0
-/// created_at : "2023-03-19T11:53:08.000000Z"
-/// updated_at : "2023-03-19T11:53:08.000000Z"
+/// created_at : "2023-04-28T12:56:15.000000Z"
+/// updated_at : "2023-04-28T12:56:15.000000Z"
 
 class Measurement {
   Measurement({
-      int? id, 
-      int? subadminid, 
-      String? type, 
-      String? unit, 
-      int? charges, 
-      int? chargesafterduedate, 
-      int? appcharges, 
-      int? tax, 
-      int? area, 
-      int? bedrooms, 
-      int? status, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _subadminid = subadminid;
-    _type = type;
-    _unit = unit;
-    _charges = charges;
-    _chargesafterduedate = chargesafterduedate;
-    _appcharges = appcharges;
-    _tax = tax;
-    _area = area;
-    _bedrooms = bedrooms;
-    _status = status;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.subadminid, 
+      this.type, 
+      this.unit, 
+      this.charges, 
+      this.chargesafterduedate, 
+      this.appcharges, 
+      this.tax, 
+      this.area, 
+      this.bedrooms, 
+      this.status, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Measurement.fromJson(dynamic json) {
-    _id = json['id'];
-    _subadminid = json['subadminid'];
-    _type = json['type'];
-    _unit = json['unit'];
-    _charges = json['charges'];
-    _chargesafterduedate = json['chargesafterduedate'];
-    _appcharges = json['appcharges'];
-    _tax = json['tax'];
-    _area = json['area'];
-    _bedrooms = json['bedrooms'];
-    _status = json['status'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    subadminid = json['subadminid'];
+    type = json['type'];
+    unit = json['unit'];
+    charges = json['charges'];
+    chargesafterduedate = json['chargesafterduedate'];
+    appcharges = json['appcharges'];
+    tax = json['tax'];
+    area = json['area'];
+    bedrooms = json['bedrooms'];
+    status = json['status'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  int? _subadminid;
-  String? _type;
-  String? _unit;
-  int? _charges;
-  int? _chargesafterduedate;
-  int? _appcharges;
-  int? _tax;
-  int? _area;
-  int? _bedrooms;
-  int? _status;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  int? subadminid;
+  String? type;
+  String? unit;
+  String? charges;
+  String? chargesafterduedate;
+  String? appcharges;
+  String? tax;
+  String? area;
+  int? bedrooms;
+  int? status;
+  String? createdAt;
+  String? updatedAt;
 Measurement copyWith({  int? id,
   int? subadminid,
   String? type,
   String? unit,
-  int? charges,
-  int? chargesafterduedate,
-  int? appcharges,
-  int? tax,
-  int? area,
+  String? charges,
+  String? chargesafterduedate,
+  String? appcharges,
+  String? tax,
+  String? area,
   int? bedrooms,
   int? status,
   String? createdAt,
   String? updatedAt,
-}) => Measurement(  id: id ?? _id,
-  subadminid: subadminid ?? _subadminid,
-  type: type ?? _type,
-  unit: unit ?? _unit,
-  charges: charges ?? _charges,
-  chargesafterduedate: chargesafterduedate ?? _chargesafterduedate,
-  appcharges: appcharges ?? _appcharges,
-  tax: tax ?? _tax,
-  area: area ?? _area,
-  bedrooms: bedrooms ?? _bedrooms,
-  status: status ?? _status,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Measurement(  id: id ?? this.id,
+  subadminid: subadminid ?? this.subadminid,
+  type: type ?? this.type,
+  unit: unit ?? this.unit,
+  charges: charges ?? this.charges,
+  chargesafterduedate: chargesafterduedate ?? this.chargesafterduedate,
+  appcharges: appcharges ?? this.appcharges,
+  tax: tax ?? this.tax,
+  area: area ?? this.area,
+  bedrooms: bedrooms ?? this.bedrooms,
+  status: status ?? this.status,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  int? get subadminid => _subadminid;
-  String? get type => _type;
-  String? get unit => _unit;
-  int? get charges => _charges;
-  int? get chargesafterduedate => _chargesafterduedate;
-  int? get appcharges => _appcharges;
-  int? get tax => _tax;
-  int? get area => _area;
-  int? get bedrooms => _bedrooms;
-  int? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['subadminid'] = _subadminid;
-    map['type'] = _type;
-    map['unit'] = _unit;
-    map['charges'] = _charges;
-    map['chargesafterduedate'] = _chargesafterduedate;
-    map['appcharges'] = _appcharges;
-    map['tax'] = _tax;
-    map['area'] = _area;
-    map['bedrooms'] = _bedrooms;
-    map['status'] = _status;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['subadminid'] = subadminid;
+    map['type'] = type;
+    map['unit'] = unit;
+    map['charges'] = charges;
+    map['chargesafterduedate'] = chargesafterduedate;
+    map['appcharges'] = appcharges;
+    map['tax'] = tax;
+    map['area'] = area;
+    map['bedrooms'] = bedrooms;
+    map['status'] = status;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 64
-/// address : "house#1"
+/// id : 41
+/// address : "House#1"
 /// type : "street"
 /// iteration : "1"
-/// dynamicid : 68
-/// subadminid : 2
-/// societyid : 1
+/// dynamicid : 3
+/// subadminid : 6
+/// societyid : 2
 /// superadminid : 1
-/// created_at : "2023-03-25T09:08:50.000000Z"
-/// updated_at : "2023-03-25T09:08:50.000000Z"
+/// occupied : 0
+/// created_at : "2023-04-28T12:54:33.000000Z"
+/// updated_at : "2023-04-28T12:54:33.000000Z"
 
 class Property {
   Property({
-      int? id, 
-      String? address, 
-      String? type, 
-      String? iteration, 
-      int? dynamicid, 
-      int? subadminid, 
-      int? societyid, 
-      int? superadminid, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _address = address;
-    _type = type;
-    _iteration = iteration;
-    _dynamicid = dynamicid;
-    _subadminid = subadminid;
-    _societyid = societyid;
-    _superadminid = superadminid;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.address, 
+      this.type, 
+      this.iteration, 
+      this.dynamicid, 
+      this.subadminid, 
+      this.societyid, 
+      this.superadminid, 
+      this.occupied, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Property.fromJson(dynamic json) {
-    _id = json['id'];
-    _address = json['address'];
-    _type = json['type'];
-    _iteration = json['iteration'];
-    _dynamicid = json['dynamicid'];
-    _subadminid = json['subadminid'];
-    _societyid = json['societyid'];
-    _superadminid = json['superadminid'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    address = json['address'];
+    type = json['type'];
+    iteration = json['iteration'];
+    dynamicid = json['dynamicid'];
+    subadminid = json['subadminid'];
+    societyid = json['societyid'];
+    superadminid = json['superadminid'];
+    occupied = json['occupied'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  String? _address;
-  String? _type;
-  String? _iteration;
-  int? _dynamicid;
-  int? _subadminid;
-  int? _societyid;
-  int? _superadminid;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  String? address;
+  String? type;
+  String? iteration;
+  int? dynamicid;
+  int? subadminid;
+  int? societyid;
+  int? superadminid;
+  int? occupied;
+  String? createdAt;
+  String? updatedAt;
 Property copyWith({  int? id,
   String? address,
   String? type,
@@ -714,104 +581,85 @@ Property copyWith({  int? id,
   int? subadminid,
   int? societyid,
   int? superadminid,
+  int? occupied,
   String? createdAt,
   String? updatedAt,
-}) => Property(  id: id ?? _id,
-  address: address ?? _address,
-  type: type ?? _type,
-  iteration: iteration ?? _iteration,
-  dynamicid: dynamicid ?? _dynamicid,
-  subadminid: subadminid ?? _subadminid,
-  societyid: societyid ?? _societyid,
-  superadminid: superadminid ?? _superadminid,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Property(  id: id ?? this.id,
+  address: address ?? this.address,
+  type: type ?? this.type,
+  iteration: iteration ?? this.iteration,
+  dynamicid: dynamicid ?? this.dynamicid,
+  subadminid: subadminid ?? this.subadminid,
+  societyid: societyid ?? this.societyid,
+  superadminid: superadminid ?? this.superadminid,
+  occupied: occupied ?? this.occupied,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  String? get address => _address;
-  String? get type => _type;
-  String? get iteration => _iteration;
-  int? get dynamicid => _dynamicid;
-  int? get subadminid => _subadminid;
-  int? get societyid => _societyid;
-  int? get superadminid => _superadminid;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['address'] = _address;
-    map['type'] = _type;
-    map['iteration'] = _iteration;
-    map['dynamicid'] = _dynamicid;
-    map['subadminid'] = _subadminid;
-    map['societyid'] = _societyid;
-    map['superadminid'] = _superadminid;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['address'] = address;
+    map['type'] = type;
+    map['iteration'] = iteration;
+    map['dynamicid'] = dynamicid;
+    map['subadminid'] = subadminid;
+    map['societyid'] = societyid;
+    map['superadminid'] = superadminid;
+    map['occupied'] = occupied;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 68
-/// address : "street#1"
+/// id : 3
+/// address : "Stret#1"
 /// type : "blocks"
 /// iteration : "1"
-/// dynamicid : 28
-/// subadminid : 2
-/// societyid : 1
+/// dynamicid : 3
+/// subadminid : 6
+/// societyid : 2
 /// superadminid : 1
-/// created_at : "2023-03-25T09:08:35.000000Z"
-/// updated_at : "2023-03-25T09:08:35.000000Z"
+/// created_at : "2023-04-28T12:54:22.000000Z"
+/// updated_at : "2023-04-28T12:54:22.000000Z"
 
 class Street {
   Street({
-      int? id, 
-      String? address, 
-      String? type, 
-      String? iteration, 
-      int? dynamicid, 
-      int? subadminid, 
-      int? societyid, 
-      int? superadminid, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _address = address;
-    _type = type;
-    _iteration = iteration;
-    _dynamicid = dynamicid;
-    _subadminid = subadminid;
-    _societyid = societyid;
-    _superadminid = superadminid;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.address, 
+      this.type, 
+      this.iteration, 
+      this.dynamicid, 
+      this.subadminid, 
+      this.societyid, 
+      this.superadminid, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Street.fromJson(dynamic json) {
-    _id = json['id'];
-    _address = json['address'];
-    _type = json['type'];
-    _iteration = json['iteration'];
-    _dynamicid = json['dynamicid'];
-    _subadminid = json['subadminid'];
-    _societyid = json['societyid'];
-    _superadminid = json['superadminid'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    address = json['address'];
+    type = json['type'];
+    iteration = json['iteration'];
+    dynamicid = json['dynamicid'];
+    subadminid = json['subadminid'];
+    societyid = json['societyid'];
+    superadminid = json['superadminid'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  String? _address;
-  String? _type;
-  String? _iteration;
-  int? _dynamicid;
-  int? _subadminid;
-  int? _societyid;
-  int? _superadminid;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  String? address;
+  String? type;
+  String? iteration;
+  int? dynamicid;
+  int? subadminid;
+  int? societyid;
+  int? superadminid;
+  String? createdAt;
+  String? updatedAt;
 Street copyWith({  int? id,
   String? address,
   String? type,
@@ -822,102 +670,80 @@ Street copyWith({  int? id,
   int? superadminid,
   String? createdAt,
   String? updatedAt,
-}) => Street(  id: id ?? _id,
-  address: address ?? _address,
-  type: type ?? _type,
-  iteration: iteration ?? _iteration,
-  dynamicid: dynamicid ?? _dynamicid,
-  subadminid: subadminid ?? _subadminid,
-  societyid: societyid ?? _societyid,
-  superadminid: superadminid ?? _superadminid,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Street(  id: id ?? this.id,
+  address: address ?? this.address,
+  type: type ?? this.type,
+  iteration: iteration ?? this.iteration,
+  dynamicid: dynamicid ?? this.dynamicid,
+  subadminid: subadminid ?? this.subadminid,
+  societyid: societyid ?? this.societyid,
+  superadminid: superadminid ?? this.superadminid,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  String? get address => _address;
-  String? get type => _type;
-  String? get iteration => _iteration;
-  int? get dynamicid => _dynamicid;
-  int? get subadminid => _subadminid;
-  int? get societyid => _societyid;
-  int? get superadminid => _superadminid;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['address'] = _address;
-    map['type'] = _type;
-    map['iteration'] = _iteration;
-    map['dynamicid'] = _dynamicid;
-    map['subadminid'] = _subadminid;
-    map['societyid'] = _societyid;
-    map['superadminid'] = _superadminid;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['address'] = address;
+    map['type'] = type;
+    map['iteration'] = iteration;
+    map['dynamicid'] = dynamicid;
+    map['subadminid'] = subadminid;
+    map['societyid'] = societyid;
+    map['superadminid'] = superadminid;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 28
-/// address : "block#1"
+/// id : 3
+/// address : "Block#1"
 /// type : "phase"
 /// iteration : "1"
-/// dynamicid : 7
-/// subadminid : 2
-/// societyid : 1
+/// dynamicid : 1
+/// subadminid : 6
+/// societyid : 2
 /// superadminid : 1
-/// created_at : "2023-03-25T09:08:18.000000Z"
-/// updated_at : "2023-03-25T09:08:18.000000Z"
+/// created_at : "2023-04-28T12:54:09.000000Z"
+/// updated_at : "2023-04-28T12:54:09.000000Z"
 
 class Block {
   Block({
-      int? id, 
-      String? address, 
-      String? type, 
-      String? iteration, 
-      int? dynamicid, 
-      int? subadminid, 
-      int? societyid, 
-      int? superadminid, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _address = address;
-    _type = type;
-    _iteration = iteration;
-    _dynamicid = dynamicid;
-    _subadminid = subadminid;
-    _societyid = societyid;
-    _superadminid = superadminid;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.address, 
+      this.type, 
+      this.iteration, 
+      this.dynamicid, 
+      this.subadminid, 
+      this.societyid, 
+      this.superadminid, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Block.fromJson(dynamic json) {
-    _id = json['id'];
-    _address = json['address'];
-    _type = json['type'];
-    _iteration = json['iteration'];
-    _dynamicid = json['dynamicid'];
-    _subadminid = json['subadminid'];
-    _societyid = json['societyid'];
-    _superadminid = json['superadminid'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    address = json['address'];
+    type = json['type'];
+    iteration = json['iteration'];
+    dynamicid = json['dynamicid'];
+    subadminid = json['subadminid'];
+    societyid = json['societyid'];
+    superadminid = json['superadminid'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  String? _address;
-  String? _type;
-  String? _iteration;
-  int? _dynamicid;
-  int? _subadminid;
-  int? _societyid;
-  int? _superadminid;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  String? address;
+  String? type;
+  String? iteration;
+  int? dynamicid;
+  int? subadminid;
+  int? societyid;
+  int? superadminid;
+  String? createdAt;
+  String? updatedAt;
 Block copyWith({  int? id,
   String? address,
   String? type,
@@ -928,97 +754,76 @@ Block copyWith({  int? id,
   int? superadminid,
   String? createdAt,
   String? updatedAt,
-}) => Block(  id: id ?? _id,
-  address: address ?? _address,
-  type: type ?? _type,
-  iteration: iteration ?? _iteration,
-  dynamicid: dynamicid ?? _dynamicid,
-  subadminid: subadminid ?? _subadminid,
-  societyid: societyid ?? _societyid,
-  superadminid: superadminid ?? _superadminid,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Block(  id: id ?? this.id,
+  address: address ?? this.address,
+  type: type ?? this.type,
+  iteration: iteration ?? this.iteration,
+  dynamicid: dynamicid ?? this.dynamicid,
+  subadminid: subadminid ?? this.subadminid,
+  societyid: societyid ?? this.societyid,
+  superadminid: superadminid ?? this.superadminid,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  String? get address => _address;
-  String? get type => _type;
-  String? get iteration => _iteration;
-  int? get dynamicid => _dynamicid;
-  int? get subadminid => _subadminid;
-  int? get societyid => _societyid;
-  int? get superadminid => _superadminid;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['address'] = _address;
-    map['type'] = _type;
-    map['iteration'] = _iteration;
-    map['dynamicid'] = _dynamicid;
-    map['subadminid'] = _subadminid;
-    map['societyid'] = _societyid;
-    map['superadminid'] = _superadminid;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['address'] = address;
+    map['type'] = type;
+    map['iteration'] = iteration;
+    map['dynamicid'] = dynamicid;
+    map['subadminid'] = subadminid;
+    map['societyid'] = societyid;
+    map['superadminid'] = superadminid;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 7
-/// address : "phase#1"
+/// id : 1
+/// address : "Phase#1"
 /// iteration : "1"
-/// dynamicid : 1
-/// subadminid : 2
-/// societyid : 1
+/// dynamicid : 2
+/// subadminid : 6
+/// societyid : 2
 /// superadminid : 1
-/// created_at : "2023-03-25T09:08:05.000000Z"
-/// updated_at : "2023-03-25T09:08:05.000000Z"
+/// created_at : "2023-04-28T12:53:57.000000Z"
+/// updated_at : "2023-04-28T12:53:57.000000Z"
 
 class Phase {
   Phase({
-      int? id, 
-      String? address, 
-      String? iteration, 
-      int? dynamicid, 
-      int? subadminid, 
-      int? societyid, 
-      int? superadminid, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _address = address;
-    _iteration = iteration;
-    _dynamicid = dynamicid;
-    _subadminid = subadminid;
-    _societyid = societyid;
-    _superadminid = superadminid;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.address, 
+      this.iteration, 
+      this.dynamicid, 
+      this.subadminid, 
+      this.societyid, 
+      this.superadminid, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Phase.fromJson(dynamic json) {
-    _id = json['id'];
-    _address = json['address'];
-    _iteration = json['iteration'];
-    _dynamicid = json['dynamicid'];
-    _subadminid = json['subadminid'];
-    _societyid = json['societyid'];
-    _superadminid = json['superadminid'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    address = json['address'];
+    iteration = json['iteration'];
+    dynamicid = json['dynamicid'];
+    subadminid = json['subadminid'];
+    societyid = json['societyid'];
+    superadminid = json['superadminid'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  String? _address;
-  String? _iteration;
-  int? _dynamicid;
-  int? _subadminid;
-  int? _societyid;
-  int? _superadminid;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  String? address;
+  String? iteration;
+  int? dynamicid;
+  int? subadminid;
+  int? societyid;
+  int? superadminid;
+  String? createdAt;
+  String? updatedAt;
 Phase copyWith({  int? id,
   String? address,
   String? iteration,
@@ -1028,109 +833,86 @@ Phase copyWith({  int? id,
   int? superadminid,
   String? createdAt,
   String? updatedAt,
-}) => Phase(  id: id ?? _id,
-  address: address ?? _address,
-  iteration: iteration ?? _iteration,
-  dynamicid: dynamicid ?? _dynamicid,
-  subadminid: subadminid ?? _subadminid,
-  societyid: societyid ?? _societyid,
-  superadminid: superadminid ?? _superadminid,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Phase(  id: id ?? this.id,
+  address: address ?? this.address,
+  iteration: iteration ?? this.iteration,
+  dynamicid: dynamicid ?? this.dynamicid,
+  subadminid: subadminid ?? this.subadminid,
+  societyid: societyid ?? this.societyid,
+  superadminid: superadminid ?? this.superadminid,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  String? get address => _address;
-  String? get iteration => _iteration;
-  int? get dynamicid => _dynamicid;
-  int? get subadminid => _subadminid;
-  int? get societyid => _societyid;
-  int? get superadminid => _superadminid;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['address'] = _address;
-    map['iteration'] = _iteration;
-    map['dynamicid'] = _dynamicid;
-    map['subadminid'] = _subadminid;
-    map['societyid'] = _societyid;
-    map['superadminid'] = _superadminid;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['address'] = address;
+    map['iteration'] = iteration;
+    map['dynamicid'] = dynamicid;
+    map['subadminid'] = subadminid;
+    map['societyid'] = societyid;
+    map['superadminid'] = superadminid;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 
 }
 
-/// id : 1
+/// id : 2
 /// country : "🇵🇰    Pakistan"
-/// state : "Punjab"
-/// city : "Rawalpindi"
-/// area : "Rawat"
+/// state : "null"
+/// city : "null"
+/// area : "Islamabad"
 /// type : "society"
-/// name : "Rawat Enclave"
-/// address : "Kallar Syedian Road"
+/// name : "Bahria Town"
+/// address : "Islamabad"
 /// superadminid : 1
 /// structuretype : 3
-/// created_at : "2023-03-19T09:20:55.000000Z"
-/// updated_at : "2023-03-19T09:20:55.000000Z"
+/// created_at : "2023-04-28T12:52:32.000000Z"
+/// updated_at : "2023-04-28T12:52:32.000000Z"
 
 class Society {
   Society({
-      int? id, 
-      String? country, 
-      String? state, 
-      String? city, 
-      String? area, 
-      String? type, 
-      String? name, 
-      String? address, 
-      int? superadminid, 
-      int? structuretype, 
-      String? createdAt, 
-      String? updatedAt,}){
-    _id = id;
-    _country = country;
-    _state = state;
-    _city = city;
-    _area = area;
-    _type = type;
-    _name = name;
-    _address = address;
-    _superadminid = superadminid;
-    _structuretype = structuretype;
-    _createdAt = createdAt;
-    _updatedAt = updatedAt;
-}
+      this.id, 
+      this.country, 
+      this.state, 
+      this.city, 
+      this.area, 
+      this.type, 
+      this.name, 
+      this.address, 
+      this.superadminid, 
+      this.structuretype, 
+      this.createdAt, 
+      this.updatedAt,});
 
   Society.fromJson(dynamic json) {
-    _id = json['id'];
-    _country = json['country'];
-    _state = json['state'];
-    _city = json['city'];
-    _area = json['area'];
-    _type = json['type'];
-    _name = json['name'];
-    _address = json['address'];
-    _superadminid = json['superadminid'];
-    _structuretype = json['structuretype'];
-    _createdAt = json['created_at'];
-    _updatedAt = json['updated_at'];
+    id = json['id'];
+    country = json['country'];
+    state = json['state'];
+    city = json['city'];
+    area = json['area'];
+    type = json['type'];
+    name = json['name'];
+    address = json['address'];
+    superadminid = json['superadminid'];
+    structuretype = json['structuretype'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
-  int? _id;
-  String? _country;
-  String? _state;
-  String? _city;
-  String? _area;
-  String? _type;
-  String? _name;
-  String? _address;
-  int? _superadminid;
-  int? _structuretype;
-  String? _createdAt;
-  String? _updatedAt;
+  int? id;
+  String? country;
+  String? state;
+  String? city;
+  String? area;
+  String? type;
+  String? name;
+  String? address;
+  int? superadminid;
+  int? structuretype;
+  String? createdAt;
+  String? updatedAt;
 Society copyWith({  int? id,
   String? country,
   String? state,
@@ -1143,46 +925,33 @@ Society copyWith({  int? id,
   int? structuretype,
   String? createdAt,
   String? updatedAt,
-}) => Society(  id: id ?? _id,
-  country: country ?? _country,
-  state: state ?? _state,
-  city: city ?? _city,
-  area: area ?? _area,
-  type: type ?? _type,
-  name: name ?? _name,
-  address: address ?? _address,
-  superadminid: superadminid ?? _superadminid,
-  structuretype: structuretype ?? _structuretype,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
+}) => Society(  id: id ?? this.id,
+  country: country ?? this.country,
+  state: state ?? this.state,
+  city: city ?? this.city,
+  area: area ?? this.area,
+  type: type ?? this.type,
+  name: name ?? this.name,
+  address: address ?? this.address,
+  superadminid: superadminid ?? this.superadminid,
+  structuretype: structuretype ?? this.structuretype,
+  createdAt: createdAt ?? this.createdAt,
+  updatedAt: updatedAt ?? this.updatedAt,
 );
-  int? get id => _id;
-  String? get country => _country;
-  String? get state => _state;
-  String? get city => _city;
-  String? get area => _area;
-  String? get type => _type;
-  String? get name => _name;
-  String? get address => _address;
-  int? get superadminid => _superadminid;
-  int? get structuretype => _structuretype;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['country'] = _country;
-    map['state'] = _state;
-    map['city'] = _city;
-    map['area'] = _area;
-    map['type'] = _type;
-    map['name'] = _name;
-    map['address'] = _address;
-    map['superadminid'] = _superadminid;
-    map['structuretype'] = _structuretype;
-    map['created_at'] = _createdAt;
-    map['updated_at'] = _updatedAt;
+    map['id'] = id;
+    map['country'] = country;
+    map['state'] = state;
+    map['city'] = city;
+    map['area'] = area;
+    map['type'] = type;
+    map['name'] = name;
+    map['address'] = address;
+    map['superadminid'] = superadminid;
+    map['structuretype'] = structuretype;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 

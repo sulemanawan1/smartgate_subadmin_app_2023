@@ -7,11 +7,9 @@ import '../../../Constants/api_routes.dart';
 import '../../../Routes/set_routes.dart';
 import '../../Login/Model/User.dart';
 
-import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/LocalBuildingApartmentResidentModel.dart'
-    as LocalBuildingApartmentResidentModel;
+import 'package:societyadminapp/Module/UnVerifiedResidents/Model/Resident Model/LocalBuildingApartmentResidentModel.dart';
 
-import '../Model/Resident Model/ApartmentResidentModel.dart';
-import '../Model/Resident Model/LocalBuildingApartmentResidentModel.dart';
+import '../Model/Resident Model/LocalBuildingApartmentResidentModel.dart' as LocalBuildingApartmentResidentModel;
 
 class LocalBuildingApartmentResidentVerificationController
     extends GetxController {
@@ -192,7 +190,7 @@ class LocalBuildingApartmentResidentVerificationController
     resident = data[1];
 
     SelectedBuilding(Localbuilding(
-        type: resident.localbuilding.first.type,
+        type: resident.localbuilding?.first.type,
         superadminid: resident.localbuilding!.first.superadminid,
         
         id: resident.localbuilding!.first.id,

@@ -289,7 +289,8 @@ class HouseResidentVerificationController extends GetxController {
           address: resident.property!.first.address,
           dynamicid: resident.property!.first.dynamicid,
           iteration: resident.property!.first.iteration));
-      SelectedMeasurement(Measurement(
+      SelectedMeasurement(
+          Measurement(
           id: resident.measurement!.first.id,
           subadminid: resident.measurement!.first.subadminid,
           charges: resident.measurement!.first.charges,
