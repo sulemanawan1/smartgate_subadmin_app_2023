@@ -1,6 +1,8 @@
 class Gatekeeper {
   final int? id;
   final int? subadminid;
+  final int? societyid;
+  
   final int? gatekeeperid;
   final String? firstName;
   final String? lastName;
@@ -16,6 +18,8 @@ class Gatekeeper {
   Gatekeeper({
     this.id,
     this.subadminid,
+    this.societyid,
+    
     this.gatekeeperid,
     this.firstName,
     this.lastName,

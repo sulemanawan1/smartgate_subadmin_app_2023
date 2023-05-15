@@ -1,12 +1,11 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
+import 'package:http/http.dart' as Http;
 
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
 import '../Model/gate_keeper_model.dart';
-import 'package:http/http.dart' as Http;
 
 class GateKeeperController extends GetxController {
   var userdata = Get.arguments;
@@ -27,7 +26,7 @@ class GateKeeperController extends GetxController {
     print(token);
 
     final response = await Http.get(
-      Uri.parse(Api.view_gatekeepers + "/" + gatekeeperid.toString()),
+      Uri.parse(Api.viewGatekeepers + "/" + gatekeeperid.toString()),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': "Bearer $token"
@@ -51,6 +50,7 @@ class GateKeeperController extends GetxController {
                 roleid: e['roleid'],
                 rolename: e['rolename'],
                 subadminid: e['subadminid'],
+                societyid: e['societyid'],
               ))
           .toList();
 
@@ -64,7 +64,7 @@ class GateKeeperController extends GetxController {
     print(token);
 
     final response = await Http.get(
-      Uri.parse(Api.delete_gatekeeper + "/" + gatekeeperid.toString()),
+      Uri.parse(Api.deleteGatekeeper + "/" + gatekeeperid.toString()),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': "Bearer $token"
@@ -79,8 +79,7 @@ class GateKeeperController extends GetxController {
       //listOfSubAdmi.clear();
 
       viewGatekeepersApi(gatekeeperid, userdata.bearerToken!);
-    } 
+    }
     update();
   }
-  
 }

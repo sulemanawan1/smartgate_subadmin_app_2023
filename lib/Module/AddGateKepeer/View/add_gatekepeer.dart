@@ -8,25 +8,29 @@ import '../../../Widgets/My Back Button/my_back_button.dart';
 import '../../../Widgets/My Button/my_button.dart';
 import '../../../Widgets/My Password TextForm Field/my_password_textform_field.dart';
 import '../../../Widgets/My TextForm Field/my_textform_field.dart';
+
 class AddGateKeeper extends GetView {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-
         body: GetBuilder<AddGateKepeerScreenController>(
             init: AddGateKepeerScreenController(),
             builder: (controller) {
               return Form(
                 key: controller.formKey,
                 child: SingleChildScrollView(
-
                   child: Center(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[ MyBackButton(text: 'Add Gatekeeper',),
-                        SizedBox(height:MediaQuery.of(context).size.height*0.05,),
+                      children: <Widget>[
+                        MyBackButton(
+                          text: 'Add Gatekeeper',
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05,
+                        ),
                         Stack(
                           children: <Widget>[
                             CircleAvatar(
@@ -34,10 +38,10 @@ class AddGateKeeper extends GetView {
                               backgroundColor: Colors.white,
                               backgroundImage: controller.imageFile == null
                                   ? AssetImage('assets/user.png')
-                              as ImageProvider
+                                      as ImageProvider
                                   : FileImage(
-                                File(controller.imageFile!.path),
-                              ),
+                                      File(controller.imageFile!.path),
+                                    ),
                             ),
                             Positioned(
                               left: 70,
@@ -49,9 +53,8 @@ class AddGateKeeper extends GetView {
                                       builder: (context) {
                                         return Container(
                                           height: 100.0,
-                                          width: MediaQuery.of(context)
-                                              .size
-                                              .width,
+                                          width:
+                                              MediaQuery.of(context).size.width,
                                           margin: EdgeInsets.symmetric(
                                               horizontal: 20, vertical: 20),
                                           child: Column(
@@ -63,14 +66,14 @@ class AddGateKeeper extends GetView {
                                               SizedBox(height: 20),
                                               Row(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment
-                                                    .spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 children: <Widget>[
                                                   ElevatedButton.icon(
                                                     style: ElevatedButton
                                                         .styleFrom(
-                                                        primary:
-                                                        primaryColor),
+                                                            primary:
+                                                                primaryColor),
                                                     icon: Icon(
                                                       Icons.camera,
                                                     ),
@@ -83,8 +86,8 @@ class AddGateKeeper extends GetView {
                                                   ElevatedButton.icon(
                                                     style: ElevatedButton
                                                         .styleFrom(
-                                                        primary:
-                                                        primaryColor),
+                                                            primary:
+                                                                primaryColor),
                                                     icon: Icon(Icons.image),
                                                     onPressed: () {
                                                       controller.getFromGallery(
@@ -108,49 +111,48 @@ class AddGateKeeper extends GetView {
                             ),
                           ],
                         ),
-                        SizedBox(height:MediaQuery.of(context).size.height*0.05,),
-                        MyTextFormField(
-                            controller: controller.fnameController,
-                            validator: emptyStringValidator,
-                            hintText: 'First Name',
-                            labelText: 'Enter First Name',
-
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05,
                         ),
                         MyTextFormField(
-                            controller: controller.lnameController,
-                            validator: emptyStringValidator,
-                            hintText: 'Last Name',
-                            labelText: 'Enter Last Name',
-                         ),
+                          controller: controller.fnameController,
+                          validator: emptyStringValidator,
+                          hintText: 'First Name',
+                          labelText: 'Enter First Name',
+                        ),
+                        MyTextFormField(
+                          controller: controller.lnameController,
+                          validator: emptyStringValidator,
+                          hintText: 'Last Name',
+                          labelText: 'Enter Last Name',
+                        ),
                         MyTextFormField(
                           textInputType: TextInputType.number,
-
                           controller: controller.cnicController,
-                            validator: emptyStringValidator,
-                            hintText: 'Cnic',
-                            labelText: 'Enter Cnic ',
-                         ),
+                          validator: emptyStringValidator,
+                          hintText: 'Cnic',
+                          labelText: 'Enter Cnic ',
+                        ),
                         MyTextFormField(
-                            controller: controller.addressController,
-                            validator: emptyStringValidator,
-                            hintText: 'Address',
-                            labelText: 'Enter Address ',
-                         ),
-                        MyTextFormField(
-                          textInputType: TextInputType.number,
-                            controller:controller.mobilenoController,
-                            validator: emptyStringValidator,
-                            hintText: 'Mobile No',
-                            labelText: 'Enter Mobile No ',
-                         ),
+                          controller: controller.addressController,
+                          validator: emptyStringValidator,
+                          hintText: 'Address',
+                          labelText: 'Enter Address ',
+                        ),
                         MyTextFormField(
                           textInputType: TextInputType.number,
-
-                          controller:controller.gatenoController,
-                            validator: emptyStringValidator,
-                            hintText: 'Gate No',
-                            labelText: 'Enter Gate No ',
-                         ),
+                          controller: controller.mobilenoController,
+                          validator: emptyStringValidator,
+                          hintText: 'Mobile No',
+                          labelText: 'Enter Mobile No ',
+                        ),
+                        MyTextFormField(
+                          textInputType: TextInputType.number,
+                          controller: controller.gatenoController,
+                          validator: emptyStringValidator,
+                          hintText: 'Gate No',
+                          labelText: 'Enter Gate No ',
+                        ),
                         MyPasswordTextFormField(
                           maxLines: 1,
                           controller: controller.passwordController,
@@ -159,50 +161,52 @@ class AddGateKeeper extends GetView {
                           validator: emptyStringValidator,
                           hintText: 'Enter Password',
                           labelText: 'Password',
-
                         ),
-
-                        SizedBox(height:MediaQuery.of(context).size.height*0.05,),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05,
+                        ),
                         MyButton(
-
-
                           onPressed: controller.isLoading
                               ? null
                               : () {
-                            if (controller.formKey.currentState!.validate()) {
-      if (controller.imageFile?.path == null) {
-      Get.snackbar('Warning', 'Select an image !');
-      } else {
-
-      controller.addGateKeeperApi(
-      file: controller.imageFile!,
-      fname: controller.fnameController.text,
-      lname: controller.lnameController.text,
-      cnic: controller.cnicController.text,
-      address:
-      controller.addressController.text,
-      mobileno:
-      controller.mobilenoController.text,
-      gateno:
-      controller.gatenoController.text,
-      password:
-      controller.passwordController.text,
-      bearerToken:
-      controller.user!.bearerToken!,
-      subadminid: controller.user!.userid!);
-
-      }
-      }},
-
-                        color: primaryColor,
+                                  if (controller.formKey.currentState!
+                                      .validate()) {
+                                    if (controller.imageFile?.path == null) {
+                                      Get.snackbar(
+                                          'Warning', 'Select an image !');
+                                    } else {
+                                      controller.addGateKeeperApi(
+                                          file: controller.imageFile!,
+                                          fname:
+                                              controller.fnameController.text,
+                                          lname:
+                                              controller.lnameController.text,
+                                          cnic: controller.cnicController.text,
+                                          address:
+                                              controller.addressController.text,
+                                          mobileno: controller
+                                              .mobilenoController.text,
+                                          gateno:
+                                              controller.gatenoController.text,
+                                          password: controller
+                                              .passwordController.text,
+                                          bearerToken:
+                                              controller.user!.bearerToken!,
+                                          subadminid: controller.user!.userid!,
+                                          societyid:
+                                              controller.user!.societyid!);
+                                    }
+                                  }
+                                },
+                          color: primaryColor,
                           name: 'Save',
                           outlinedBorder: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16.0),
-
                           ),
                         ),
-                        SizedBox(height:MediaQuery.of(context).size.height*0.05,),
-
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05,
+                        ),
                       ],
                     ),
                   ),
