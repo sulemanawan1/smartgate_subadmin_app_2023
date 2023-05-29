@@ -44,7 +44,10 @@ dependencies:
   fluttertoast: ^8.0.9
   firebase_core: ^2.6.1
   firebase_messaging: ^14.2.4
-  google_fonts: ^3.0.1
+  flutter_local_notifications: ^14.1.0
+  cloud_firestore: ^4.7.1
+  app_settings: ^4.2.0
+  google_fonts: ^4.0.4
   flutter_svg: ^1.1.6
   dropdown_search: ^5.0.5
   dio: ^4.0.6
@@ -52,7 +55,8 @@ dependencies:
   csc_picker: ^0.2.6
   intl: ^0.17.0
   firebase_core_platform_interface: ^4.5.1
-
+  flutter_screenutil: ^5.7.0
+  alarm: ^1.0.5
 
 
 
