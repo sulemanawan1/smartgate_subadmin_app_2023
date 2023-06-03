@@ -54,7 +54,7 @@ class ViewFinanceManager extends GetView {
                             itemBuilder: (context, index) {
                               return SizedBox(
                                 width: 327.w,
-                                height: 88.97,
+                                height: 88.96,
                                 child: Card(
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(
