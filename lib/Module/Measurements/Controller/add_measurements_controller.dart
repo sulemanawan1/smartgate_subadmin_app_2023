@@ -2,11 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as Http;
 
 import '../../../Constants/api_routes.dart';
 import '../../Login/Model/User.dart';
-import 'package:http/http.dart' as Http;
-
 import '../Model/MeasurementModel.dart';
 
 class AddMeasurementController extends GetxController {
@@ -14,11 +13,11 @@ class AddMeasurementController extends GetxController {
   String? unitVal;
   bool isLoading = false;
   final TextEditingController chargesController = TextEditingController();
-  final TextEditingController chargesAfterDueDateController = TextEditingController();
+  final TextEditingController chargesAfterDueDateController =
+      TextEditingController();
   final TextEditingController lateChargesController = TextEditingController();
   final TextEditingController appChargesController = TextEditingController();
   final TextEditingController taxController = TextEditingController();
-  final TextEditingController bedRoomsController = TextEditingController();
   final TextEditingController areaController = TextEditingController();
   var userdata = Get.arguments;
   late final User user;
@@ -58,12 +57,9 @@ class AddMeasurementController extends GetxController {
     required String propertyType,
     required String unitType,
     required String charges,
-    required String bedrooms,
     required String area,
-    required String serviceChargesAfterDueDate,
     required String lateCharges,
     required String appCharges,
-
     required String tax,
   }) async {
     print(userid);
@@ -71,7 +67,6 @@ class AddMeasurementController extends GetxController {
     print(propertyType);
     print(unitType);
     print(charges);
-    print(bedrooms);
     print(area);
     isLoading = true;
     update();
@@ -87,9 +82,7 @@ class AddMeasurementController extends GetxController {
         'unit': unitType,
         'charges': charges,
         'area': area,
-        'bedrooms': bedrooms,
         "status": 0,
-        "chargesafterduedate": serviceChargesAfterDueDate,
         "latecharges": lateCharges,
         "appcharges": double.tryParse(appCharges),
         "tax": tax
@@ -117,7 +110,6 @@ class AddMeasurementController extends GetxController {
       unitVal = null;
 
       chargesController.clear();
-      bedRoomsController.clear();
       areaController.clear();
       isLoading = false;
       update();
@@ -158,14 +150,14 @@ class AddMeasurementController extends GetxController {
     double after_due_date_fine = 0.05;
     double app_charges = serviceCharges! * (app_percentage / 100);
     double tax_charges = serviceCharges * (tax_percentage / 100);
-    double late_charges =  (serviceCharges * after_due_date_fine);
+    double late_charges = (serviceCharges * after_due_date_fine);
     double after_duedate_charges =
         (serviceCharges * after_due_date_fine) + serviceCharges;
 
     taxController.text = tax_charges.toString();
     appChargesController.text = app_charges.toString();
     chargesAfterDueDateController.text = after_duedate_charges.toString();
-    lateChargesController.text=late_charges.toString();
+    lateChargesController.text = late_charges.toString();
 
     update();
   }
@@ -175,7 +167,6 @@ class AddMeasurementController extends GetxController {
     appChargesController.text = '';
     chargesAfterDueDateController.text = '';
     chargesController.text = '';
-    bedRoomsController.text = '';
     areaController.text = '';
     update();
   }

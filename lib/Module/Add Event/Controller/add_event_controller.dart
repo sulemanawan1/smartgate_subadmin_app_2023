@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -8,24 +7,24 @@ import 'package:http/http.dart' as Http;
 import '../../../Constants/api_routes.dart';
 import '../../../Routes/set_routes.dart';
 import '../../Login/Model/User.dart';
-class AddEventScreenController extends GetxController {
 
+class AddEventScreenController extends GetxController {
   var user = Get.arguments;
   late final User userdata;
-  bool isLoading=false;
+  bool isLoading = false;
 
   @override
   void onInit() {
     super.onInit();
-    userdata= this. user;
+    userdata = this.user;
   }
+
   final formKey = new GlobalKey<FormState>();
   TextEditingController eventTitleController = TextEditingController();
   TextEditingController eventDescriptionController = TextEditingController();
   TextEditingController eventStartDateController = TextEditingController();
   TextEditingController eventEndDateController = TextEditingController();
-  int eventActive=0;
-
+  int eventActive = 0;
 
   Future StartDate(context) async {
     DateTime? picked = await showDatePicker(
@@ -33,15 +32,12 @@ class AddEventScreenController extends GetxController {
         firstDate: new DateTime(2020),
         lastDate: new DateTime(2030),
         context: context);
-    if (picked != null)
-      picked.toString();
+    if (picked != null) picked.toString();
 
     print(picked);
-    eventStartDateController.text =await picked.toString().split(' ')[0];
+    eventStartDateController.text = await picked.toString().split(' ')[0];
     print(eventStartDateController.text);
     update();
-
-
   }
 
   Future EndDate(context) async {
@@ -50,30 +46,26 @@ class AddEventScreenController extends GetxController {
         initialDate: new DateTime.now(),
         firstDate: new DateTime(2020),
         lastDate: new DateTime(2030));
-    if (picked != null)
-      picked.toString();
+    if (picked != null) picked.toString();
 
     eventEndDateController.text = picked.toString().split(' ')[0];
-
 
     update();
   }
 
-  Future addEventApi(
-      {required int userid,
-        required String token,
-      required  String eventTitle,
-      required  String eventDescription,
-      required  String eventStartDate,
-      required  String eventEndDate,
-      }) async
-  {
-
+  Future addEventApi({
+    required int userid,
+    required String token,
+    required String eventTitle,
+    required String eventDescription,
+    required String eventStartDate,
+    required String eventEndDate,
+  }) async {
     print(userid);
     print(token);
 
-isLoading=true;
-update();
+    isLoading = true;
+    update();
 
     final response = await Http.post(
       Uri.parse(Api.addEvent),
@@ -82,7 +74,6 @@ update();
         'Authorization': "Bearer $token"
       },
       body: jsonEncode(<String, dynamic>{
-
         "userid": userid,
         "title": eventTitle,
         "description": eventDescription,
@@ -100,30 +91,22 @@ update();
       print(data);
       print(response.statusCode);
 
-      Get.offAndToNamed(eventsscreen,arguments: user);
+      Get.offAndToNamed(eventsscreen, arguments: user);
 
       Get.snackbar("Event Add Successfully", "");
-    }
-
-    else if (response.statusCode == 403) {
+    } else if (response.statusCode == 403) {
       isLoading = false;
       update();
       var data = jsonDecode(response.body.toString());
 
       (data['errors'] as List)
           .map((e) => Get.snackbar(
-        "Error",
-        e.toString(),
-      ))
+                "Error",
+                e.toString(),
+              ))
           .toList();
-    }
-
-    else {
+    } else {
       Get.snackbar("Failed to Add Event", "");
     }
   }
-
-
-
-
 }

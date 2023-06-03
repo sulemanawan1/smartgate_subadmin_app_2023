@@ -5,6 +5,9 @@ import 'package:societyadminapp/Module/AddSocietyDetail/Add%20Streets/View/add_s
 import 'package:societyadminapp/Module/AddSocietyDetail/Blocks/View/blocks.dart';
 import 'package:societyadminapp/Module/AddSocietyDetail/Phases/View/phases.dart';
 import 'package:societyadminapp/Module/AddSocietyDetail/Streets/View/streets.dart';
+import 'package:societyadminapp/Module/Finance%20Manger/Add%20Finance%20Manager/View/add_finance_manager.dart';
+import 'package:societyadminapp/Module/Finance%20Manger/Update%20Finance%20Manager%20Details/View/update_finance_manager_details.dart';
+import 'package:societyadminapp/Module/Finance%20Manger/View%20Finance%20Manager/View/view_finance_manager.dart';
 import 'package:societyadminapp/Module/Measurements/View/add_measurements.dart';
 import 'package:societyadminapp/Module/Society%20Apartment%20Bills/View/generate_society_apartment_bills.dart';
 import 'package:societyadminapp/Module/Splash/View/splash_screen.dart';
@@ -138,5 +141,8 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => GenerateSocietyApartmentBills());
     Get.lazyPut(() => GeneratedSocietyApartmentBills());
     Get.lazyPut(() => ResidentialEmergencyScreen());
+    Get.lazyPut(() => AddFinanceManager());
+    Get.lazyPut(() => ViewFinanceManager());
+    Get.lazyPut(() => UpdateFinanceManagerDetails());
   }
 }

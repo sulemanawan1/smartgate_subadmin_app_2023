@@ -9,6 +9,9 @@ import 'package:societyadminapp/Module/AdminProfile/View/admin_profile_screen.da
 import 'package:societyadminapp/Module/Bills/View/bills.dart';
 import 'package:societyadminapp/Module/Events/View/events_screen.dart';
 import 'package:societyadminapp/Module/Events/View/view_event_images_screen.dart';
+import 'package:societyadminapp/Module/Finance%20Manger/Add%20Finance%20Manager/View/add_finance_manager.dart';
+import 'package:societyadminapp/Module/Finance%20Manger/Update%20Finance%20Manager%20Details/View/update_finance_manager_details.dart';
+import 'package:societyadminapp/Module/Finance%20Manger/View%20Finance%20Manager/View/view_finance_manager.dart';
 import 'package:societyadminapp/Module/GateKepeer/View/gate_keeper_screen.dart';
 import 'package:societyadminapp/Module/ImageHeroView/viewimage.dart';
 import 'package:societyadminapp/Module/Login/View/login.dart';
@@ -417,6 +420,21 @@ class RouteManagement {
       GetPage(
           name: residentialEmergencyScreen,
           page: () => ResidentialEmergencyScreen(),
+          binding: ScreenBindings(),
+          transition: Transition.noTransition),
+      GetPage(
+          name: viewFinanceManager,
+          page: () => ViewFinanceManager(),
+          binding: ScreenBindings(),
+          transition: Transition.noTransition),
+      GetPage(
+          name: addFinanceManager,
+          page: () => AddFinanceManager(),
+          binding: ScreenBindings(),
+          transition: Transition.noTransition),
+      GetPage(
+          name: updateFinanceManager,
+          page: () => UpdateFinanceManagerDetails(),
           binding: ScreenBindings(),
           transition: Transition.noTransition),
     ];

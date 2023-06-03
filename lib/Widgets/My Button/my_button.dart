@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../Constants/constants.dart';
+
 class MyButton extends StatelessWidget {
   final OutlinedBorder? outlinedBorder;
   final double? height;
   final double? width;
+  final bool? loading;
   final double? elevation;
   final double? fontSize;
   final double? letterSpacing;
@@ -15,50 +18,48 @@ class MyButton extends StatelessWidget {
   final Color? textColor;
   final int? maxLines;
   final void Function()? onPressed;
-  const MyButton
-
-  (
-  {super.key,
-  this.outlinedBorder,
-  this.elevation,
-  this.fontWeight,
-  this.letterSpacing,
-  this.fontSize,
-  this.textColor,
-  this.height,
-  this.width,
-  this.border,
-  required this.name,
-  this.color,
-  this.maxLines,
-  this.onPressed});
+  const MyButton(
+      {super.key,
+      this.outlinedBorder,
+      this.elevation,
+      this.fontWeight,
+      this.letterSpacing,
+      this.fontSize,
+      this.textColor,
+      this.height,
+      this.width,
+      this.border,
+      required this.name,
+      this.color,
+      this.maxLines,
+      this.onPressed,
+      this.loading = false});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width?? MediaQuery.of(context).size.width*.4,
+      width: width ?? MediaQuery.of(context).size.width * .4,
       height: height,
       child: ElevatedButton(
-
         style: ElevatedButton.styleFrom(
-            elevation:elevation
-                ??5,
-            shape: outlinedBorder
-                ?? RoundedRectangleBorder(
+            elevation: elevation ?? 5,
+            shape: outlinedBorder ??
+                RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14.0)),
-            backgroundColor: color??primaryColor),
-        child: Text(
-          name,
-          maxLines: maxLines??1,
-          style: GoogleFonts.ubuntu(
-              color: textColor??Colors.white,
-              fontWeight: fontWeight,
-              letterSpacing: letterSpacing,
-              fontSize: fontSize),
-        ),
+            backgroundColor: color ?? primaryColor),
+        child: loading!
+            ? CircularProgressIndicator(color: Colors.white,)
+            : Text(
+                name,
+                maxLines: maxLines ?? 1,
+                style: GoogleFonts.ubuntu(
+                    color: textColor ?? Colors.white,
+                    fontWeight: fontWeight,
+                    letterSpacing: letterSpacing,
+                    fontSize: fontSize),
+              ),
         onPressed: onPressed,
       ),
     );
   }
 }
-

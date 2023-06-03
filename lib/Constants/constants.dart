@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -31,7 +29,6 @@ const String assetsBaseUrl = "assets/";
 //     // View Users canceled the picker
 //   }
 // }
-
 
 Future<String> getDate(BuildContext context) async {
   DateTime date = new DateTime(2022, 12, 24);
@@ -136,4 +133,9 @@ String? cnicValidator(String? v) {
   } else {
     return null;
   }
+}
+
+extension MySizedBox on num {
+  SizedBox get ph => SizedBox(height: toDouble());
+  SizedBox get pw => SizedBox(width: toDouble());
 }

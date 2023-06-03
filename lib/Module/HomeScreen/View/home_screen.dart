@@ -419,6 +419,42 @@ class HomeScreen extends GetView {
                   //     )),
                 ],
               ),
+              Row(
+                children: [
+                  Padding(
+                      padding: EdgeInsets.only(left: 32, top: 32),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          AdminScreenContainer(
+                            onTap: () async {
+                              Get.offNamed(viewFinanceManager,
+                                  arguments: controller.user);
+                            },
+                            icon: 'assets/reports.svg',
+                            text: 'Finance \n Managers',
+                          ),
+                        ],
+                      )),
+
+                  // Padding(
+                  //     padding: EdgeInsets.only(left: 32, top: 32),
+                  //     child: Stack(
+                  //       clipBehavior: Clip.none,
+                  //       children: [
+                  //         AdminScreenContainer(
+                  //           onTap: () async {
+                  //             Get.toNamed(generatedbill,
+                  //                 arguments: controller.user);
+                  //           },
+                  //           icon: 'assets/reports.svg',
+                  //           text: 'Bills',
+                  //         ),
+                  //
+                  //       ],
+                  //     )),
+                ],
+              ),
 
               //             DropdownSearch<PhasesList>(
               //               asyncItems: (String filter) async {
